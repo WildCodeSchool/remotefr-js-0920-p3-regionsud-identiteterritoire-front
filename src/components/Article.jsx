@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from './Card';
 import Thematiques from './Thematiques';
+import './Article.css';
 
 const Article = () => {
   return (

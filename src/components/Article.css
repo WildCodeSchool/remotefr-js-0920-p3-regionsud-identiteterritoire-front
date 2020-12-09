@@ -1,0 +1,36 @@
+header {
+  border: 3px orange solid;
+}
+
+footer {
+  border: 3px navy solid;
+  background-color: black;
+  color: white;
+}
+
+.logo {
+  border: 2px red solid;
+}
+
+section {
+  border: 3px purple solid;
+}
+
+nav {
+  border: 2px yellow solid;
+}
+
+.card-container {
+  border: 3px magenta solid;
+}
+.contact {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+}
+.contact ul {
+  margin: 0 0.5vw;
+}
+.contact li {
+  list-style-type: none;
+}

@@ -27,7 +27,7 @@ export default function Destination() {
           département du Var et siège de sa préfecture.
         </h4>
         <h4>
-          Troisième ville de la région Provence-Alpes-Côte d`Azur derrière
+          Troisième ville de la région Provence-Alpes-Côte d'Azur derrière
           Marseille et Nice,elle abrite en outre le siège de la préfecture
           maritime de la Méditerranée.
         </h4>

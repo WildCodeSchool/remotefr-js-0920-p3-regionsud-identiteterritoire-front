@@ -16,7 +16,9 @@ nav {
 
 .section-container {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
+  align-items: center;
 }
 
 .theme-icons-container {
@@ -26,8 +28,28 @@ nav {
 }
 
 .card-container {
-  border: 3px magenta solid;
   display: flex;
-  flex-direction: column;
-  align-items: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.card-img {
+  width: 150px;
+  height: auto;
+}
+
+@media screen and (min-width: 1024px) {
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    padding: 2%;
+  }
+
+  .card-img {
+    width: 363px;
+    height: 288px;
+  }
+  .section-container {
+    flex-direction: row;
+  }
 }

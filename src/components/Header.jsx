@@ -1,6 +1,7 @@
 import React from 'react';
 import './Header.css';
 import logoQuadri from '../assets/LOGO-2-QUADRI.jpg';
+import headerBackground from '../assets/header.png';
 
 const Header = () => {
   return (
@@ -9,8 +10,12 @@ const Header = () => {
         <img className='logo-homepage' src={logoQuadri} alt='Logo Region Sud' />
       </div>
       <div className='header'>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut quam unde
-        suscipit ea molestias eligendi voluptates totam blanditiis illo cum?
+        <img
+          className='header-background'
+          src={headerBackground}
+          alt='Paysage littoral'
+        />
+        <p></p>
       </div>
       <nav>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus

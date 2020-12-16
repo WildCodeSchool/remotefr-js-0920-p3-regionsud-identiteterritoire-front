@@ -11,11 +11,7 @@ const Article = () => {
         <Card text='Choisir sur une carte' />
         <Card text='Se faire accompagner' />
       </section>
-
-      <section className='section-container'>
-        <Thematiques />
-      </section>
-
+      <Thematiques />
       <section className='section-container'>
         <Card text='Y vivre' />
         <Card text='Découvrir' />

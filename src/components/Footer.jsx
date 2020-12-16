@@ -1,15 +1,15 @@
 import React from 'react';
+import './Footer.css';
+import logoBlack from '../assets/LOGO-2-TRAIT-NOIR.jpg';
 
 const Footer = () => {
   return (
     <footer>
-      <div className='footer'>
-        <img
-          className='center'
-          src='https://via.placeholder.com/150'
-          alt='Logo Région Sud'
-        />
-      </div>
+      <img
+        className='center logo-footer'
+        src={logoBlack}
+        alt='Logo Région Sud'
+      />
       <div className='contact'>
         <ul>
           <h3>REGION SUD PROVENCE-ALPES-CÔTE D'AZUR</h3>

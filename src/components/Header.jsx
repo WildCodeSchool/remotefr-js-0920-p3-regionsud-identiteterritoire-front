@@ -1,13 +1,13 @@
 import React from 'react';
+import './Header.css';
+import logoQuadri from '../assets/LOGO-2-QUADRI.jpg';
 
 const Header = () => {
   return (
     <header>
-      <img
-        classNamme='logo'
-        src='https://via.placeholder.com/64'
-        alt='Logo Region Sud'
-      />
+      <div className='header-logo'>
+        <img className='logo-homepage' src={logoQuadri} alt='Logo Region Sud' />
+      </div>
       <div className='header'>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut quam unde
         suscipit ea molestias eligendi voluptates totam blanditiis illo cum?

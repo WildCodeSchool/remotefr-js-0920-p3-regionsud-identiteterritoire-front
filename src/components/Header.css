@@ -1,0 +1,9 @@
+.logo-homepage {
+  width: 277px;
+  height: 150px;
+}
+
+.header-logo {
+  display: flex;
+  justify-content: flex-start;
+}

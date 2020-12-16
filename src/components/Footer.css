@@ -1,0 +1,22 @@
+.logo-footer {
+  width: 250px;
+  height: 130px;
+}
+
+footer {
+  border: 3px navy solid;
+  background-color: black;
+  color: white;
+}
+
+.contact {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+}
+.contact ul {
+  margin: 0 0.5vw;
+}
+.contact li {
+  list-style-type: none;
+}

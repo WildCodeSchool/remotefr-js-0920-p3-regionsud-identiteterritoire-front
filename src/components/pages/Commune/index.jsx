@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Cultuero from '../../widgets/Cultuero';
+import Culturo from '../../widgets/Culturo';
+import Guide from '../../widgets/Guide';
 /**
  * @class Header
  * @description Gere le haut du site
@@ -22,7 +23,8 @@ class Commune extends React.Component {
           veniam laudantium, alias ab ducimus cupiditate non? Vitae impedit
           debitis rem?
         </p>
-        <Cultuero />
+        <Guide />
+        <Culturo />
       </div>
     );
   };

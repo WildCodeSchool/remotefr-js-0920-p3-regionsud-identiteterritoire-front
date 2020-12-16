@@ -3,7 +3,7 @@ import React from 'react';
  * @class Header
  * @description Gere le haut du site
  */
-class Cultuero extends React.Component {
+class Culturo extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -12,7 +12,7 @@ class Cultuero extends React.Component {
   render = () => {
     return (
       <div>
-        <h2>Cultuero</h2>
+        <h2>Culturo</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. At aliquid
           necessitatibus eligendi libero commodi repellat ut velit, officiis,
@@ -57,4 +57,4 @@ class Cultuero extends React.Component {
   };
 }
 
-export default Cultuero;
+export default Culturo;

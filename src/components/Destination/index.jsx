@@ -15,7 +15,7 @@ export default function Destination() {
           Population: 166 700 <small>(2008)</small>
         </p>
 
-        <p>Superficie: 42,84 km2</p>
+        <p>Superficie: 42,84 km²</p>
         <p>Maire: Hubert Falco</p>
       </div>
       <div className="col-md-9">

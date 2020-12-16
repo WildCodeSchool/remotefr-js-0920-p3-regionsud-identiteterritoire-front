@@ -8,7 +8,7 @@ export default function Destination() {
     <div className="row">
       <div className="col-md-4">
         <img
-          src="https://cdn-media.rtl.fr/cache/FK9y_F2KrJv76B7pwcilKg/880v587-0/online/image/2012/0704/7750350513_carte-de-localisation-de-toulon-var.jpg"
+          src="https://map.viamichelin.com/map/carte?map=viamichelin&z=10&lat=43.12519&lon=5.93104&width=550&height=382&format=png&version=latest&layer=background&debug_pattern=.*"
           className="img-fluid"
           alt="Responsive_imge"
         />
@@ -27,7 +27,7 @@ export default function Destination() {
           département du Var et siège de sa préfecture.
         </h4>
         <h4>
-          Troisième ville de la région Provence-Alpes-Côte d'Azur derrière
+          Troisième ville de la région Provence-Alpes-Côte d`Azur derrière
           Marseille et Nice,elle abrite en outre le siège de la préfecture
           maritime de la Méditerranée.
         </h4>

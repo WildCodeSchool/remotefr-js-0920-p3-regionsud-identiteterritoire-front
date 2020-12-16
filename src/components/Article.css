@@ -1,18 +1,18 @@
-header {
+/* header {
   border: 3px orange solid;
-}
+} */
 
-.logo {
+/* .logo {
   border: 2px red solid;
-}
+} */
 
-section {
+/* section {
   border: 3px purple solid;
-}
+} */
 
-nav {
+/* nav {
   border: 2px yellow solid;
-}
+} */
 
 .section-container {
   display: flex;

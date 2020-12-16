@@ -5,5 +5,10 @@
 
 .header-logo {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
+}
+
+.header {
+  width: auto;
+  box-sizing: border-box;
 }

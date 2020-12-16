@@ -26,18 +26,23 @@ class Guide extends React.Component {
     } = this.state;
 
     return (
-      <div className="guideOffice">
-        <img
-          src={officeTourism}
-          alt="Office du Tourisme"
-          title="Office du Tourisme"
-        />
-        <h2>Se faire accompagner</h2>
-        <p>{name}</p>
-        <p>{address}</p>
-        <p>{phone}</p>
-        <p>{mail}</p>
-        <p>{open}</p>
+      <div className="container">
+        <div className="guide-image">
+          <img
+            src={officeTourism}
+            alt="Office du Tourisme"
+            title="Office du Tourisme"
+          />
+        </div>
+        <div className="guide-text">
+          <h2>Se faire accompagner</h2>
+          <p>{name}</p>
+          <p>{address}</p>
+          <p>{phone}</p>
+          <p>{mail}</p>
+          <p>{open}</p>
+          <a href="https://toulontourisme.com">https://toulontourisme.com</a>
+        </div>
       </div>
     );
   };

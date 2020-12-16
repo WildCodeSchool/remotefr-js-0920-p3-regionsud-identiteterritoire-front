@@ -1,3 +1,16 @@
-.guideOffice img {
-  width: 150px;
+.container {
+  display: flex;
+}
+
+.guide-image img {
+  width: 200px;
+}
+
+.guide-text {
+  margin-left: 5%;
+  line-height: 50%;
+}
+
+.guide-text h2 {
+  margin-bottom: 5%;
 }

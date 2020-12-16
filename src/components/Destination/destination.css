@@ -1,4 +1,10 @@
-.text_1 {
+.text_1 h4 {
   padding-top: 20px;
   line-height: 5px;
+  margin: 0 0 4px 0px;
+  color: rgb(56, 53, 53);
+}
+
+.col-md-8 {
+  color: rgb(56, 53, 53);
 }

@@ -16,11 +16,11 @@ export default function Destination() {
           <h4>
             Population: 166 700 <small>(2008)</small>
           </h4>
-
           <h4>Superficie: 42,84 km²</h4>
           <h4>Maire: Hubert Falco</h4>
         </div>
       </div>
+
       <div className="col-md-8">
         <h4 className="text-parag">
           Toulon est une commune du sud-Est de la France, chef-lieu du

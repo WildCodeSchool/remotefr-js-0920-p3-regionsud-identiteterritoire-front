@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import officeTourism from './images/office_tourisme.jpg';
 import './css/style.css';
@@ -26,15 +27,19 @@ class Guide extends React.Component {
     } = this.state;
 
     return (
-      <div className="container">
-        <div className="guide-image">
+      <div className="row">
+        <p className="col-md-12">
+          Département : <a href="#">Var</a> / Intercommunalité :{' '}
+          <a href="#">Métropole Toulob Provence Méditerranée</a>
+        </p>
+        <div className="image col-md-3">
           <img
             src={officeTourism}
             alt="Office du Tourisme"
             title="Office du Tourisme"
           />
         </div>
-        <div className="guide-text">
+        <div className="col-md-9 guide-text">
           <h2>Se faire accompagner</h2>
           <p>{name}</p>
           <p>{address}</p>
@@ -43,6 +48,7 @@ class Guide extends React.Component {
           <p>{open}</p>
           <a href="https://toulontourisme.com">https://toulontourisme.com</a>
         </div>
+        <hr className="col-md-10 underline" />
       </div>
     );
   };

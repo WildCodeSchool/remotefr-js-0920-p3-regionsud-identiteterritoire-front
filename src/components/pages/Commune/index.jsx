@@ -15,7 +15,7 @@ class Commune extends React.Component {
   render = () => {
     const { match } = this.props;
     return (
-      <div>
+      <div className="background-color">
         <h1>Toulon ({match.params.id})</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus impedit

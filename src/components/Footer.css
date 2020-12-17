@@ -6,6 +6,8 @@
 footer {
   background-color: black;
   color: white;
+  padding-top: 2%;
+  margin-top: 5%;
 }
 
 .contact {
@@ -18,4 +20,8 @@ footer {
 }
 .contact li {
   list-style-type: none;
+}
+
+.contact-btn {
+  background-color: transparent;
 }

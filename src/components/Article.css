@@ -29,12 +29,27 @@
 
 .card-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
 }
 .card-img {
   width: 150px;
-  height: auto;
+  height: 120px;
+}
+
+.horizontal-line {
+  width: 15%;
+  height: 4%;
+  border-radius: 20%;
+  background-color: #333;
+}
+
+.hr-full {
+  border: 0;
+  height: 1px;
+  width: 90%;
+  background: #333;
+  background-image: linear-gradient(to right, #ccc, #333, #ccc);
 }
 
 @media screen and (min-width: 1024px) {
@@ -51,5 +66,8 @@
   }
   .section-container {
     flex-direction: row;
+  }
+  .logos {
+    justify-content: space-evenly;
   }
 }

@@ -6,9 +6,27 @@
 .header-logo {
   display: flex;
   justify-content: space-between;
+  padding: 2px;
 }
 
-.header {
-  width: auto;
-  box-sizing: border-box;
+.header > img {
+  width: 100%;
+}
+
+.calendar-btn,
+.search-btn {
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+  outline: 0;
+
+  background-color: transparent;
+  border-width: 5px;
+  border-color: transparent;
+}
+
+.homepage-nav {
+  background-color: #555;
+  color: white;
+  display: flex;
+  justify-content: center;
 }

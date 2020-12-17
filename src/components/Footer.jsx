@@ -21,8 +21,8 @@ const Footer = () => {
           <h4>Du lundi au vendredi</h4>
           <li>De 9h à 17h sans interruption</li>
           <li>04 91 57 50 57</li>
-          <button type='button' className='btn'>
-            Contactez la région
+          <button type='button' className='contact-btn'>
+            Contacter la région
           </button>
         </ul>
         <ul>

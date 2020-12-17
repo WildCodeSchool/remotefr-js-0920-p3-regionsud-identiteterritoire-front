@@ -17,12 +17,26 @@ const Header = () => {
           src={headerBackground}
           alt='Paysage littoral'
         />
-        <p></p>
+        <nav className='homepage-nav'>
+          <p>Je souhaite découvrir une destination de mon choix </p>
+          <button type='submit' className='calendar-btn'>
+            <span role='img' aria-label='emoji' id='emoji'>
+              ⛛
+            </span>
+          </button>
+          <p> à partir du xx:xx:xx</p>
+          <button type='submit' className='calendar-btn'>
+            <span role='img' aria-label='emoji' id='emoji'>
+              📅
+            </span>
+          </button>
+          <button type='submit' className='search-btn'>
+            <span role='img' aria-label='emoji' id='emoji'>
+              🔍
+            </span>
+          </button>
+        </nav>
       </div>
-      <nav>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus
-        repellendus modi illo, labore quae ex?
-      </nav>
     </header>
   );
 };

@@ -3,7 +3,8 @@
 import React from 'react';
 import './destination.css';
 
-export default function Destination() {
+export default function Destination(props) {
+  const { population, anneeRecensement, superficie, name } = props;
   return (
     <div className="row">
       <div className="col-md-4">
@@ -14,10 +15,11 @@ export default function Destination() {
         />
         <div className="text_1">
           <h4>
-            Population: 166 700 <small>(2008)</small>
+            Population: {population}
+            <small>({anneeRecensement})</small>
           </h4>
-          <h4>Superficie: 42,84 km²</h4>
-          <h4>Maire: Hubert Falco</h4>
+          <h4>Superficie: {superficie}</h4>
+          <h4>Maire: {name}</h4>
         </div>
       </div>
 
@@ -36,6 +38,7 @@ export default function Destination() {
           de la rade de Toulon. Ses habitants sont appelés les Toulonnais.
         </h4>
       </div>
+      <hr className="col-md-11" />
     </div>
   );
 }

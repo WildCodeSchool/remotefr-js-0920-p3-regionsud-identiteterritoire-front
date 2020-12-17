@@ -8,3 +8,7 @@
 .col-md-8 {
   color: rgb(56, 53, 53);
 }
+.col-md-11 {
+  border-top: 1px solid black;
+  margin-top: 50px;
+}

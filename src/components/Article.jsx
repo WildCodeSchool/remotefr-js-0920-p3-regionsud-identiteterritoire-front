@@ -32,6 +32,7 @@ const Article = () => {
         <Card text='Découvrir' src={decouvrir} />
         <Card text="S'y installer" src={installer} />
       </section>
+      <p></p>
       <hr className='hr-full' />
       <section className='section-container logos'>
         <Partenaires src={Datasud} alt='lorem ipsum' title='lorem ipsum' />

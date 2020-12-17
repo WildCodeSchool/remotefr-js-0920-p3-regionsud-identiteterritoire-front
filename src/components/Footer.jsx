@@ -1,18 +1,16 @@
 import React from 'react';
 import './Footer.css';
-import logoBlack from '../assets/LOGO-2-TRAIT-NOIR.jpg';
+import logoBlack from '../assets/LOGO-2-TRAIT-BLANC.png';
 
 const Footer = () => {
   return (
     <footer>
-      <img
-        className='center logo-footer'
-        src={logoBlack}
-        alt='Logo Région Sud'
-      />
+      <img className='logo-footer' src={logoBlack} alt='Logo Région Sud' />
       <div className='contact'>
         <ul>
-          <h3>REGION SUD PROVENCE-ALPES-CÔTE D'AZUR</h3>
+          <h3>
+            REGION SUD <br /> PROVENCE-ALPES-CÔTE D'AZUR
+          </h3>
           <h4>Hôtel de Région</h4>
           <li>27, place Jules Guesde</li>
           <li>13481 Marseille Cedex 20</li>
@@ -28,7 +26,7 @@ const Footer = () => {
         <ul>
           <h4>Liens utiles</h4>
           <li>Subventions régionales</li>
-          <li>Sud MMarchés Publics</li>
+          <li>Sud Marchés Publics</li>
         </ul>
       </div>
     </footer>

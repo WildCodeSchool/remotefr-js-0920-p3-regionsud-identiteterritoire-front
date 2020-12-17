@@ -17,6 +17,7 @@ const Header = () => {
           src={headerBackground}
           alt='Paysage littoral'
         />
+        <h1 className='city-title'>Destination Sud</h1>
         <nav className='homepage-nav'>
           <p>Je souhaite découvrir une destination de mon choix </p>
           <button type='submit' className='calendar-btn'>

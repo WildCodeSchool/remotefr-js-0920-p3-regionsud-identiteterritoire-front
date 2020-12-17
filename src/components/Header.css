@@ -6,7 +6,6 @@
 .header-logo {
   display: flex;
   justify-content: space-between;
-  padding: 2px;
 }
 
 .header > img {
@@ -24,9 +23,25 @@
   border-color: transparent;
 }
 
+.header {
+  position: relative;
+}
+
+.city-title {
+  position: absolute;
+  right: 2%;
+  top: 5%;
+  color: white;
+  font-size: 50px;
+}
+
 .homepage-nav {
-  background-color: #555;
+  background-color: #4c4a4a;
   color: white;
   display: flex;
   justify-content: center;
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+  letter-spacing: 2px;
 }

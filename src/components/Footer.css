@@ -1,13 +1,17 @@
 .logo-footer {
   width: 250px;
   height: 130px;
+  margin: 0 45%;
+}
+
+h4 {
+  margin-bottom: 0%;
 }
 
 footer {
-  background-color: black;
+  background-color: #333;
   color: white;
-  padding-top: 2%;
-  margin-top: 5%;
+  padding: 1% 0;
 }
 
 .contact {
@@ -23,5 +27,10 @@ footer {
 }
 
 .contact-btn {
-  background-color: transparent;
+  background-color: #333;
+  color: white;
+  border: 2px solid white;
+  margin: 8% auto;
+  padding: 8%;
+  width: 100%;
 }

@@ -2,6 +2,12 @@
 // eslint-disable react/no-unescaped-entities
 import React from 'react';
 import './destination.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faFacebook,
+  faTwitter,
+  faInstagram,
+} from '@fortawesome/free-brands-svg-icons';
 
 export default function Destination(props) {
   const {
@@ -57,6 +63,24 @@ export default function Destination(props) {
           deleniti sit consectetur quod autem quia molestias, sunt dicta eveniet
           omnis possimus.
         </p>
+      </div>
+      <div className="social-container">
+        <div className="row">
+          <div className="col-sm-12">
+            <h3 className="social-follow">Social Follow</h3>
+            <div className="social-icons">
+              <a href="https://www.facebook.com" className="facebook social">
+                <FontAwesomeIcon icon={faFacebook} size="2x" />
+              </a>
+              <a href="https://www.twitter.com" className="twitter social">
+                <FontAwesomeIcon icon={faTwitter} size="2x" />
+              </a>
+              <a href="https://www.instagram.com" className="instagram social">
+                <FontAwesomeIcon icon={faInstagram} size="2x" />
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

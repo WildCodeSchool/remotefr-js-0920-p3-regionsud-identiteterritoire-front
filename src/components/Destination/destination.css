@@ -12,3 +12,34 @@
   border-top: 1px solid black;
   margin-top: 50px;
 }
+/* SOCIAL CONTAINER*/
+.social-container {
+  padding: 4px 40px;
+  margin-top: 50px;
+  align-items: center;
+}
+.social-follow {
+  text-align: center;
+}
+.social-icons {
+  text-align: center;
+}
+a.social {
+  margin: 0 10px;
+  display: inline-block;
+}
+a.social:hover {
+  transform: translateY(-2px);
+}
+
+a.facebook {
+  color: #4968ad;
+}
+
+a.twitter {
+  color: #49a1eb;
+}
+
+a.instagram {
+  color: rgb(187, 15, 110);
+}

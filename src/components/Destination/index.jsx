@@ -42,13 +42,25 @@ export default function Destination(props) {
           de la rade de Toulon. Ses habitants sont appelés les Toulonnais.
         </p>
         <div className="text_1">
-          <h4>Population: {population}</h4>
-          <small>{anneeRecensement}</small>
+          <h4>
+            <b>Population: {population}</b>
+          </h4>
+          <div className="anneeRecensement">
+            <small>{anneeRecensement}</small>
+          </div>
 
-          <h4>Superficie: {superficie}</h4>
-          <p>Km²</p>
-          <h4>Maire: {name}</h4>
-          <small>{anneereprise}</small>
+          <h4>
+            <b>Superficie: {superficie}</b>
+          </h4>
+          <div className="km">
+            <p>Km²</p>
+          </div>
+          <h4>
+            <b>Maire: {name}</b>
+          </h4>
+          <div className="anneereprise">
+            <small>{anneereprise}</small>
+          </div>
         </div>
       </div>
       <div className="col-sm-4">
@@ -63,11 +75,23 @@ export default function Destination(props) {
           deleniti sit consectetur quod autem quia molestias, sunt dicta eveniet
           omnis possimus.
         </p>
+        <div className="containerImg">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/fr/thumb/b/bc/Villes_Internet.jpg/220px-Villes_Internet.jpg"
+            className="img-fluid"
+            alt="Responsive_imge"
+          />
+          <img
+            src="http://pro.visitparisregion.com/var/crt_idf/storage/images/media/crt-images/optimisation-de-vos-prestations/labels-et-reseaux/vvf2/logo-villes-et-villages-fleuris-2019/831511-1-fre-FR/Logo-Villes-et-villages-fleuris-2019_diaporama.jpg"
+            className="img-fluid"
+            alt="Responsive_imge"
+          />
+        </div>
       </div>
       <div className="social-container">
         <div className="row">
           <div className="col-sm-12">
-            <h3 className="social-follow">Social Follow</h3>
+            <h3 className="social-follow">Réseaux sociaux</h3>
             <div className="social-icons">
               <a href="https://www.facebook.com" className="facebook social">
                 <FontAwesomeIcon icon={faFacebook} size="2x" />

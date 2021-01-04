@@ -12,6 +12,24 @@
   border-top: 1px solid black;
   margin-top: 50px;
 }
+.km {
+  color: rgb(133, 128, 128);
+}
+.anneereprise {
+  color: rgb(133, 128, 128);
+}
+.anneeRecensement {
+  color: rgb(133, 128, 128);
+}
+.containerImg {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+}
+.fas {
+  font-size: 24px;
+}
 /* SOCIAL CONTAINER*/
 .social-container {
   padding: 4px 40px;
@@ -20,6 +38,7 @@
 }
 .social-follow {
   text-align: center;
+  color: rgb(163, 158, 158);
 }
 .social-icons {
   text-align: center;

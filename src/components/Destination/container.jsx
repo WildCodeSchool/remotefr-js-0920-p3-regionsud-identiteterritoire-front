@@ -9,6 +9,7 @@ export default function DestinationContainer() {
       anneeRecensement={data.anneeRecensement}
       superficie={data.superficie}
       name={data.name}
+      anneereprise={data.anneereprise}
     />
   );
 }

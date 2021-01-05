@@ -1,3 +1,20 @@
 body {
   background-color: #e7e7e7;
 }
+
+.container {
+  background-color: #fff;
+}
+
+.container-theme {
+  position: fixed;
+}
+
+.text-theme > p {
+  color: #e97b84;
+}
+
+.text-theme > span {
+  color: #e97b84;
+  font-weight: bold;
+}

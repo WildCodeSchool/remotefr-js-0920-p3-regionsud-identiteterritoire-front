@@ -14,8 +14,19 @@ class Home extends React.Component {
   render = () => {
     return (
       <div className="container">
-        <h1>Home page</h1>
-        <Link to="/commune/83000">Toulon</Link>
+        <div className="home col-md-12">
+          <h1>Home page</h1>
+          <Link to="/commune/83000">Toulon</Link>
+        </div>
+        <div className="container-theme">
+          <div className="text-theme">
+            <p>Accès</p>
+            <span>Rapide</span>
+          </div>
+          <div className="circle-theme">
+            <i className="fas fa-heart" />
+          </div>
+        </div>
       </div>
     );
   };

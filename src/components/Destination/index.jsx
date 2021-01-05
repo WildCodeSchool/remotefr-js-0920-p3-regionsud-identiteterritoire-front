@@ -8,21 +8,26 @@ import {
   faTwitter,
   faInstagram,
 } from '@fortawesome/free-brands-svg-icons';
+import PropTypes from 'prop-types';
 
-export default function Destination(props) {
-  const {
-    population,
-    anneeRecensement,
-    superficie,
-    name,
-    anneereprise,
-  } = props;
+function Destination({
+  population,
+  anneeRecensement,
+  superficie,
+  name,
+  anneereprise,
+}) {
   return (
     <div className="row">
       <div className="col-md-8">
         <h1>
           Bienvenue à <b>Toulon</b>
         </h1>
+        <p>
+          <b>Site officiel:</b>
+          <a href="https://www.toulon.fr"> https://www.toulon.fr</a>
+        </p>
+
         <p className="text-parag">
           Toulon est une commune du sud-Est de la France, chef-lieu du
           département du Var et siège de sa préfecture. Lorem ipsum dolor, sit
@@ -95,16 +100,39 @@ export default function Destination(props) {
           </div>
         </div>
       </div>
-      <div className="col-sm-4">
-        <h1>
-          19.0° <small>Vent:NO</small>
-        </h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque eos
-          nobis optio necessitatibus aspernatur velit incidunt quam, officiis
-          deleniti sit consectetur quod autem quia molestias, sunt dicta eveniet
-          omnis possimus.
-        </p>
+      <div className="col-md-4">
+        <h2>
+          <b>19.0°</b> <small>Vent:NO 27Km/h</small>
+        </h2>
+        <div className="row">
+          <div className="col-md-12 bg-color">
+            <h4>
+              <b>Office de Tourisme</b>
+            </h4>
+            <p>Provence Méditerranée</p>
+            <p>
+              <b>Bureau de Toulon</b>
+              <br />
+              12,place Louis Blanc <br />
+              83000 Toulon <br />
+              Tel: +33 4 94 18 53 00 <br />
+              E-mai:info@toulontourisme.com
+            </p>
+            <p>
+              Horaires (Toute l&apos;année) <br />
+              Lundi: 9h à 13h et de 14h à 18h <br />
+              Mardi: <b>10h</b> à 13h et de 14h à 18h <br />
+              Mercredi: 9h à 13h et de 14h à 18h
+              <br />
+              Jeudi: 9h à 13h et de 14h à 18h <br />
+              Vendredi: 9h à 13h et de 14h à 18h
+              <br />
+              Samedi: 9h à 13h et de 14h à 18h
+              <br /> Dimanche: fermer
+            </p>
+          </div>
+        </div>
+
         <div className="row">
           <div className="col-md-12 containerImg">
             <img
@@ -123,3 +151,11 @@ export default function Destination(props) {
     </div>
   );
 }
+Destination.propTypes = {
+  name: PropTypes.string.isRequired,
+  population: PropTypes.number.isRequired,
+  anneeRecensement: PropTypes.number.isRequired,
+  superficie: PropTypes.number.isRequired,
+  anneereprise: PropTypes.number.isRequired,
+};
+export default Destination;

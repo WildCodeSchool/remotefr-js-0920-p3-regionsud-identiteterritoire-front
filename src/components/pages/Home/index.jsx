@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './style.css';
@@ -24,7 +25,26 @@ class Home extends React.Component {
             <span>Rapide</span>
           </div>
           <div className="circle-theme">
-            <i className="fas fa-heart" />
+            <ul>
+              <li>
+                <a href="#">
+                  <i className="fas fa-heart" />
+                </a>
+              </li>
+              <p>Social/Santé/Sport</p>
+              <li>
+                <a href="#">
+                  <i className="fas fa-home" />
+                </a>
+              </li>
+              <p>Musée</p>
+              <li>
+                <a href="#">
+                  <i className="fas fa-leaf" />
+                </a>
+              </li>
+              <p>Environnement</p>
+            </ul>
           </div>
         </div>
       </div>

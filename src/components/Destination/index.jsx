@@ -19,14 +19,7 @@ export default function Destination(props) {
   } = props;
   return (
     <div className="row">
-      <div className="col-md-4">
-        <img
-          src="https://cdn.worldvectorlogo.com/logos/ville-de-toulon.svg"
-          className="img-fluid"
-          alt="Responsive_imge"
-        />
-      </div>
-      <div className="col-md-4">
+      <div className="col-md-8">
         <h1>Bienvenue à Toulon</h1>
         <p className="text-parag">
           Toulon est une commune du sud-Est de la France, chef-lieu du
@@ -41,25 +34,51 @@ export default function Destination(props) {
           La commune est établie sur les bords de la mer Méditerranée, le long
           de la rade de Toulon. Ses habitants sont appelés les Toulonnais.
         </p>
-        <div className="text_1">
-          <h4>
-            <b>Population: {population}</b>
-          </h4>
-          <div className="anneeRecensement">
-            <small>{anneeRecensement}</small>
+        <div className="row">
+          <div className="col-md-4 text_1">
+            <h4>
+              <b>Population: {population}</b>
+            </h4>
+            <div className="anneeRecensement">
+              <small>{anneeRecensement}</small>
+            </div>
           </div>
-
-          <h4>
-            <b>Superficie: {superficie}</b>
-          </h4>
-          <div className="km">
-            <p>Km²</p>
+          <div className="col-md-4 text_1">
+            <h4>
+              <b>Superficie: {superficie}</b>
+            </h4>
+            <div className="km">
+              <p>Km²</p>
+            </div>
           </div>
-          <h4>
-            <b>Maire: {name}</b>
-          </h4>
-          <div className="anneereprise">
-            <small>{anneereprise}</small>
+          <div className="col-md-4 text_1">
+            <h4>
+              <b>Maire: {name}</b>
+            </h4>
+            <div className="anneereprise">
+              <small>{anneereprise}</small>
+            </div>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-12">
+            <div className="social-container">
+              <h3 className="social-follow">Réseaux sociaux</h3>
+              <div className="social-icons">
+                <a href="https://www.facebook.com" className="facebook social">
+                  <FontAwesomeIcon icon={faFacebook} size="2x" />
+                </a>
+                <a href="https://www.twitter.com" className="twitter social">
+                  <FontAwesomeIcon icon={faTwitter} size="2x" />
+                </a>
+                <a
+                  href="https://www.instagram.com"
+                  className="instagram social"
+                >
+                  <FontAwesomeIcon icon={faInstagram} size="2x" />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -86,24 +105,6 @@ export default function Destination(props) {
             className="img-fluid"
             alt="Responsive_imge"
           />
-        </div>
-      </div>
-      <div className="social-container">
-        <div className="row">
-          <div className="col-sm-12">
-            <h3 className="social-follow">Réseaux sociaux</h3>
-            <div className="social-icons">
-              <a href="https://www.facebook.com" className="facebook social">
-                <FontAwesomeIcon icon={faFacebook} size="2x" />
-              </a>
-              <a href="https://www.twitter.com" className="twitter social">
-                <FontAwesomeIcon icon={faTwitter} size="2x" />
-              </a>
-              <a href="https://www.instagram.com" className="instagram social">
-                <FontAwesomeIcon icon={faInstagram} size="2x" />
-              </a>
-            </div>
-          </div>
         </div>
       </div>
     </div>

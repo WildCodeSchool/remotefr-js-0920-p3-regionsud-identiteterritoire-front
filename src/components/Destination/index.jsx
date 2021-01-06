@@ -9,6 +9,7 @@ import {
   faInstagram,
 } from '@fortawesome/free-brands-svg-icons';
 import PropTypes from 'prop-types';
+import { WiDayCloudy } from 'react-icons/wi';
 
 function Destination({
   population,
@@ -54,26 +55,26 @@ function Destination({
         </p>
         <div className="row">
           <div className="col-md-4 text_1">
-            <h4>
+            <h5>
               <b>Population: {population}</b>
-            </h4>
-            <div className="anneeRecensement">
+            </h5>
+            <div className="gbright-color">
               <small>{anneeRecensement}</small>
             </div>
           </div>
           <div className="col-md-4 text_1">
-            <h4>
+            <h5>
               <b>Superficie: {superficie}</b>
-            </h4>
-            <div className="km">
+            </h5>
+            <div className="gbright-color">
               <small>Km²</small>
             </div>
           </div>
           <div className="col-md-4 text_1">
-            <h4>
+            <h5>
               <b>Maire: {name}</b>
-            </h4>
-            <div className="anneereprise">
+            </h5>
+            <div className="gbright-color">
               <small>{anneereprise}</small>
             </div>
           </div>
@@ -101,15 +102,27 @@ function Destination({
         </div>
       </div>
       <div className="col-md-4">
-        <h2>
-          <b>19.0°</b> <small>Vent:NO 27Km/h</small>
-        </h2>
+        <div className="row">
+          <div className="col-md-6 ">
+            <h2>
+              <b>
+                <WiDayCloudy />
+                19.0°
+              </b>
+            </h2>
+          </div>
+        </div>
+        <div className="col-md-6 gbright-color">
+          <p>Vent:NO 27Km/h</p>
+        </div>
         <div className="row">
           <div className="col-md-12 bg-color">
             <h4>
-              <b>Office de Tourisme</b>
+              <b className="red-color">Office de Tourisme</b>
             </h4>
-            <p>Provence Méditerranée</p>
+            <p className="gbright-color">
+              <b>Provence Méditerranée</b>
+            </p>
             <p>
               <b>Bureau de Toulon</b>
               <br />
@@ -128,21 +141,23 @@ function Destination({
               Vendredi: 9h à 13h et de 14h à 18h
               <br />
               Samedi: 9h à 13h et de 14h à 18h
-              <br /> Dimanche: fermer
+              <br /> Dimanche: <b className="red-color">fermer</b>
             </p>
           </div>
         </div>
 
         <div className="row">
-          <div className="col-md-12 containerImg">
+          <div className="col-md-6 text-center">
             <img
               src="https://upload.wikimedia.org/wikipedia/fr/thumb/b/bc/Villes_Internet.jpg/220px-Villes_Internet.jpg"
-              className="img-fluid"
+              className="img-rate-quality-picto"
               alt="Responsive_imge"
             />
+          </div>
+          <div className="col-md-6 text-center">
             <img
               src="http://pro.visitparisregion.com/var/crt_idf/storage/images/media/crt-images/optimisation-de-vos-prestations/labels-et-reseaux/vvf2/logo-villes-et-villages-fleuris-2019/831511-1-fre-FR/Logo-Villes-et-villages-fleuris-2019_diaporama.jpg"
-              className="img-fluid"
+              className="img-rate-quality-picto"
               alt="Responsive_imge"
             />
           </div>

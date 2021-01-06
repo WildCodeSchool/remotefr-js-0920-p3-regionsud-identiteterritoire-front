@@ -1,30 +1,23 @@
+.img-rate-quality-picto {
+  max-width: 70%;
+}
+
 .text_1 h4 {
   padding-top: 20px;
   line-height: 5px;
   margin: 0 0 4px 0px;
   color: rgb(56, 53, 53);
 }
-
-.km {
-  color: rgb(133, 128, 128);
-}
-.anneereprise {
-  color: rgb(133, 128, 128);
-}
-.anneeRecensement {
-  color: rgb(133, 128, 128);
-}
-
-.fas {
-  font-size: 24px;
-}
-.containerImg {
-  display: flex;
-  max-width: 40%;
-  justify-content: space-evenly;
-}
+/*Grid office tourisme*/
 .bg-color {
   background-color: rgb(245, 245, 245);
+}
+/*******************************/
+.red-color {
+  color: rgb(219, 28, 28);
+}
+.gbright-color {
+  color: rgb(163, 158, 158);
 }
 /* SOCIAL CONTAINER*/
 .social-container {

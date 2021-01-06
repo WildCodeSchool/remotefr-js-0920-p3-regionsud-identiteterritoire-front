@@ -135,7 +135,7 @@ function Destination({
         </div>
 
         <div className="row">
-          <div className="col-md-12 bg-color pt-4">
+          <div className="col-md-12 bg-color title-office">
             <h4>
               <b className="red-color align-text">Office de Tourisme</b>
             </h4>

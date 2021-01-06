@@ -1,17 +1,20 @@
-.img-rate-quality-picto {
-  max-width: 70%;
-}
-
 .text_1 h4 {
   padding-top: 20px;
   line-height: 5px;
   margin: 0 0 4px 0px;
   color: rgb(56, 53, 53);
 }
+.miniInfo {
+  padding-left: 20px;
+}
 /*Grid office tourisme*/
 .bg-color {
   background-color: rgb(245, 245, 245);
 }
+.align-text {
+  margin-inline-start: 20px;
+}
+
 /*******************************/
 .red-color {
   color: rgb(219, 28, 28);
@@ -19,6 +22,7 @@
 .gbright-color {
   color: rgb(163, 158, 158);
 }
+
 /* SOCIAL CONTAINER*/
 .social-container {
   padding: 4px 40px;
@@ -50,4 +54,14 @@ a.twitter {
 
 a.instagram {
   color: rgb(187, 15, 110);
+}
+.align-baseline {
+  height: 10px;
+}
+.align-baseline1 {
+  height: 35px;
+}
+/* ICONS-PUB*/
+.img-rate-quality-picto {
+  max-width: 70%;
 }

@@ -9,6 +9,7 @@ import {
   faInstagram,
 } from '@fortawesome/free-brands-svg-icons';
 import PropTypes from 'prop-types';
+import { FaExpandAlt, FaUserTie, FaUsers } from 'react-icons/fa';
 import { WiDayCloudy } from 'react-icons/wi';
 
 function Destination({
@@ -21,7 +22,7 @@ function Destination({
   return (
     <div className="row">
       <div className="col-md-8">
-        <h1>
+        <h1 className="align-baseline1">
           Bienvenue à <b>Toulon</b>
         </h1>
         <p>
@@ -35,7 +36,10 @@ function Destination({
           amet consectetur adipisicing elit. Exercitationem, porro magni
           pariatur commodi debitis aperiam dolor eum repudiandae laborum
           reiciendis voluptates, maxime quod incidunt praesentium cupiditate
-          distinctio quis laboriosam explicabo.
+          distinctio quis laboriosam explicabo. Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Tempore quo corrupti, natus soluta
+          delectus error voluptates rerum optio est pariatur commodi quas
+          quisquam placeat obcaecati. Incidunt ipsa quis officia nobis.
         </p>
         <p>
           Troisième ville de la région Provence-Alpes-Côte d&apos;Azur derrière
@@ -43,7 +47,8 @@ function Destination({
           maritime de la Méditerranée. Lorem ipsum dolor sit amet consectetur
           adipisicing elit. Unde qui quasi doloremque recusandae, inventore modi
           mollitia aspernatur, architecto impedit aperiam voluptatum doloribus.
-          Accusamus eum debitis possimus quos asperiores placeat est.
+          Accusamus eum debitis possimus quos asperiores placeat est. Lorem
+          ipsum dolor sit amet consectetur adipisicing elit.
         </p>
         <p>
           La commune est établie sur les bords de la mer Méditerranée, le long
@@ -55,26 +60,35 @@ function Destination({
         </p>
         <div className="row">
           <div className="col-md-4 text_1">
-            <h5>
-              <b>Population: {population}</b>
+            <h5 className="align-baseline">
+              <b>
+                <FaUsers />
+                {population}
+              </b>
             </h5>
-            <div className="gbright-color">
+            <div className="gbright-color align-baseline miniInfo">
               <small>{anneeRecensement}</small>
             </div>
           </div>
           <div className="col-md-4 text_1">
-            <h5>
-              <b>Superficie: {superficie}</b>
+            <h5 className="align-baseline">
+              <b>
+                <FaExpandAlt />
+                {superficie}
+              </b>
             </h5>
-            <div className="gbright-color">
+            <div className="gbright-color align-baseline miniInfo">
               <small>Km²</small>
             </div>
           </div>
           <div className="col-md-4 text_1">
-            <h5>
-              <b>Maire: {name}</b>
+            <h5 className="align-baseline">
+              <b>
+                <FaUserTie />
+                {name}
+              </b>
             </h5>
-            <div className="gbright-color">
+            <div className="gbright-color miniInfo ">
               <small>{anneereprise}</small>
             </div>
           </div>
@@ -82,7 +96,7 @@ function Destination({
         <div className="row">
           <div className="col-md-12">
             <div className="social-container">
-              <h3 className="social-follow">Réseaux sociaux</h3>
+              <h4 className="social-follow">Réseaux sociaux</h4>
               <div className="social-icons">
                 <a href="https://www.facebook.com" className="facebook social">
                   <FontAwesomeIcon icon={faFacebook} size="2x" />
@@ -103,27 +117,32 @@ function Destination({
       </div>
       <div className="col-md-4">
         <div className="row">
-          <div className="col-md-6 ">
+          <div className="col-md-4 d-flex justify-content-center">
             <h2>
-              <b>
-                <WiDayCloudy />
-                19.0°
-              </b>
+              <WiDayCloudy size="70px" />
             </h2>
           </div>
+          <div className="col-md-4 d-flex justify-content-center">
+            <h2>
+              <b>19.0°</b>
+            </h2>
+          </div>
+          <div className="col-md-4 gbright-color d-flex justify-content-center">
+            <p>
+              Vent:NO <br /> 27Km/h
+            </p>
+          </div>
         </div>
-        <div className="col-md-6 gbright-color">
-          <p>Vent:NO 27Km/h</p>
-        </div>
+
         <div className="row">
-          <div className="col-md-12 bg-color">
+          <div className="col-md-12 bg-color pt-4">
             <h4>
-              <b className="red-color">Office de Tourisme</b>
+              <b className="red-color align-text">Office de Tourisme</b>
             </h4>
-            <p className="gbright-color">
+            <p className="gbright-color align-text">
               <b>Provence Méditerranée</b>
             </p>
-            <p>
+            <p className="align-text">
               <b>Bureau de Toulon</b>
               <br />
               12,place Louis Blanc <br />
@@ -131,7 +150,7 @@ function Destination({
               Tel: +33 4 94 18 53 00 <br />
               E-mai:info@toulontourisme.com
             </p>
-            <p>
+            <p className="align-text">
               Horaires (Toute l&apos;année) <br />
               Lundi: 9h à 13h et de 14h à 18h <br />
               Mardi: <b>10h</b> à 13h et de 14h à 18h <br />

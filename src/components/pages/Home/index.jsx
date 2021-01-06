@@ -34,7 +34,7 @@ class Home extends React.Component {
               <p>Social/Santé/Sport</p>
               <li>
                 <a href="#">
-                  <i className="fas fa-home" />
+                  <i className="fas fa-landmark" />
                 </a>
               </li>
               <p>Musée</p>

@@ -7,9 +7,10 @@ body {
 }
 
 .container-theme {
-  position: fixed;
+  position: relative;
   margin-top: 50px;
   text-align: center;
+  left: 700px;
 }
 
 .text-theme {
@@ -66,4 +67,12 @@ body {
 
 .circle-theme ul li a i {
   line-height: 70px;
+}
+
+.circle-theme ul li:hover {
+  background-color: #a57f1e;
+}
+
+.circle-theme ul li a:hover {
+  color: #fdc52a;
 }

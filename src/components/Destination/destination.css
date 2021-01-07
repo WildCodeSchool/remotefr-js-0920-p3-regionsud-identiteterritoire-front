@@ -32,7 +32,9 @@
 .title-office {
   padding-top: 35px;
 }
-
+.villageIcons {
+  margin-top: 15px;
+}
 /*******************************/
 .red-color {
   color: rgb(219, 28, 28);

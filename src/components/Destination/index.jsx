@@ -175,14 +175,14 @@ function Destination({
           </div>
 
           <div className="row">
-            <div className="col-md-6 text-center bureau">
+            <div className="col-md-6 text-center villageIcons">
               <img
                 src={imagesLogoVilleInternet}
                 className="img-rate-quality-picto"
                 alt="Responsive_imge"
               />
             </div>
-            <div className="col-md-6 text-center bureau">
+            <div className="col-md-6 text-center villageIcons">
               <img
                 src={imageLogoVillageFlories}
                 className="img-rate-quality-picto"

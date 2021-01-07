@@ -7,9 +7,24 @@
 .miniInfo {
   padding-left: 20px;
 }
+
 /*Grid office tourisme*/
 .bg-color {
   background-color: rgb(245, 245, 245);
+}
+.weaderlogo {
+  margin: 10px auto;
+}
+.Provence {
+  line-height: 1%;
+}
+.bureau {
+  margin-top: 30px;
+}
+
+/* ICONS-PUB*/
+.img-rate-quality-picto {
+  max-width: 70%;
 }
 .align-text {
   margin-inline-start: 20px;
@@ -64,7 +79,10 @@ a.instagram {
 .align-baseline1 {
   height: 35px;
 }
-/* ICONS-PUB*/
-.img-rate-quality-picto {
-  max-width: 70%;
+
+.orange-bar {
+  background-color: #fcbb3b;
+  width: 30%;
+  height: 14px;
+  margin: 60px auto;
 }

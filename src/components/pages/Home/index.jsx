@@ -16,6 +16,30 @@ class Home extends React.Component {
     return (
       <div className="container">
         <div className="home col-md-12">
+          {/* SEARCHBAR */}
+
+          <div className="container-searchbar col-xs-12">
+            <select className="form-select">
+              <option selected>Changer de ville</option>
+              <option value="1">Marseille</option>
+              <option value="2">Toulon</option>
+              <option value="3">Nice</option>
+            </select>
+            <select className="form-select">
+              <option selected>Changer de personne</option>
+              <option value="1">Marseille</option>
+              <option value="2">Toulon</option>
+              <option value="3">Nice</option>
+            </select>
+            <input type="date" value="2021-01-12" />
+            <ul>
+              <li>
+                <a href="#">
+                  <i className="fas fa-search" />
+                </a>
+              </li>
+            </ul>
+          </div>
           <h1>Home page</h1>
           <Link to="/commune/83000">Toulon</Link>
         </div>

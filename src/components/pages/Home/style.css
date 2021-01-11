@@ -1,0 +1,78 @@
+body {
+  background-color: #e7e7e7;
+}
+
+.container {
+  background-color: #fff;
+}
+
+.container-theme {
+  position: relative;
+  margin-top: 50px;
+  text-align: center;
+  left: 700px;
+}
+
+.text-theme {
+  color: #dc2c31;
+  font-family: 'Poppins', sans-serif;
+  line-height: 80%;
+  margin-bottom: 20px;
+}
+
+.text-theme p {
+  margin-left: -45px;
+  font-size: 25px;
+}
+
+.text-theme > span {
+  text-align: center;
+  font-weight: bold;
+  font-size: 35px;
+}
+
+.circle-theme {
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+.circle-theme p {
+  font-size: 12px;
+  font-family: 'Poppins', sans-serif;
+  color: #a6a6a6;
+}
+
+.circle-theme ul {
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+}
+
+.circle-theme ul li {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  background-color: #fdc52a;
+  border-radius: 100%;
+  margin: 10px 0px;
+}
+
+.circle-theme ul li a {
+  display: block;
+  color: #a57f1e;
+  font-size: 30px;
+}
+
+.circle-theme ul li a i {
+  line-height: 70px;
+}
+
+.circle-theme ul li:hover {
+  background-color: #a57f1e;
+}
+
+.circle-theme ul li a:hover {
+  color: #fdc52a;
+}

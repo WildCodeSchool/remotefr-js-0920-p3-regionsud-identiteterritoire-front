@@ -1,6 +1,17 @@
 .logo-homepage {
   width: 277px;
-  height: 150px;
+  height: 180px;
+}
+
+.header-text {
+  font-size: 25px;
+  margin: 0.2em;
+  padding-top: 1em;
+}
+
+.header-text > p,
+.header-text > h1 {
+  margin: 0;
 }
 
 .header-logo {
@@ -36,12 +47,14 @@
 }
 
 .homepage-nav {
-  background-color: #4c4a4a;
-  color: white;
+  background-color: white;
+  color: black;
   display: flex;
   justify-content: center;
   position: absolute;
-  bottom: 0%;
-  width: 100%;
+  bottom: 40%;
+  left: 10%;
+  width: 80%;
   letter-spacing: 2px;
+  border-radius: 30px;
 }

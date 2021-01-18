@@ -1,7 +1,9 @@
 import React from 'react';
+import './css/styles.css';
 import PropTypes from 'prop-types';
 import Header from './Header';
 import Footer from './Footer';
+
 /**
  * @class Templates
  * @description fusionne le haut et le bas du site
@@ -18,7 +20,7 @@ class Templates extends React.Component {
     return (
       <div>
         <Header />
-        <main className="container">{children}</main>
+        <main className="container bg-white">{children}</main>
         <Footer />
       </div>
     );

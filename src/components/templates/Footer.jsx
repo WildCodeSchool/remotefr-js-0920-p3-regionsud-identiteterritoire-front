@@ -1,4 +1,5 @@
 import React from 'react';
+import logoBlack from './images/logo-black.jpg';
 
 /**
  * @class Footer
@@ -12,7 +13,17 @@ class Footer extends React.Component {
   }
 
   render = () => {
-    return <footer className="container">Footer</footer>;
+    return (
+      <footer>
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12 text-center">
+              <img src={logoBlack} alt="" className="center-content" />
+            </div>
+          </div>
+        </div>
+      </footer>
+    );
   };
 }
 export default Footer;

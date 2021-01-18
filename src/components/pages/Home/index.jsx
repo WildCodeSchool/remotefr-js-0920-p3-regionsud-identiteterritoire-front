@@ -1,10 +1,14 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import './style.css';
+import HomeMapBox from './mapbox';
+import SliderTop from '../../elements/SliderTop';
+
 /**
- * @class Header
- * @description Gere le haut du site
+ * @class Home
+ * @description Homepage du site web
  */
 class Home extends React.Component {
   constructor(props) {
@@ -14,66 +18,103 @@ class Home extends React.Component {
 
   render = () => {
     return (
-      <div className="container">
-        <div className="home col-md-12">
-          {/* SEARCHBAR */}
-
-          <div className="container-searchbar col-xs-12">
-            <select className="form-select">
-              <option selected>Changer de ville</option>
-              <option value="1">Marseille</option>
-              <option value="2">Toulon</option>
-              <option value="3">Nice</option>
-            </select>
-            <select className="form-select">
-              <option selected>Changer de personne</option>
-              <option value="1">Marseille</option>
-              <option value="2">Toulon</option>
-              <option value="3">Nice</option>
-            </select>
-            <input type="date" value="2021-01-12" />
-            <ul>
-              <li>
-                <a href="#">
-                  <i className="fas fa-search" />
-                </a>
-              </li>
-            </ul>
+      <div>
+        <SliderTop pictures="home-slide.jpg" />
+        <div className="row">
+          <div className="col-md-12">
+            <div className="bigTitle">Laissez vous guider</div>
           </div>
-          <h1>Home page</h1>
-          <Link to="/commune/83000">Toulon</Link>
         </div>
-        <div className="container-theme">
-          <div className="text-theme">
-            <p>Accès</p>
-            <span>Rapide</span>
+
+        <div className="row">
+          <div className="col-md-8 offset-md-2">
+            <div className="row">
+              <div className="col-md-6">
+                <BlockRandomCity
+                  name="Marseille"
+                  cp="13001"
+                  picture="marseille.jpg"
+                />
+                <BlockRandomCity
+                  name="Toulon"
+                  cp="83000"
+                  picture="toulon.jpg"
+                />
+              </div>
+              <div className="col-md-6 mrg-home-decalage">
+                <BlockRandomCity name="Nice" cp="06000" picture="nice.jpg" />
+                <BlockRandomCity
+                  name="Forcalquier"
+                  cp="04300"
+                  picture="forcalquier.jpg"
+                />
+              </div>
+            </div>
           </div>
-          <div className="circle-theme">
-            <ul>
-              <li>
-                <a href="#">
-                  <i className="fas fa-heart" />
-                </a>
-              </li>
-              <p>Social/Santé/Sport</p>
-              <li>
-                <a href="#">
-                  <i className="fas fa-landmark" />
-                </a>
-              </li>
-              <p>Musée</p>
-              <li>
-                <a href="#">
-                  <i className="fas fa-leaf" />
-                </a>
-              </li>
-              <p>Environnement</p>
-            </ul>
+        </div>
+
+        <div className="row relative">
+          <div className="bigTitle abso-choisir-sur-carte">
+            Choisir sur une carte
+          </div>
+          <HomeMapBox />
+        </div>
+        <div className="row">
+          <div className="col-md-12">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, sit
+            aspernatur atque alias maiores iure commodi ratione reprehenderit id
+            rem ducimus nostrum aut cumque suscipit eos, quod consequatur.
+            Repellendus, quibusdam! Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Ullam, sit aspernatur atque alias maiores iure
+            commodi ratione reprehenderit id rem ducimus nostrum aut cumque
+            suscipit eos, quod consequatur. Repellendus, quibusdam! Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Ullam, sit aspernatur
+            atque alias maiores iure commodi ratione reprehenderit id rem
+            ducimus nostrum aut cumque suscipit eos, quod consequatur.
+            Repellendus, quibusdam! Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Ullam, sit aspernatur atque alias maiores iure
+            commodi ratione reprehenderit id rem ducimus nostrum aut cumque
+            suscipit eos, quod consequatur. Repellendus, quibusdam! Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Ullam, sit aspernatur
+            atque alias maiores iure commodi ratione reprehenderit id rem
+            ducimus nostrum aut cumque suscipit eos, quod consequatur.
           </div>
         </div>
       </div>
     );
   };
 }
+
+/**
+ * @class BlockRandomCity
+ * @description Gere les block random des villes
+ */
+const BlockRandomCity = (props) => {
+  const { name, cp, picture } = props;
+  const pictureUrl = `./images/${picture}`;
+  return (
+    <div>
+      <div className="row">
+        <div className="col-md-4">
+          <img src={pictureUrl} className="img-fluid" alt={name} />
+        </div>
+        <div className=" col-md-8">
+          <Link to={`/commune/${cp}`} className="home-title-city">
+            {name}
+          </Link>
+          cp Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+          alias ipsa aperiam voluptatum! Hic sint accusamus aperiam veritatis
+          illo
+        </div>
+      </div>
+    </div>
+  );
+};
+
+BlockRandomCity.propTypes = {
+  picture: PropTypes.string.isRequired,
+  cp: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+};
 
 export default Home;

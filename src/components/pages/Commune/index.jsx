@@ -1,8 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import Cultuero from '../../widgets/Cultuero';
+import InfoCommune from '../../widgets/InfoCommune';
+import MapCommune from '../../widgets/MapCommune';
+import SliderTop from '../../elements/SliderTop';
+
 /**
- * @class Header
+ * @class Commune
  * @description Gere le haut du site
  */
 class Commune extends React.Component {
@@ -12,28 +14,14 @@ class Commune extends React.Component {
   }
 
   render = () => {
-    const { match } = this.props;
     return (
       <div>
-        <h1>Toulon ({match.params.id})</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus impedit
-          corrupti assumenda quia nulla nemo, animi voluptatibus esse doloribus
-          veniam laudantium, alias ab ducimus cupiditate non? Vitae impedit
-          debitis rem?
-        </p>
-        <Cultuero />
+        <SliderTop pictures="communes/toulon.jpg" />
+        <InfoCommune />
+        <MapCommune />
       </div>
     );
   };
 }
-
-Commune.propTypes = {
-  match: PropTypes.shape({
-    params: PropTypes.shape({
-      id: PropTypes.number.isRequired,
-    }).isRequired,
-  }).isRequired,
-};
 
 export default Commune;

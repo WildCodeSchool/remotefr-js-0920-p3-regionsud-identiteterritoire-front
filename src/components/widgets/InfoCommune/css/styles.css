@@ -1,0 +1,95 @@
+.text_1 h4 {
+  padding-top: 20px;
+  line-height: 5px;
+  margin: 0 0 4px 0px;
+  color: rgb(56, 53, 53);
+}
+.miniInfo {
+  padding-left: 20px;
+}
+
+/*Grid office tourisme*/
+.bg-color {
+  background-color: rgb(245, 245, 245);
+}
+.weaderlogo {
+  margin: 10px auto;
+}
+.Provence {
+  line-height: 1%;
+}
+.bureau {
+  margin-top: 30px;
+}
+
+/* ICONS-PUB*/
+.img-rate-quality-picto {
+  max-width: 70%;
+}
+.align-text {
+  margin-inline-start: 20px;
+}
+
+.villageIcons {
+  margin-top: 15px;
+}
+/*******************************/
+.red-color {
+  color: rgb(219, 28, 28);
+}
+.gbright-color {
+  color: rgb(163, 158, 158);
+}
+
+/* SOCIAL CONTAINER*/
+.social-container {
+  padding: 4px 40px;
+  margin-top: 50px;
+  align-items: center;
+}
+.social-follow {
+  text-align: center;
+  color: rgb(163, 158, 158);
+}
+.social-icons {
+  text-align: center;
+}
+a.social {
+  margin: 0 10px;
+  display: inline-block;
+}
+a.social:hover {
+  transform: translateY(-2px);
+}
+
+a.facebook {
+  color: #4968ad;
+}
+
+a.twitter {
+  color: #49a1eb;
+}
+
+a.instagram {
+  color: rgb(187, 15, 110);
+}
+.align-baseline {
+  height: 10px;
+}
+.align-baseline1 {
+  height: 35px;
+}
+
+.orange-bar {
+  background-color: #fcbb3b;
+  width: 30%;
+  height: 14px;
+  margin: 60px auto;
+}
+
+
+
+
+.padding-grey-block{
+  padding:24px 15px 15px 15px;
+}

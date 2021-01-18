@@ -1,0 +1,61 @@
+.headerpunchlineslim {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.headerpunchlineBig {
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 24px;
+}
+
+.logoWildCodeSchool{
+  margin-top:15px;
+}
+
+.h100{
+ height:100%;
+}
+
+
+.bigTitle {
+  font-size: 70px;
+  font-weight: bold;
+  color: #f2f2f2;
+}
+
+.center-content {
+  margin: 0 auto;
+}
+
+.home-title-city {
+  font-size: 30px;
+  font-weight: bold;
+  color:#313131;
+  display: block;
+}
+
+footer {
+  background-color: #313131;
+  color: #fff;
+  min-height: 300px;
+  padding-top:30px;
+}
+
+#map {
+  width: 100%;
+  height: 500px;
+  margin-top: 70px;
+}
+
+.relative {
+  position: relative;
+}
+
+.abso-choisir-sur-carte {
+  position: absolute;
+}
+
+.mrg-home-decalage {
+  margin-top: 60px;
+}

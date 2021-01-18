@@ -1,0 +1,51 @@
+.slider {
+  position: relative;
+  height: 300px;
+  max-width: 100%;
+  background-color: #d2d2d2;
+  background-repeat: no-repeat;
+  background-position: center 80%;
+  /*ici variable*/
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+.slider-container{
+  margin-bottom:25px;
+}
+
+.vertical-center {
+  margin: 0 auto;
+  position: absolute;
+  top: 70%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 600px;
+}
+
+.roundedFormsHome {
+  border: 1px solid rgb(221, 221, 221) !important;
+  border-radius: 24px !important;
+  color: rgb(34, 34, 34) !important;
+  display: flex !important;
+  height: 42px !important;
+  position: relative !important;
+  width: 100% !important;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 16px 32px, rgba(0, 0, 0, 0.1) 0px 3px 8px !important;
+  background-color: #fff;
+}
+
+#sliderForms>input {
+  border-width: 0px;
+  border: none;
+}
+
+.dot {
+  height: 36px;
+  width: 36px;
+  background-color: #fcbb3b;
+  border-radius: 50%;
+  display: inline-block;
+}

@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import Templates from './components/templates';
 import Commune from './components/pages/Commune'; // Exemple
 import Home from './components/pages/Home'; // Exemple
-import FloatQuickAccess from './components/elements/FloatQuickAccess';
+import FloatQuickAccess from './components/elements/FloatQuickAccess'; // Exemple
 
 function App() {
   return (

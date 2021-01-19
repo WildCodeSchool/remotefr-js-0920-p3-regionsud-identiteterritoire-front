@@ -9,14 +9,13 @@
   line-height: 24px;
 }
 
-.logoWildCodeSchool{
-  margin-top:15px;
+.logoWildCodeSchool {
+  margin-top: 15px;
 }
 
-.h100{
- height:100%;
+.h100 {
+  height: 100%;
 }
-
 
 .bigTitle {
   font-size: 70px;
@@ -24,22 +23,115 @@
   color: #f2f2f2;
 }
 
-.center-content {
-  margin: 0 auto;
-}
-
 .home-title-city {
   font-size: 30px;
   font-weight: bold;
-  color:#313131;
+  color: #313131;
   display: block;
 }
 
+/***** FOOTER *****/
+
 footer {
   background-color: #313131;
-  color: #fff;
   min-height: 300px;
-  padding-top:30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: #fff;
+}
+
+/* LOGO */
+
+.top-border {
+  margin: 3%;
+  border-top: rgba(255, 255, 255, 0.158) 1px solid;
+}
+
+.center-content {
+  margin: 0 auto;
+  margin: 5%;
+}
+
+.border-title {
+  margin-right: 30%;
+  width: 10%;
+}
+
+.social-border-title {
+  margin-right: 64%;
+  width: 10%;
+}
+
+.title-footer {
+  margin-left: 30%;
+  margin-bottom: 5%;
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff;
+}
+
+.title-footer-horaire {
+  margin-left: 25%;
+  margin-bottom: 5%;
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff;
+}
+
+.connect-social-title {
+  margin-left: 13%;
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff;
+}
+
+.adress > h6 {
+  margin-left: 30%;
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff;
+}
+
+.adress > p {
+  text-align: left;
+  margin-left: 30%;
+  line-height: 50%;
+}
+
+.horaire > p {
+  text-align: left;
+  margin-left: 25%;
+  line-height: 50%;
+}
+
+.liens-utiles > a {
+  text-align: left;
+  line-height: 50%;
+  color: #fff;
+}
+
+.btn-footer {
+  text-transform: uppercase;
+  color: #fff;
+  border: #fff 2px solid;
+  background: none;
+  font-weight: bold;
+  padding: 5%;
+  cursor: pointer;
+  text-align: left;
+}
+
+.icon-social {
+  padding: 2%;
+  margin: 1%;
+  width: 13%;
+  color: #fff;
+  border: #fff 2px solid;
+  cursor: pointer;
 }
 
 #map {

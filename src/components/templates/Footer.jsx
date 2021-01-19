@@ -110,7 +110,7 @@ class Footer extends React.Component {
                 <h5 className="title-footer-horaire">Du lundi au vendredi</h5>
                 <p>De 9h à 17h sans interruption</p>
                 <p>04 91 57 50 57</p>
-                <button type="button" className="btn-footer">
+                <button type="button" className="btn-footer-contact">
                   Contacter la Région
                 </button>
               </div>
@@ -125,7 +125,6 @@ class Footer extends React.Component {
                 >
                   Subventions régionales
                 </a>
-                <br />
                 <a
                   href="#"
                   alt="Sud Marchés Publics"

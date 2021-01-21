@@ -17,6 +17,7 @@ import { FaExpandAlt, FaUserTie, FaUsers } from 'react-icons/fa';
 import imagesLogoVilleInternet from './images/logo-villes-internet-1.jpg';
 import Weather from './Weather';
 import imageLogoVillageFlories from './images/Logo-Villes-et-villages-fleuris-2019_diaporama.jpg';
+
 /**
  * @class InfoCommune
  * @description Map en bas de la home
@@ -26,6 +27,9 @@ class InfoCommune extends React.Component {
     super(props);
     this.state = {
       commune: [],
+      mairie: [],
+      maire: [],
+      geocommune: [],
     };
   }
 
@@ -42,24 +46,45 @@ class InfoCommune extends React.Component {
         const commune = res.data;
         this.setState({ commune });
       });
+
+    axios
+      .get(`https://regionsud-api.woozy.fr/api/communes/${id}/mairie`)
+      .then((res) => {
+        const mairie = res.data;
+        this.setState({ mairie });
+      });
+
+    axios
+      .get(`https://regionsud-api.woozy.fr/api/communes/${id}/maire`)
+      .then((res) => {
+        const maire = res.data;
+        this.setState({ maire });
+      });
+
+    axios
+      .get(`https://regionsud-api.woozy.fr/api/communes/${id}/geocommunes`)
+      .then((res) => {
+        const geocommune = res.data;
+        this.setState({ geocommune });
+      });
   }
 
   render() {
-    const { commune } = this.state;
+    const { commune, geocommune, maire, mairie } = this.state;
 
     return (
-      <div>
+      <div className="col-md-10 offset-md-1">
         <div className="row">
           <div className="col-md-8">
             <h1 className="align-baseline1">
-              Bienvenue à <b>{commune.nom_reel}</b>
+              Bienvenue à <b>{commune.nom}</b>
             </h1>
             <p>
               <b>Site officiel:</b>
-              <a href="https://www.toulon.fr"> https://www.toulon.fr</a>
+              <a href="{mairie.www}" target="_blank">
+                {` ${mairie.www}`}
+              </a>
             </p>
-
-            <p className="text-parag">{commune.text}</p>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
               Exercitationem, porro magni pariatur commodi debitis aperiam dolor
@@ -86,34 +111,31 @@ class InfoCommune extends React.Component {
                 <h5 className="align-baseline">
                   <b>
                     <FaUsers />
-                    {commune.population_2012}
+                    {geocommune.population}
                   </b>
                 </h5>
                 <div className="gbright-color align-baseline miniInfo">
-                  <small>2012</small>
+                  2012
                 </div>
               </div>
+
               <div className="col-md-4 text_1">
                 <h5 className="align-baseline">
                   <b>
                     <FaExpandAlt />
-                    {commune.surface}
+                    {geocommune.superficie / 100}km²
                   </b>
                 </h5>
-                <div className="gbright-color align-baseline miniInfo">
-                  <small>Km²</small>
-                </div>
+                <div className="gbright-color align-baseline miniInfo">Km²</div>
               </div>
               <div className="col-md-4 text_1">
                 <h5 className="align-baseline">
                   <b>
                     <FaUserTie />
-                    {commune.maire}
+                    {maire.nom} {maire.prenom}
                   </b>
                 </h5>
-                <div className="gbright-color miniInfo ">
-                  <small>2018</small>
-                </div>
+                <div className="gbright-color miniInfo ">58ans</div>
               </div>
             </div>
             <div className="row">
@@ -150,7 +172,9 @@ class InfoCommune extends React.Component {
               <div className="col-md-12">
                 <div className="bg-grey-light padding-grey-block">
                   <h4>
-                    <b className="red-color align-text">Office de Tourisme</b>
+                    <b className="red-color align-text officeTourismeTitle">
+                      Office de Tourisme
+                    </b>
                   </h4>
                   <p className="gbright-color align-text Provence">
                     <b>Provence Méditerranée</b>
@@ -215,12 +239,3 @@ InfoCommune.propTypes = {
 };
 
 export default withRouter(InfoCommune);
-
-// Destination.propTypes = {
-//   name: PropTypes.string.isRequired,
-//   maire: PropTypes.string.isRequired,
-//   population: PropTypes.number.isRequired,
-//   anneeRecensement: PropTypes.number.isRequired,
-//   superficie: PropTypes.number.isRequired,
-//   anneereprise: PropTypes.number.isRequired,
-// };

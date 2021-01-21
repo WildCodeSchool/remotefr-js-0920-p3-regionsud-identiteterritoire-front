@@ -33,39 +33,24 @@ function Patrimoine() {
           />
         </div>
         <div className="Row">
-          <div className="col-md-4">
+          <div className="col-md-6">
             <img
               src={logoMusee}
               className="img-rate-quality-picto  roundedImage"
               alt="Responsive_imge"
             />
+          </div>
+          <div className="col-md-6">
             <p>
               <b>Musée d&apos;art</b>
             </p>
+
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
               incidunt quis id ex vel? Iste perferendis excepturi porro id illo
               pariatur in voluptatem sunt, reprehenderit nulla dolores?
               Dignissimos, deleniti culpa!
             </p>
-          </div>
-          <div className="Row">
-            <div className="col-md-4">
-              <img
-                src={logoMusee}
-                className="img-rate-quality-picto  roundedImage"
-                alt="Responsive_imge"
-              />
-              <p>
-                <b>Musée d&apos;art</b>
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Veritatis incidunt quis id ex vel? Iste perferendis excepturi
-                porro id illo pariatur in voluptatem sunt, reprehenderit nulla
-                dolores? Dignissimos, deleniti culpa!
-              </p>
-            </div>
           </div>
         </div>
       </div>

@@ -1,16 +1,16 @@
 .container-theme {
-  position:fixed;
-  top: 35px;
-  right: 180px;
+  position: absolute;
   text-align: center;
+  top: 35px;
+  right: 6%;
 }
 
 .circle-icon {
-  background-color:#fcbb3b;
+  background-color: #fcbb3b;
   padding: 20px;
   border-radius: 50%;
   margin-bottom: 10px;
-  color:#a67e1e;
+  color: #a67e1e;
 }
 
 .BlockRoundIcon a:hover .circle-icon {
@@ -21,14 +21,13 @@
   color: #7f6216;
 }
 
-.BlockRoundIcon a:hover>div {
+.BlockRoundIcon a:hover > div {
   color: #5c5c5c;
   text-decoration: none;
 }
 
-
-.BlockRoundIcon>a>div {
-  color:#888888;
+.BlockRoundIcon > a > div {
+  color: #888888;
 }
 
 .BlockRoundIcon {
@@ -39,15 +38,15 @@
 .title-theme {
   color: #f14132;
   text-align: left;
-  margin-bottom:30px;
+  margin-bottom: 30px;
 }
 
-.title-theme>:first-of-type {
+.title-theme > :first-of-type {
   line-height: 0px;
   font-size: 22px;
 }
 
-.title-theme>:last-of-type {
+.title-theme > :last-of-type {
   font-weight: bold;
   font-size: 35px;
 }

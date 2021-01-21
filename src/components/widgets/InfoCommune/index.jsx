@@ -1,5 +1,3 @@
-// eslint-disable react/prefer-stateless-function
-// eslint-disable react/no-unescaped-entities
 import React from 'react';
 import axios from 'axios';
 import { withRouter } from 'react-router-dom';

@@ -18,7 +18,7 @@ class Home extends React.Component {
 
   render = () => {
     return (
-      <div>
+      <div className="Global">
         <SliderTop pictures="home-slide.jpg" />
         <div className="row">
           <div className="col-md-12">

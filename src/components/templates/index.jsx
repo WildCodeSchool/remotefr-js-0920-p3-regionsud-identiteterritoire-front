@@ -18,7 +18,7 @@ class Templates extends React.Component {
   render = () => {
     const { children } = this.props;
     return (
-      <div>
+      <div className="Global">
         <Header />
         <main className="container bg-white">{children}</main>
         <Footer />

@@ -1,6 +1,9 @@
 import React from 'react';
 import './css/styles.css';
 import PropTypes from 'prop-types';
+import SelectPersonas from './SelectPersonas';
+import DatePicker from './DatePicker';
+import SelectTown from './SelectTown';
 /**
  * @class SliderTop
  * @description Gestion des slider
@@ -20,7 +23,12 @@ const SliderTop = (props) => {
         <div className="row justify-content-center align-self-center h100">
           <div className="vertical-center">
             <div className="roundedFormsHome">
-              <span className="dot" />
+              <SelectTown />
+              <SelectPersonas />
+              <DatePicker />
+              <span className="dot">
+                <i className="fas fa-search search-icon" />{' '}
+              </span>
             </div>
           </div>
         </div>

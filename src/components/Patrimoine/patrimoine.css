@@ -1,0 +1,16 @@
+.title_p {
+  color: rgb(245, 20, 20);
+  font-size: 4em;
+}
+.number {
+  color: red;
+}
+.roundedImage {
+  border-radius: 100px;
+  width: 90px;
+  height: 90px;
+}
+.logoMinister {
+  width: 250px;
+  height: 250px;
+}

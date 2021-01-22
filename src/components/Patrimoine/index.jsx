@@ -6,30 +6,11 @@ import logoMusee from './images/logoMusee.jpg';
 function Patrimoine() {
   return (
     <div>
-      <div className="Row">
-        <div className="col-md-12">
+      <div className="row">
+        <div className="col-md-8">
           <h1 className="title_p">
             <b>Patrimoine</b>
           </h1>
-          <div className="col-md-4 rounded  float-right">
-            <img
-              src={logoMusee}
-              className="img-fluid img-thumbnail roundedImage"
-              alt="Responsive_imge"
-            />
-            <p>
-              <b>Musée d&apos;art</b>
-            </p>
-
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-              incidunt quis id ex vel? Iste perferendis excepturi porro id illo
-              pariatur in voluptatem sunt, reprehenderit nulla dolores?
-              Dignissimos, deleniti culpa!
-            </p>
-          </div>
-        </div>
-        <div className="col-md-6">
           <h4>
             <b>Musées</b>
           </h4>
@@ -46,13 +27,67 @@ function Patrimoine() {
             <br /> l&apos;institut de France, figurent dans ce <br />
             recensement.
           </p>
-        </div>
-        <div className="col-md-3">
           <img
             src={logoMinistere}
             className="img-rate-quality-pico logoMinister"
             alt="Responsive_imge"
           />
+        </div>
+
+        <div className="col-md-4">
+          <div className="row">
+            <div className="col-md-4">
+              <img
+                src={logoMusee}
+                className="img-fluid img-thumbnail roundedImage"
+                alt="Responsive_imge"
+              />
+              <p>
+                <b>Musée d&apos;art</b>
+              </p>
+
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Veritatis incidunt quis id ex vel? Iste perferendis excepturi
+                porro id illo pariatur in voluptatem sunt, reprehenderit nulla
+                dolores? Dignissimos, deleniti culpa!
+              </p>
+            </div>
+            <div className="col-md-4">
+              <img
+                src={logoMusee}
+                className="img-fluid img-thumbnail roundedImage"
+                alt="Responsive_imge"
+              />
+              <p>
+                <b>Musée d&apos;art</b>
+              </p>
+
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Veritatis incidunt quis id ex vel? Iste perferendis excepturi
+                porro id illo pariatur in voluptatem sunt, reprehenderit nulla
+                dolores? Dignissimos, deleniti culpa!
+              </p>
+            </div>
+            <div className="col-md-4">
+              <img
+                src={logoMusee}
+                className="img-fluid img-thumbnail roundedImage"
+                alt="Responsive_imge"
+              />
+              <p>
+                <b>Musée d&apos;art</b>
+              </p>
+
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Veritatis incidunt quis id ex vel? Iste perferendis excepturi
+                porro id illo pariatur in voluptatem sunt, reprehenderit nulla
+                dolores? Dignissimos, deleniti culpa!
+              </p>
+            </div>
+          </div>
         </div>
       </div>
       <div className="row">

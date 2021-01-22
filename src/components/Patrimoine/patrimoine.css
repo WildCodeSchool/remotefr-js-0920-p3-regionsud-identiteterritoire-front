@@ -1,9 +1,9 @@
 .title_p {
-  color: rgb(245, 20, 20);
+  color: rgb(241, 8, 8);
   font-size: 4em;
 }
 .number {
-  color: red;
+  color: rgb(241, 8, 8);
 }
 .roundedImage {
   border-radius: 100px;
@@ -12,5 +12,10 @@
 }
 .logoMinister {
   width: 250px;
-  height: 250px;
+  height: auto;
+}
+.patrimoine_container {
+  padding: 4px 40px;
+  margin-top: 50px;
+  align-items: center;
 }

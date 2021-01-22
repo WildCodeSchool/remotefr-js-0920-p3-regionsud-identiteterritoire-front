@@ -2,7 +2,7 @@ import React from 'react';
 import InfoCommune from '../../widgets/InfoCommune';
 import MapCommune from '../../widgets/MapCommune';
 import SliderTop from '../../elements/SliderTop';
-
+import Evenements from '../../Evenements';
 /**
  * @class Commune
  * @description Gere le haut du site
@@ -18,6 +18,7 @@ class Commune extends React.Component {
       <div>
         <SliderTop pictures="communes/toulon.jpg" />
         <InfoCommune />
+        <Evenements />
         <MapCommune />
       </div>
     );

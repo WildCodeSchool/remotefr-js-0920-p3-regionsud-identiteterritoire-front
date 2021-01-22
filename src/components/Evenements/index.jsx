@@ -6,7 +6,7 @@ function Evenements() {
     <div>
       <div className="row">
         <div className="col-md-8">
-          <h1 className="title_e">
+          <h1 className="title">
             <b>Evévenements</b>
           </h1>
           <h4>

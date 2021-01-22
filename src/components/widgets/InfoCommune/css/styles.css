@@ -7,7 +7,9 @@
 .miniInfo {
   padding-left: 20px;
 }
-
+.officeTourismeTitle{
+  font-size:22px;
+}
 /*Grid office tourisme*/
 .bg-color {
   background-color: rgb(245, 245, 245);

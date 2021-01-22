@@ -4,6 +4,7 @@ import Select from 'react-select';
 const options = [
   { label: 'Habitant', value: 'habitant' },
   { label: 'Nouvel arrivant', value: 'nouvel arrivant' },
+  { label: 'Touriste', value: 'touriste' },
 ];
 
 function SelectPersonas() {

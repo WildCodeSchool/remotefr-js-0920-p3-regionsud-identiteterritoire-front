@@ -1,5 +1,9 @@
 import React from 'react';
 import './evenements.css';
+import Arsud from './images/Arsud_spectacle.jpg';
+import Faron from './images/faron.jpg';
+import FeuDartifice from './images/feu_dartifice.jpg';
+import JazzToulon from './images/jazz_toulon.jpg';
 
 function Evenements() {
   return (
@@ -22,56 +26,54 @@ function Evenements() {
             <br /> d&apos;Azur: Spéctacles, exposition, festivals,
             <br /> concerts, conférrence,saison théatrale etc ...
           </p>
-          <img src="" className="img-rate-quality-pico" alt="Responsive_imge" />
+          <img
+            src={Arsud}
+            className="img-rate-quality-pico"
+            alt="Responsive_imge"
+          />
         </div>
 
         <div className="col-md-4">
           <div className="row">
-            <div className="col-md-4">
+            <div className="col-md-12">
               <img
-                src=""
-                className="img-fluid img-thumbnail roundedImage"
+                src={Faron}
+                className="rounded-circle roundedImage"
                 alt="Responsive_imge"
               />
               <p>
                 <b>Vivement dilanche au faron</b>
-              </p>
-
-              <p>
+                <br />
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Veritatis incidunt quis id ex vel? Iste perferendis excepturi
                 porro id illo pariatur in voluptatem sunt, reprehenderit nulla
                 dolores? Dignissimos, deleniti culpa!
               </p>
             </div>
-            <div className="col-md-4">
+            <div className="col-md-12">
               <img
-                src=""
-                className="img-fluid img-thumbnail roundedImage"
+                src={FeuDartifice}
+                className="rounded-circle roundedImage"
                 alt="Responsive_imge"
               />
               <p>
-                <b>Feu d&apos;artifice</b>
-              </p>
-
-              <p>
+                <b>Vivement dilanche au faron</b>
+                <br />
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Veritatis incidunt quis id ex vel? Iste perferendis excepturi
                 porro id illo pariatur in voluptatem sunt, reprehenderit nulla
                 dolores? Dignissimos, deleniti culpa!
               </p>
             </div>
-            <div className="col-md-4">
+            <div className="col-md-12">
               <img
-                src=""
-                className="img-fluid img-thumbnail roundedImage"
+                src={JazzToulon}
+                className="rounded-circle roundedImage"
                 alt="Responsive_imge"
               />
               <p>
-                <b>Festival Jazz toulon</b>
-              </p>
-
-              <p>
+                <b>Vivement dilanche au faron</b>
+                <br />
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Veritatis incidunt quis id ex vel? Iste perferendis excepturi
                 porro id illo pariatur in voluptatem sunt, reprehenderit nulla

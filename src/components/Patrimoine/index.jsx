@@ -5,7 +5,7 @@ import logoMusee from './images/logoMusee.jpg';
 
 function Patrimoine() {
   return (
-    <div>
+    <div className="container">
       <div className="row">
         <div className="col-md-8">
           <h1 className="title_p">
@@ -36,51 +36,45 @@ function Patrimoine() {
 
         <div className="col-md-4">
           <div className="row">
-            <div className="col-md-4">
+            <div className="col-md-12">
               <img
                 src={logoMusee}
-                className="img-fluid img-thumbnail roundedImage"
+                className="rounded-circle roundedImage"
                 alt="Responsive_imge"
               />
               <p>
                 <b>Musée d&apos;art</b>
-              </p>
-
-              <p>
+                <br />
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Veritatis incidunt quis id ex vel? Iste perferendis excepturi
                 porro id illo pariatur in voluptatem sunt, reprehenderit nulla
                 dolores? Dignissimos, deleniti culpa!
               </p>
             </div>
-            <div className="col-md-4">
+            <div className="col-md-12">
               <img
                 src={logoMusee}
-                className="img-fluid img-thumbnail roundedImage"
+                className="rounded-circle roundedImage"
                 alt="Responsive_imge"
               />
               <p>
                 <b>Musée d&apos;art</b>
-              </p>
-
-              <p>
+                <br />
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Veritatis incidunt quis id ex vel? Iste perferendis excepturi
                 porro id illo pariatur in voluptatem sunt, reprehenderit nulla
                 dolores? Dignissimos, deleniti culpa!
               </p>
             </div>
-            <div className="col-md-4">
+            <div className="col-md-12">
               <img
                 src={logoMusee}
-                className="img-fluid img-thumbnail roundedImage"
+                className="rounded-circle roundedImage"
                 alt="Responsive_imge"
               />
               <p>
                 <b>Musée d&apos;art</b>
-              </p>
-
-              <p>
+                <br />
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Veritatis incidunt quis id ex vel? Iste perferendis excepturi
                 porro id illo pariatur in voluptatem sunt, reprehenderit nulla

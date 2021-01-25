@@ -36,49 +36,67 @@ function Evenements() {
         <div className="col-md-4">
           <div className="row">
             <div className="col-md-12">
-              <img
-                src={Faron}
-                className="rounded-circle roundedImage"
-                alt="Responsive_imge"
-              />
-              <p>
-                <b>Vivement dilanche au faron</b>
-                <br />
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Veritatis incidunt quis id ex vel? Iste perferendis excepturi
-                porro id illo pariatur in voluptatem sunt, reprehenderit nulla
-                dolores? Dignissimos, deleniti culpa!
-              </p>
+              <div className="row">
+                <div className="col-md-4">
+                  <img
+                    src={Faron}
+                    className="rounded-circle roundedImage"
+                    alt="Responsive_imge"
+                  />
+                </div>
+                <div className="col-md-8">
+                  <p>
+                    <b>Vivement dilanche au faron</b>
+                    <br />
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Veritatis incidunt quis id ex vel? Iste perferendis
+                    excepturi porro id illo pariatur in voluptatem sunt,
+                    reprehenderit nulla dolores? Dignissimos, deleniti culpa!
+                  </p>
+                </div>
+              </div>
             </div>
             <div className="col-md-12">
-              <img
-                src={FeuDartifice}
-                className="rounded-circle roundedImage"
-                alt="Responsive_imge"
-              />
-              <p>
-                <b>Vivement dilanche au faron</b>
-                <br />
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Veritatis incidunt quis id ex vel? Iste perferendis excepturi
-                porro id illo pariatur in voluptatem sunt, reprehenderit nulla
-                dolores? Dignissimos, deleniti culpa!
-              </p>
+              <div className="row">
+                <div className="col-md-4">
+                  <img
+                    src={FeuDartifice}
+                    className="rounded-circle roundedImage"
+                    alt="Responsive_imge"
+                  />
+                </div>
+                <div className="col-md-8">
+                  <p>
+                    <b>Feu d&apos;artifice</b>
+                    <br />
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Veritatis incidunt quis id ex vel? Iste perferendis
+                    excepturi porro id illo pariatur in voluptatem sunt,
+                    reprehenderit nulla dolores? Dignissimos, deleniti culpa!
+                  </p>
+                </div>
+              </div>
             </div>
             <div className="col-md-12">
-              <img
-                src={JazzToulon}
-                className="rounded-circle roundedImage"
-                alt="Responsive_imge"
-              />
-              <p>
-                <b>Vivement dilanche au faron</b>
-                <br />
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Veritatis incidunt quis id ex vel? Iste perferendis excepturi
-                porro id illo pariatur in voluptatem sunt, reprehenderit nulla
-                dolores? Dignissimos, deleniti culpa!
-              </p>
+              <div className="row">
+                <div className="col-md-4">
+                  <img
+                    src={JazzToulon}
+                    className="rounded-circle roundedImage"
+                    alt="Responsive_imge"
+                  />
+                </div>
+                <div className="col-md-8">
+                  <p>
+                    <b>Festival Jazz toulon</b>
+                    <br />
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Veritatis incidunt quis id ex vel? Iste perferendis
+                    excepturi porro id illo pariatur in voluptatem sunt,
+                    reprehenderit nulla dolores? Dignissimos, deleniti culpa!
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -117,7 +117,7 @@ const BlockRandomCity = (props) => {
 
 BlockRandomCity.propTypes = {
   picture: PropTypes.string.isRequired,
-  inseeCode: PropTypes.number.isRequired,
+  inseeCode: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
 };
 

@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import React from 'react';
 import './css/styles.css';
 import { FormGroup } from 'reactstrap';
@@ -11,13 +10,6 @@ class App extends React.Component {
     this.state = {
       value: new Date().toISOString(),
     };
-  }
-
-  componentDidUpdate() {
-    // Access ISO String and formatted values from the DOM.
-    const hiddenInputElement = document.getElementById('example-datepicker');
-    console.log(hiddenInputElement.value); // ISO String, ex: "2016-11-19T12:00:00.000Z"
-    console.log(hiddenInputElement.getAttribute('data-formattedvalue')); // Formatted String, ex: "11/19/2016"
   }
 
   handleChange(value) {

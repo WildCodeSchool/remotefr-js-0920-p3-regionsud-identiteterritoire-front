@@ -1,7 +1,5 @@
 import React from 'react';
 import L from 'leaflet';
-import axios from 'axios';
-import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 /**
  * @class MapCommune
@@ -10,31 +8,19 @@ import PropTypes from 'prop-types';
 class MapCommune extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { geocommune: [] };
+    this.state = {};
   }
 
   componentDidMount() {
-    const {
-      match: {
-        params: { id },
-      },
-    } = this.props;
     this.map = L.map('map').setView([43.0589, 5.9299], 10);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution:
         '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
     }).addTo(this.map);
-
-    axios
-      .get(`https://regionsud-api.woozy.fr/api/communes/${id}/geocommunes`)
-      .then((res) => {
-        const geocommune = res.data;
-        this.setState({ geocommune });
-      });
   }
 
   render() {
-    const { geocommune } = this.state;
+    const { geocommune } = this.props;
     if (geocommune.geo_shape) {
       const geojsonFeature = {
         type: 'Feature',
@@ -56,12 +42,16 @@ class MapCommune extends React.Component {
   }
 }
 
-export default withRouter(MapCommune);
-
 MapCommune.propTypes = {
-  match: PropTypes.shape({
-    params: PropTypes.shape({
-      id: PropTypes.number.isRequired,
-    }).isRequired,
+  geocommune: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    code_insee: PropTypes.string,
+    altitude: PropTypes.string,
+    superficie: PropTypes.string,
+    population: PropTypes.string,
+    longitude: PropTypes.string,
+    latitude: PropTypes.string,
+    geo_shape: PropTypes.string,
   }).isRequired,
 };
+export default MapCommune;

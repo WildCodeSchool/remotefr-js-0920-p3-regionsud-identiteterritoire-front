@@ -78,32 +78,16 @@ class InfoCommune extends React.Component {
               Bienvenue à <b>{commune.nom}</b>
             </h1>
             <p>
-              <b>Site officiel:</b>
+              <b>Site officiel: </b>
               <a href="{mairie.www}" target="_blank">
                 {` ${mairie.www}`}
               </a>
             </p>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Exercitationem, porro magni pariatur commodi debitis aperiam dolor
-              eum repudiandae laborum reiciendis voluptates, maxime quod
-              incidunt praesentium cupiditate distinctio quis laboriosam
-              explicabo. Lorem ipsum dolor sit amet consectetur adipisicing
-              elit. Tempore quo corrupti, natus soluta delectus error voluptates
-              rerum optio est pariatur commodi quas quisquam placeat obcaecati.
-              Incidunt ipsa quis officia nobis.
+              $VILLE est un(e) $TYPEDECOMMUNE située dans le département $
+              DEPARTEMENT.
             </p>
 
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Exercitationem, porro magni pariatur commodi debitis aperiam dolor
-              eum repudiandae laborum reiciendis voluptates, maxime quod
-              incidunt praesentium cupiditate distinctio quis laboriosam
-              explicabo. Lorem ipsum dolor sit amet consectetur adipisicing
-              elit. Tempore quo corrupti, natus soluta delectus error voluptates
-              rerum optio est pariatur commodi quas quisquam placeat obcaecati.
-              Incidunt ipsa quis officia nobis.
-            </p>
             <div className="row">
               <div className="col-md-4 text_1">
                 <h5 className="align-baseline">
@@ -121,10 +105,13 @@ class InfoCommune extends React.Component {
                 <h5 className="align-baseline">
                   <b>
                     <FaExpandAlt />
-                    {geocommune.superficie / 100}km²
+                    {geocommune.superficie / 100} km²
                   </b>
                 </h5>
-                <div className="gbright-color align-baseline miniInfo">Km²</div>
+                <div className="gbright-color align-baseline miniInfo">
+                  {' '}
+                  Km²
+                </div>
               </div>
               <div className="col-md-4 text_1">
                 <h5 className="align-baseline">
@@ -133,7 +120,7 @@ class InfoCommune extends React.Component {
                     {maire.nom} {maire.prenom}
                   </b>
                 </h5>
-                <div className="gbright-color miniInfo ">58ans</div>
+                <div className="gbright-color miniInfo "> 58ans</div>
               </div>
             </div>
             <div className="row">
@@ -195,7 +182,7 @@ class InfoCommune extends React.Component {
                     Vendredi: 9h à 13h et de 14h à 18h
                     <br />
                     Samedi: 9h à 13h et de 14h à 18h
-                    <br /> Dimanche: <b className="red-color">fermer</b>
+                    <br /> Dimanche: <b className="red-color">Fermé</b>
                   </p>
                 </div>
               </div>

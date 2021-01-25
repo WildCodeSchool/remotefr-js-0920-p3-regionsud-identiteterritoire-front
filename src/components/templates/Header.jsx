@@ -23,8 +23,8 @@ class Header extends React.Component {
           </div>
           <div className="col-md-8">
             <div align="center">
-              <div className="headerpunchlineslim">La data vous invite a</div>
-              <div className="headerpunchlineBig">decouvrir notre région</div>
+              <div className="headerpunchlineslim">La data vous invite à</div>
+              <div className="headerpunchlineBig">découvrir notre région</div>
             </div>
           </div>
           <div className="col-md-2">

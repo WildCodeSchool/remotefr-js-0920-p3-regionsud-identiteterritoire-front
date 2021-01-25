@@ -1,0 +1,8 @@
+.title {
+  color: rgb(223, 26, 26);
+}
+.roundedImage {
+  border-radius: 100px;
+  width: 90px;
+  height: 90px;
+}

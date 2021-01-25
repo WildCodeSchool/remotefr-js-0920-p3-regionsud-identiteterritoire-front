@@ -18,7 +18,7 @@ class Home extends React.Component {
 
   render = () => {
     return (
-      <div>
+      <div className="Global">
         <SliderTop pictures="home-slide.jpg" />
         <div className="row">
           <div className="col-md-12">
@@ -32,20 +32,24 @@ class Home extends React.Component {
               <div className="col-md-6">
                 <BlockRandomCity
                   name="Marseille"
-                  cp="13001"
+                  inseeCode="13055"
                   picture="marseille.jpg"
                 />
                 <BlockRandomCity
                   name="Toulon"
-                  cp="83000"
+                  inseeCode="83137"
                   picture="toulon.jpg"
                 />
               </div>
               <div className="col-md-6 mrg-home-decalage">
-                <BlockRandomCity name="Nice" cp="06000" picture="nice.jpg" />
+                <BlockRandomCity
+                  name="Nice"
+                  inseeCode="06088"
+                  picture="nice.jpg"
+                />
                 <BlockRandomCity
                   name="Forcalquier"
-                  cp="04300"
+                  inseeCode="04088"
                   picture="forcalquier.jpg"
                 />
               </div>
@@ -90,8 +94,8 @@ class Home extends React.Component {
  * @description Gere les block random des villes
  */
 const BlockRandomCity = (props) => {
-  const { name, cp, picture } = props;
-  const pictureUrl = `./images/${picture}`;
+  const { name, inseeCode, picture } = props;
+  const pictureUrl = `/images/communes/${picture}`;
   return (
     <div>
       <div className="row">
@@ -99,7 +103,7 @@ const BlockRandomCity = (props) => {
           <img src={pictureUrl} className="img-fluid" alt={name} />
         </div>
         <div className=" col-md-8">
-          <Link to={`/commune/${cp}`} className="home-title-city">
+          <Link to={`/commune/${inseeCode}`} className="home-title-city">
             {name}
           </Link>
           cp Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
@@ -113,7 +117,7 @@ const BlockRandomCity = (props) => {
 
 BlockRandomCity.propTypes = {
   picture: PropTypes.string.isRequired,
-  cp: PropTypes.number.isRequired,
+  inseeCode: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
 };
 

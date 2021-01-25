@@ -1,7 +1,4 @@
-// eslint-disable react/prefer-stateless-function
-// eslint-disable react/no-unescaped-entities
 import React from 'react';
-import axios from 'axios';
 import { withRouter } from 'react-router-dom';
 
 import PropTypes from 'prop-types';
@@ -17,6 +14,7 @@ import { FaExpandAlt, FaUserTie, FaUsers } from 'react-icons/fa';
 import imagesLogoVilleInternet from './images/logo-villes-internet-1.jpg';
 import Weather from './Weather';
 import imageLogoVillageFlories from './images/Logo-Villes-et-villages-fleuris-2019_diaporama.jpg';
+
 /**
  * @class InfoCommune
  * @description Map en bas de la home
@@ -24,42 +22,25 @@ import imageLogoVillageFlories from './images/Logo-Villes-et-villages-fleuris-20
 class InfoCommune extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      commune: [],
-    };
-  }
-
-  componentDidMount() {
-    const {
-      match: {
-        params: { id },
-      },
-    } = this.props;
-
-    axios
-      .get(`https://regionsud-api.woozy.fr/api/communes/${id}`)
-      .then((res) => {
-        const commune = res.data;
-        this.setState({ commune });
-      });
+    this.state = {};
   }
 
   render() {
-    const { commune } = this.state;
+    const { commune, geocommune, maire, mairie } = this.props;
 
     return (
-      <div>
+      <div className="col-md-10 offset-md-1">
         <div className="row">
           <div className="col-md-8">
             <h1 className="align-baseline1">
-              Bienvenue à <b>{commune.nom_reel}</b>
+              Bienvenue à <b>{commune.nom}</b>
             </h1>
             <p>
               <b>Site officiel:</b>
-              <a href="https://www.toulon.fr"> https://www.toulon.fr</a>
+              <a href="{mairie.www}" target="_blank">
+                {` ${mairie.www}`}
+              </a>
             </p>
-
-            <p className="text-parag">{commune.text}</p>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
               Exercitationem, porro magni pariatur commodi debitis aperiam dolor
@@ -86,34 +67,31 @@ class InfoCommune extends React.Component {
                 <h5 className="align-baseline">
                   <b>
                     <FaUsers />
-                    {commune.population_2012}
+                    {geocommune.population}
                   </b>
                 </h5>
                 <div className="gbright-color align-baseline miniInfo">
-                  <small>2012</small>
+                  2012
                 </div>
               </div>
+
               <div className="col-md-4 text_1">
                 <h5 className="align-baseline">
                   <b>
                     <FaExpandAlt />
-                    {commune.surface}
+                    {geocommune.superficie / 100}km²
                   </b>
                 </h5>
-                <div className="gbright-color align-baseline miniInfo">
-                  <small>Km²</small>
-                </div>
+                <div className="gbright-color align-baseline miniInfo">Km²</div>
               </div>
               <div className="col-md-4 text_1">
                 <h5 className="align-baseline">
                   <b>
                     <FaUserTie />
-                    {commune.maire}
+                    {maire.nom} {maire.prenom}
                   </b>
                 </h5>
-                <div className="gbright-color miniInfo ">
-                  <small>2018</small>
-                </div>
+                <div className="gbright-color miniInfo ">Maire de la ville</div>
               </div>
             </div>
             <div className="row">
@@ -145,12 +123,14 @@ class InfoCommune extends React.Component {
             </div>
           </div>
           <div className="col-md-4">
-            <Weather />
+            <Weather codeInsee={commune.code_insee} />
             <div className="row">
               <div className="col-md-12">
                 <div className="bg-grey-light padding-grey-block">
                   <h4>
-                    <b className="red-color align-text">Office de Tourisme</b>
+                    <b className="red-color align-text officeTourismeTitle">
+                      Office de Tourisme
+                    </b>
                   </h4>
                   <p className="gbright-color align-text Provence">
                     <b>Provence Méditerranée</b>
@@ -212,15 +192,50 @@ InfoCommune.propTypes = {
       id: PropTypes.number.isRequired,
     }).isRequired,
   }).isRequired,
+
+  commune: PropTypes.shape({
+    code_insee: PropTypes.string.isRequired,
+    code_postal: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
+    latitude: PropTypes.string.isRequired,
+    longitude: PropTypes.string.isRequired,
+    nom: PropTypes.string.isRequired,
+    population: PropTypes.string,
+    slug: PropTypes.string,
+    text: PropTypes.string,
+  }).isRequired,
+
+  maire: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    nom: PropTypes.string.isRequired,
+    prenom: PropTypes.string.isRequired,
+    genre: PropTypes.string.isRequired,
+    code_insee: PropTypes.string.isRequired,
+  }).isRequired,
+
+  mairie: PropTypes.shape({
+    id: PropTypes.number,
+    code_insee: PropTypes.string,
+    nom: PropTypes.string,
+    adresse: PropTypes.string,
+    code_postal: PropTypes.string,
+    telephone: PropTypes.string,
+    www: PropTypes.string,
+    email: PropTypes.string,
+    latitude: PropTypes.string,
+    longitude: PropTypes.string,
+  }).isRequired,
+
+  geocommune: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    code_insee: PropTypes.string,
+    altitude: PropTypes.string,
+    superficie: PropTypes.string,
+    population: PropTypes.string,
+    longitude: PropTypes.string,
+    latitude: PropTypes.string,
+    geo_shape: PropTypes.string,
+  }).isRequired,
 };
 
 export default withRouter(InfoCommune);
-
-// Destination.propTypes = {
-//   name: PropTypes.string.isRequired,
-//   maire: PropTypes.string.isRequired,
-//   population: PropTypes.number.isRequired,
-//   anneeRecensement: PropTypes.number.isRequired,
-//   superficie: PropTypes.number.isRequired,
-//   anneereprise: PropTypes.number.isRequired,
-// };

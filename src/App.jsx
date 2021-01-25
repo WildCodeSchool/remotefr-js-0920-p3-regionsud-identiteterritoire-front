@@ -9,12 +9,12 @@ function App() {
   return (
     <div>
       <Templates>
+        <FloatQuickAccess />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/commune/:id" component={Commune} />
         </Switch>
       </Templates>
-      <FloatQuickAccess />
     </div>
   );
 }

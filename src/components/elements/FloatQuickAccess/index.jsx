@@ -13,7 +13,7 @@ const FloatQuickAccess = () => {
         <div>Accès</div>
         <div>Rapide</div>
       </div>
-      <div>
+      <div className="theme-icons">
         <BlockRoundIcon name="Social/Santé/Sport" link="#" icon="heart" />
         <BlockRoundIcon name="Musée" link="#" icon="landmark" />
         <BlockRoundIcon name="Environnement" link="#" icon="leaf" />
@@ -37,7 +37,7 @@ const BlockRoundIcon = (props) => {
 BlockRoundIcon.propTypes = {
   name: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
-  icon: PropTypes.number.isRequired,
+  icon: PropTypes.string.isRequired,
 };
 
 export default FloatQuickAccess;

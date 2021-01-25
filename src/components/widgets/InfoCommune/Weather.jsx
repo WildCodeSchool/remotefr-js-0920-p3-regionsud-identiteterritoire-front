@@ -1,79 +1,50 @@
-import React from 'react';
-import { withRouter } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import PropTypes from 'prop-types';
 import './css/weather.css';
+import PropTypes from 'prop-types';
 
-class Weather extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      weather: [],
-    };
-  }
+function Weather(props) {
+  const { codeInsee } = props;
+  const [wind, setWind] = useState([]);
+  const [weather, setWeather] = useState([]);
+  const [main, setMain] = useState([]);
 
-  componentDidMount() {
-    const {
-      match: {
-        params: { id },
-      },
-    } = this.props;
-    axios
-      .get(`https://regionsud-api.woozy.fr/api/communes/${id}/meteo`)
-      .then((res) => {
-        const weather = res.data;
-        this.setState({ weather });
-      });
-  }
+  useEffect(() => {
+    if (codeInsee) {
+      axios
+        .get(`https://regionsud-api.woozy.fr/api/communes/${codeInsee}/meteo`)
+        .then((res) => {
+          setWind(res.data.wind);
+          setWeather(res.data.weather.pop());
+          setMain(res.data.main);
+        });
+    }
+  }, [codeInsee]);
 
-  /**
-   * @name randomWeatherImages
-   * @description génération d'une image aleatoire pour la meteo
-   */
-  randomWeatherImages = () => {
-    const pictures = [
-      'cloud.jpg',
-      'neige.jpg',
-      'orage.jpg',
-      'pluie.jpg',
-      'suncloud.jpg',
-    ];
-    return `/images/${pictures[Math.floor(Math.random() * pictures.length)]}`;
-  };
+  return (
+    <div className="row">
+      <div className="col-md-4">
+        <img
+          src={`http://openweathermap.org/img/wn/${weather.icon}@2x.png`}
+          alt={weather.description}
+        />
+      </div>
 
-  render() {
-    const { weather } = this.state;
-    const pictureUrlWeather = this.randomWeatherImages();
-    return (
-      <div className="row">
-        <div className="col-md-4 d-flex justify-content-center weaderlogo">
-          <img
-            src={pictureUrlWeather}
-            className="img-rate-quality-picto"
-            alt="Responsive_imge"
-          />
-        </div>
-        <div className="col-md-4 d-flex justify-content-start weaderlogo ">
-          <h2>
-            <b>{weather.temperature}.0°</b>
-          </h2>
-        </div>
-        <div className="col-md-4 gbright-color d-flex justify-content-start">
-          <p>
-            Vent:{weather.vent_direction} <br /> {weather.vent_vitesse}Km/h
-          </p>
+      <div className="col-md-4">
+        <div className="weather-degree">{main.temp}°</div>
+      </div>
+      <div className="col-md-4">
+        <div className="weather-wind-speed">
+          <div className="text-center">
+            <b>Vent</b>
+          </div>
+          <div className="text-center">{wind.speed}km/h</div>
         </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
 
-Weather.propTypes = {
-  match: PropTypes.shape({
-    params: PropTypes.shape({
-      id: PropTypes.number.isRequired,
-    }).isRequired,
-  }).isRequired,
-};
+Weather.propTypes = { codeInsee: PropTypes.number.isRequired };
 
-export default withRouter(Weather);
+export default Weather;

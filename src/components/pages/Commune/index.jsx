@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import InfoCommune from '../../widgets/InfoCommune';
 import MapCommune from '../../widgets/MapCommune';
 import SliderTop from '../../elements/SliderTop';
-
+import Evenements from '../../Evenements';
 /**
  * @class Commune
  * @description Gere le haut du site
@@ -61,6 +61,7 @@ class Commune extends React.Component {
     return (
       <div>
         <SliderTop pictures="communes/toulon.jpg" />
+
         <InfoCommune
           commune={commune}
           geocommune={geocommune}

@@ -1,0 +1,35 @@
+.mapMenuCommuneBlock{
+  z-index: 9999;
+  position: absolute;
+  width:250px;
+  height:500px;
+  background-color: #fcbb3b;
+  padding:30px;
+  top:70px;
+}
+
+.mapMenuCommuneList>div {
+  margin: 10px 0 0 25px;
+  color:white;
+}
+
+
+.mapMenuCommuneTitle {
+  font-size: 36px;
+  font-weight: bold;
+  position: absolute;
+  color:#e4a019;
+  top: 20;
+  right: 100%;
+  white-space: nowrap;
+  -webkit-transform: rotate(270deg);
+  -webkit-transform-origin: right top;
+  -moz-transform: rotate(270deg);
+  -moz-transform-origin: right top;
+  -ms-transform: rotate(270deg);
+  -ms-transform-origin: right top;
+  -o-transform: rotate(270deg);
+  -o-transform-origin: right top;
+  transform: rotate(270deg);
+  transform-origin: right top;
+}

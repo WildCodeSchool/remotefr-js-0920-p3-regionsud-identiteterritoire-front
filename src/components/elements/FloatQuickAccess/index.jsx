@@ -37,7 +37,7 @@ const BlockRoundIcon = (props) => {
 BlockRoundIcon.propTypes = {
   name: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
-  icon: PropTypes.number.isRequired,
+  icon: PropTypes.string.isRequired,
 };
 
 export default FloatQuickAccess;

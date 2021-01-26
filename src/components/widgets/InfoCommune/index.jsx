@@ -1,5 +1,4 @@
 import React from 'react';
-import axios from 'axios';
 import { withRouter } from 'react-router-dom';
 
 import PropTypes from 'prop-types';
@@ -23,52 +22,11 @@ import imageLogoVillageFlories from './images/Logo-Villes-et-villages-fleuris-20
 class InfoCommune extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      commune: [],
-      mairie: [],
-      maire: [],
-      geocommune: [],
-    };
-  }
-
-  componentDidMount() {
-    const {
-      match: {
-        params: { id },
-      },
-    } = this.props;
-
-    axios
-      .get(`https://regionsud-api.woozy.fr/api/communes/${id}`)
-      .then((res) => {
-        const commune = res.data;
-        this.setState({ commune });
-      });
-
-    axios
-      .get(`https://regionsud-api.woozy.fr/api/communes/${id}/mairie`)
-      .then((res) => {
-        const mairie = res.data;
-        this.setState({ mairie });
-      });
-
-    axios
-      .get(`https://regionsud-api.woozy.fr/api/communes/${id}/maire`)
-      .then((res) => {
-        const maire = res.data;
-        this.setState({ maire });
-      });
-
-    axios
-      .get(`https://regionsud-api.woozy.fr/api/communes/${id}/geocommunes`)
-      .then((res) => {
-        const geocommune = res.data;
-        this.setState({ geocommune });
-      });
+    this.state = {};
   }
 
   render() {
-    const { commune, geocommune, maire, mairie } = this.state;
+    const { commune, geocommune, maire, mairie } = this.props;
 
     return (
       <div className="col-md-10 offset-md-1">
@@ -120,7 +78,8 @@ class InfoCommune extends React.Component {
                     {maire.nom} {maire.prenom}
                   </b>
                 </h5>
-                <div className="gbright-color miniInfo "> 58ans</div>
+
+                <div className="gbright-color miniInfo ">Maire de la ville</div>
               </div>
             </div>
             <div className="row">
@@ -152,7 +111,7 @@ class InfoCommune extends React.Component {
             </div>
           </div>
           <div className="col-md-4">
-            <Weather />
+            <Weather codeInsee={commune.code_insee} />
             <div className="row">
               <div className="col-md-12">
                 <div className="bg-grey-light padding-grey-block">
@@ -220,6 +179,50 @@ InfoCommune.propTypes = {
     params: PropTypes.shape({
       id: PropTypes.number.isRequired,
     }).isRequired,
+  }).isRequired,
+
+  commune: PropTypes.shape({
+    code_insee: PropTypes.string.isRequired,
+    code_postal: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
+    latitude: PropTypes.string.isRequired,
+    longitude: PropTypes.string.isRequired,
+    nom: PropTypes.string.isRequired,
+    population: PropTypes.string,
+    slug: PropTypes.string,
+    text: PropTypes.string,
+  }).isRequired,
+
+  maire: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    nom: PropTypes.string.isRequired,
+    prenom: PropTypes.string.isRequired,
+    genre: PropTypes.string.isRequired,
+    code_insee: PropTypes.string.isRequired,
+  }).isRequired,
+
+  mairie: PropTypes.shape({
+    id: PropTypes.number,
+    code_insee: PropTypes.string,
+    nom: PropTypes.string,
+    adresse: PropTypes.string,
+    code_postal: PropTypes.string,
+    telephone: PropTypes.string,
+    www: PropTypes.string,
+    email: PropTypes.string,
+    latitude: PropTypes.string,
+    longitude: PropTypes.string,
+  }).isRequired,
+
+  geocommune: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    code_insee: PropTypes.string,
+    altitude: PropTypes.string,
+    superficie: PropTypes.string,
+    population: PropTypes.string,
+    longitude: PropTypes.string,
+    latitude: PropTypes.string,
+    geo_shape: PropTypes.string,
   }).isRequired,
 };
 

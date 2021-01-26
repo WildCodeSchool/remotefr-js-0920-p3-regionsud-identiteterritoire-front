@@ -28,11 +28,13 @@ class Header extends React.Component {
             </div>
           </div>
           <div className="col-md-2">
-            <img
-              src={logoWildCodeSchool}
-              alt=""
-              className="img-fluid logoWildCodeSchool"
-            />
+            <a href="https://wildcodeschool.fr">
+              <img
+                src={logoWildCodeSchool}
+                alt=""
+                className="img-fluid logoWildCodeSchool"
+              />
+            </a>
           </div>
         </div>
       </div>

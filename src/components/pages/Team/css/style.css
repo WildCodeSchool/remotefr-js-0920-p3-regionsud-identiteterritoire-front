@@ -1,20 +1,22 @@
-.team-h2 {
-  width: 100%;
-  margin: 2rem 0;
-  text-align: center;
+.team-content h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .team-history {
-  width: 70%;
+  width: 100%;
 }
 
 .team-presentation p {
   text-align: center;
-  font-weight: bold;
-  font-size: x-large;
+  font-size: 1.2rem;
+  margin: 0 100px;
 }
 
 .team-presentation h1 {
+  color: rgb(241, 8, 8);
+  font-weight: bold;
+  font-size: 3em;
   margin: 20px 0;
   text-align: center;
 }
@@ -24,26 +26,25 @@
 }
 
 .team-main {
-  justify-content: space-around;
   display: flex;
   flex-flow: row wrap;
   width: 100%;
   margin: auto;
-  color: #323639;
+  color: #313131;
 }
 
 .team-content {
   border-radius: 5px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
-  background-color: #f88360;
-  color: #fbd8c8;
+  background-color: #f2f2f2;
+  color: #313131;
   flex-flow: row wrap;
   text-align: center;
   justify-content: center;
   transition: all 0.7s ease-in-out;
-  width: 40%;
+  width: 60%;
   min-width: 300px;
-  margin: 5rem 0.5rem 3rem 0.5rem;
+  margin: 3rem auto;
   padding: 1.25rem;
 }
 
@@ -57,11 +58,11 @@
 }
 
 .team-content .left-text {
-  text-align: left;
+  text-align: center;
 }
 
 .team-content .right-text {
-  text-align: right;
+  text-align: center;
 }
 
 .team-h3 {
@@ -86,15 +87,15 @@
   display: inline-block;
   margin: 0.15em;
   position: relative;
-  font-size: 1em;
+  font-size: 1.5em;
   text-align: center;
 }
 
 .social-icons-team i {
-  color: #fd835e;
+  color: #313131;
   position: absolute;
-  top: 0.6em;
-  left: 0.6em;
+  top: 0.5em;
+  left: 0.5em;
   transition: all 265ms ease-out;
 }
 
@@ -125,6 +126,6 @@
   transform: scale(2.2);
   -ms-transform: scale(2.2);
   -webkit-transform: scale(2.2);
-  color: #fff;
+  color: #313131;
   transition: all 265ms ease-in;
 }

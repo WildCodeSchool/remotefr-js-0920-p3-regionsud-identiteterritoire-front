@@ -7,6 +7,7 @@ import HomeMapBox from './mapbox';
 import RandomCommuneBottom from './randomCommuneBottom';
 import RandomGallery from './randomGallery';
 import SliderTop from '../../elements/SliderTop';
+import LogoPartenaire from './LogoPartenaire';
 
 /**
  * @class Home
@@ -93,6 +94,7 @@ class Home extends React.Component {
             atque alias maiores iure commodi ratione reprehenderit id rem
             ducimus nostrum aut cumque suscipit eos, quod consequatur.
           </div>
+          <LogoPartenaire />
         </div>
       </div>
     );

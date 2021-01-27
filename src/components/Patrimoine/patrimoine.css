@@ -21,3 +21,11 @@
   height: 14px;
   margin: 60px auto;
 }
+
+.container-patrimoine {
+  padding: 0 15%;
+}
+
+.padding-text {
+  padding: 0 25px;
+}

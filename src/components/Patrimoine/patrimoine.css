@@ -14,3 +14,10 @@
   width: 250px;
   height: auto;
 }
+
+.orange-bar {
+  background-color: #fcbb3b;
+  width: 30%;
+  height: 14px;
+  margin: 60px auto;
+}

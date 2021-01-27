@@ -1,0 +1,16 @@
+.titleEvenements {
+  color: rgb(219, 28, 28);
+  font-size: 4em;
+  font-weight: bold;
+}
+.logoArsud {
+  width: 350px;
+  height: auto;
+}
+
+
+
+
+.evenements-text {
+  max-width:300px;
+}

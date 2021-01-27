@@ -40,6 +40,7 @@
   border-radius: 50%;
   margin: 0 10px;
   cursor: pointer;
+  border: none;
 }
 
 .datepicker {
@@ -57,9 +58,9 @@
 }
 
 .search-icon {
-  font-size: 15px;
+  font-size: 18px;
   color: #fff;
-  padding: 10px;
+  padding: 1px;
 }
 
 /* React Select Style*/

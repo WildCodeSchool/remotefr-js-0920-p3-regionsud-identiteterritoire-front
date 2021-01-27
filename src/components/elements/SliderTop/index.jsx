@@ -1,4 +1,5 @@
 import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './css/styles.css';
 import PropTypes from 'prop-types';
 import SelectPersonas from './SelectPersonas';
@@ -9,8 +10,10 @@ import SelectTown from './SelectTown';
  * @description Gestion des slider
  */
 
+
 const SliderTop = (props) => {
   const { pictures } = props;
+  const [isSubmitted, setIsSubmitted] = useState([]);
   let pictureSlider = '/images/sliders/communes/toulon.jpg';
   if (pictures.startsWith('http')) {
     pictureSlider = pictures;
@@ -18,6 +21,15 @@ const SliderTop = (props) => {
     pictureSlider = `/images/sliders/${pictures}`;
   }
 
+      
+  handleSubmit = (event) => {
+    setIsSubmitted(!isSubmitted);
+    event.preventDefault();
+    return 'Le choix a bien été soumis';
+  };
+
+      
+      
   return (
     <div className="row slider-container">
       <div
@@ -32,16 +44,21 @@ const SliderTop = (props) => {
               <SelectTown />
               <SelectPersonas />
               <DatePicker />
-              <span className="dot">
-                <i className="fas fa-search search-icon" />{' '}
-              </span>
+                <button
+                  type="submit"
+                  onSubmit={this.handleSubmit}
+                  className="dot"
+                >
+                  <i className="fas fa-search search-icon" />{' '}
+                </button>
+
             </div>
           </div>
         </div>
       </div>
-    </div>
-  );
-};
+    );
+  }
+}
 
 SliderTop.propTypes = {
   pictures: PropTypes.string.isRequired,

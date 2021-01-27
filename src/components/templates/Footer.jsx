@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logoBlack from './images/logo-black.jpg';
 import YouTube from './images/002-youtube.png';
 import Facebook from './images/043-facebook-1.png';
@@ -132,6 +133,13 @@ class Footer extends React.Component {
                 >
                   Sud Marchés Publics
                 </a>
+                <Link
+                  to="/team"
+                  alt="Équipe en charge du développement"
+                  title="Équipe en charge du développement"
+                >
+                  Équipe en charge du développement
+                </Link>
               </div>
             </div>
           </div>

@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import L from 'leaflet';
 import PropTypes from 'prop-types';
 import './css/styles.css';
+import axios from 'axios';
+import { withRouter } from 'react-router-dom';
 /**
  * @class MapCommune
  * @description Map de la page commune
@@ -9,17 +11,42 @@ import './css/styles.css';
 
 function MapCommune(props) {
   const { geocommune } = props;
-  const [latLng] = useState([43.0589, 5.9299]);
   const [markers, setMarkers] = useState([]);
+  const [mapOptions, setMapOptions] = useState([]);
   const mapRef = useRef();
   const layerRef = useRef();
+
+  /**
+   * @description creation du template de popup
+   */
+  function templatePopup(marker) {
+    return `<div class="row mapPopup"><div class="col-md-4"><img src="${
+      marker.illustrations[0].urlDiaporama
+    }" class="img-fluid mapPopupImg" alt="${
+      marker.nom
+    }"/></div><div class="col-md-8"><h3>${marker.nom}</h3><p>${
+      marker.description
+    }</p>
+${marker.telephone ? `<div><b>Téléphone</b> : ${marker.telephone}</div>` : ''}
+          ${
+            marker.www
+              ? `<div><b>Site internet</b> : <a href="${marker.www}" target="blank">${marker.www}</a></div>`
+              : ''
+          }
+          ${marker.email ? `<div><b>Email</b> : ${marker.email}</div>` : ''}
+          ${marker.fax ? `<div><b>Fax</b> : ${marker.fax}</div>` : ''}
+          </div></div>`;
+  }
+  /**
+   * @description creation de la carte et des UseRef
+   */
 
   useEffect(() => {
     mapRef.current = L.map('map', {
       layers: [
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'),
       ],
-    }).setView(latLng, 12);
+    }).setView([43.0589, 5.9299], 12);
     layerRef.current = L.featureGroup().addTo(mapRef.current);
   }, []);
 
@@ -52,21 +79,29 @@ function MapCommune(props) {
   useEffect(() => {
     if (markers) {
       layerRef.current.clearLayers();
+
       markers.forEach((marker) => {
         const m = L.marker(
-          new L.LatLng(marker.longitude, marker.latitude),
+          new L.LatLng(marker.latitude, marker.longitude),
         ).addTo(layerRef.current);
-        m.bindPopup(
-          `<div class="row"><div class="col-md-4"><img src="${marker.image}" class="img-fluid" alt="Marseille"/></div><div class="col-md-8"><h2>${marker.name}</h2><p>${marker.text}</p></div></div>`,
-          {
-            maxWidth: 560,
-            minWidth: 300,
-          },
-        );
+        m.bindPopup(templatePopup(marker), {
+          maxWidth: 610,
+          minWidth: 610,
+        });
         m.on('click', function popitthis() {
           m.openPopup();
+          // mapRef.current.setView(
+          //   new L.LatLng(marker.latitude, marker.longitude),
+          //   16,
+          // );
         });
       });
+
+      if (markers.length) {
+        // Recentrage des datas
+        const bounds = layerRef.current.getBounds();
+        mapRef.current.fitBounds(bounds, { padding: [50, 50] });
+      }
     }
   }, [markers]);
 
@@ -75,123 +110,62 @@ function MapCommune(props) {
    * @description function d'ajout des markers en state
    */
   function handleClick(value) {
-    const resto = [
-      {
-        name: "Le cochon d'or",
-        longitude: 43.711999266051,
-        latitude: 7.2382688946467,
-        image:
-          'https://img.over-blog-kiwi.com/2/55/12/01/20200806/ob_04cead_la-salle-to-restaurant-paris-10.jpg',
-        text:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nesciunt dicta id maiores accusamus blanditiis dolore debitis, autem quia molestiae quas temporibus, ut fuga numquam modi repellat! Perspiciatis, quam deserunt.',
+    const {
+      match: {
+        params: { id },
       },
-
-      {
-        name: 'Le Bouqet fleurie',
-        longitude: 43.9,
-        latitude: 7.7,
-        image:
-          'https://www.yonder.fr/sites/default/files/styles/scale_1008x672/public/destinations/restaurant-prado-lisbonne_1.jpg?itok=StdCt1xY',
-        text:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nesciunt dicta id maiores accusamus blanditiis dolore debitis, autem quia molestiae quas temporibus, ut fuga numquam modi repellat! Perspiciatis, quam deserunt.',
-      },
-
-      {
-        name: 'La pause',
-        longitude: 43.8,
-        latitude: 7.4,
-        image:
-          'https://restaurantdupalaisroyal.com/wp-content/uploads/2020/02/Restaurant_du_Palais_Royal_RDC_11_GdeLaubier.jpg',
-        text:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nesciunt dicta id maiores accusamus blanditiis dolore debitis, autem quia molestiae quas temporibus, ut fuga numquam modi repellat! Perspiciatis, quam deserunt.',
-      },
-    ];
-
-    const camping = [
-      {
-        name: 'Les flots bleue',
-        longitude: 43.67,
-        latitude: 7.32,
-        image:
-          'https://img-4.linternaute.com/G1iusbKNQnbpYDZsSxJtr5rzupk=/660x366/smart/87c9629abc9e47ad957fc712ebf37bd8/ccmcms-linternaute/18498156.jpg',
-        text:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nesciunt dicta id maiores accusamus blanditiis dolore debitis, autem quia molestiae quas temporibus, ut fuga numquam modi repellat! Perspiciatis, quam deserunt.',
-      },
-
-      {
-        name: 'La rose',
-        longitude: 43.92,
-        latitude: 7.74,
-        image: 'https://cdn2.acsi.eu/5/c/1/2/5c127c6cc5315.jpeg',
-        text:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nesciunt dicta id maiores accusamus blanditiis dolore debitis, autem quia molestiae quas temporibus, ut fuga numquam modi repellat! Perspiciatis, quam deserunt.',
-      },
-
-      {
-        name: 'La gaillote',
-        longitude: 43.85,
-        latitude: 7.67,
-        image:
-          'https://remeng.rosselcdn.net/sites/default/files/dpistyles_v2/ena_16_9_extra_big/2020/04/20/node_146216/11807835/public/2020/04/20/B9723264353Z.1_20200420190750_000%2BG3SFTF6MA.1-0.jpg?itok=uuvE5MFU1587475762',
-        text:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nesciunt dicta id maiores accusamus blanditiis dolore debitis, autem quia molestiae quas temporibus, ut fuga numquam modi repellat! Perspiciatis, quam deserunt.',
-      },
-    ];
-
-    const comico = [
-      {
-        name: 'Commisaria Gambetta',
-        longitude: 43.7,
-        latitude: 7.23,
-        image:
-          'https://france3-regions.francetvinfo.fr/image/76d5IfhosQO4SMpbB0mOKXts9w0/600x400/regions/2020/08/25/5f451f0dd2de9_p1013093-4973164.jpg',
-        text:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nesciunt dicta id maiores accusamus blanditiis dolore debitis, autem quia molestiae quas temporibus, ut fuga numquam modi repellat! Perspiciatis, quam deserunt.',
-      },
-
-      {
-        name: 'Commisaria Centre ville',
-        longitude: 43.85,
-        latitude: 7.67,
-        image:
-          'https://www.pagesjaunes.fr/media/resto/commissariat_de_police_OSD12156711-69612.jpeg',
-        text:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nesciunt dicta id maiores accusamus blanditiis dolore debitis, autem quia molestiae quas temporibus, ut fuga numquam modi repellat! Perspiciatis, quam deserunt.',
-      },
-    ];
-    switch (value) {
-      case 'comico':
-        setMarkers(comico);
-        break;
-
-      case 'camping':
-        setMarkers(camping);
-        break;
-
-      case 'resto':
-        setMarkers(resto);
-        break;
-      default:
-        setMarkers([]);
-        break;
-    }
+    } = props;
+    axios
+      .get(
+        `https://regionsud-api-dev.woozy.fr/api/communes/${id}/tourismes?type=${value}`,
+      )
+      .then((res) => {
+        setMarkers(res.data);
+      });
   }
+  /**
+   *
+   * @description recupere la liste des activité & possible
+   */
+  useEffect(() => {
+    const {
+      match: {
+        params: { id },
+      },
+    } = props;
+
+    if (!mapOptions.length) {
+      axios
+        .get(
+          `https://regionsud-api-dev.woozy.fr/api/communes/${id}/tourismes/counter`,
+        )
+        .then((res) => {
+          setMapOptions(res.data);
+        });
+    }
+  }, [mapOptions]);
 
   return (
     <div className="row relative">
       <div className="bigTitle abso-choisir-sur-carte">Info sur la ville</div>
       <div className="mapMenuCommuneBlock">
         <div className="mapMenuCommuneTitle">Faite votre choix</div>
-        <div className="mapMenuCommuneList">
-          <button type="button" onClick={() => handleClick('resto')}>
-            Resto
-          </button>
-          <button type="button" onClick={() => handleClick('camping')}>
-            Camping
-          </button>
-          <button type="button" onClick={() => handleClick('comico')}>
-            Commissaria
-          </button>
+        <div>
+          {mapOptions.map(function mpo(item, i) {
+            return (
+              <button
+                key={item.name}
+                type="button"
+                tabIndex={i}
+                className="mapMenuCommuneListLink"
+                onClick={() => handleClick(item.type)}
+                onKeyDown={() => handleClick(item.type)}
+              >
+                {item.name}
+                <span className="mapOptionsCounter">({item.total})</span>
+              </button>
+            );
+          })}
         </div>
       </div>
       <div id="map" />
@@ -200,6 +174,11 @@ function MapCommune(props) {
 }
 
 MapCommune.propTypes = {
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      id: PropTypes.number.isRequired,
+    }).isRequired,
+  }).isRequired,
   geocommune: PropTypes.shape({
     id: PropTypes.number.isRequired,
     code_insee: PropTypes.string,
@@ -212,4 +191,4 @@ MapCommune.propTypes = {
   }).isRequired,
 };
 
-export default MapCommune;
+export default withRouter(MapCommune);

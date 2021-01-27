@@ -12,7 +12,7 @@ function App() {
         <FloatQuickAccess />
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/commune/:id" component={Commune} />
+          <Route exact path="/commune/:id/:slug" component={Commune} />
         </Switch>
       </Templates>
     </div>

@@ -11,7 +11,13 @@ import SelectTown from './SelectTown';
 
 const SliderTop = (props) => {
   const { pictures } = props;
-  const pictureSlider = `/images/sliders/${pictures}`;
+  let pictureSlider = '/images/sliders/communes/toulon.jpg';
+  if (pictures.startsWith('http')) {
+    pictureSlider = pictures;
+  } else {
+    pictureSlider = `/images/sliders/${pictures}`;
+  }
+
   return (
     <div className="row slider-container">
       <div

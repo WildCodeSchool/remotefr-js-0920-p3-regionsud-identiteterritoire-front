@@ -5,9 +5,9 @@ import logoMusee from './images/logoMusee.jpg';
 
 function Patrimoine() {
   return (
-    <div className="container">
+    <div className="container container-patrimoine">
       <div className="row">
-        <div className="col-md-8">
+        <div className="col-md-8 testing">
           <h1 className="title_p">
             <b>Patrimoine</b>
           </h1>
@@ -30,14 +30,14 @@ function Patrimoine() {
           <img
             src={logoMinistere}
             className="img-rate-quality-pico logoMinister"
-            alt="Responsive_imge"
+            alt="Responsive_image"
           />
         </div>
 
         <div className="col-md-4">
           <div className="row">
             <div className="col-md-12">
-              <div className="row">
+              <div className="row musee-align">
                 <div className="col-md-4">
                   <img
                     src={logoMusee}
@@ -45,7 +45,7 @@ function Patrimoine() {
                     alt="Responsive_imge"
                   />
                 </div>
-                <div className="col-md-8">
+                <div className="col-md-8 padding-text">
                   <p>
                     <b>Musée d&apos;art</b>
                     <br />
@@ -66,7 +66,7 @@ function Patrimoine() {
                     alt="Responsive_imge"
                   />
                 </div>
-                <div className="col-md-8">
+                <div className="col-md-8 padding-text">
                   <p>
                     <b>Musée d&apos;art</b>
                     <br />
@@ -87,7 +87,7 @@ function Patrimoine() {
                     alt="Responsive_imge"
                   />
                 </div>
-                <div className="col-md-8">
+                <div className="col-md-8 padding-text">
                   <p>
                     <b>Musée d&apos;art</b>
                     <br />

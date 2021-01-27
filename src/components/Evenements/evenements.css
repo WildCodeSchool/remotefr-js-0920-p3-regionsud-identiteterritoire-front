@@ -2,7 +2,24 @@
   color: rgb(223, 26, 26);
 }
 .roundedImage {
-  border-radius: 100px;
   width: 90px;
   height: 90px;
+}
+
+.orange-bar {
+  background-color: #fcbb3b;
+  width: 30%;
+  height: 14px;
+  margin: 60px auto;
+}
+.logoArsud {
+  width: 350px;
+  height: auto;
+}
+
+.container-evenements {
+  padding: 0 15%;
+}
+.padding-text {
+  padding: 0 25px;
 }

@@ -7,11 +7,11 @@ import JazzToulon from './images/jazz_toulon.jpg';
 
 function Evenements() {
   return (
-    <div>
+    <div className=" container container-evenements">
       <div className="row">
         <div className="col-md-8">
           <h1 className="title">
-            <b>Evévenements</b>
+            <b>Evènements</b>
           </h1>
           <h4>
             <b>Culturo</b>
@@ -28,7 +28,7 @@ function Evenements() {
           </p>
           <img
             src={Arsud}
-            className="img-rate-quality-pico"
+            className="img-rate-quality-pico logoArsud"
             alt="Responsive_imge"
           />
         </div>
@@ -44,9 +44,9 @@ function Evenements() {
                     alt="Responsive_imge"
                   />
                 </div>
-                <div className="col-md-8">
+                <div className="col-md-8 padding-text">
                   <p>
-                    <b>Vivement dilanche au faron</b>
+                    <b>Vivement dimanche au faron</b>
                     <br />
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Veritatis incidunt quis id ex vel? Iste perferendis
@@ -65,7 +65,7 @@ function Evenements() {
                     alt="Responsive_imge"
                   />
                 </div>
-                <div className="col-md-8">
+                <div className="col-md-8 padding-text">
                   <p>
                     <b>Feu d&apos;artifice</b>
                     <br />
@@ -86,9 +86,9 @@ function Evenements() {
                     alt="Responsive_imge"
                   />
                 </div>
-                <div className="col-md-8">
+                <div className="col-md-8 padding-text">
                   <p>
-                    <b>Festival Jazz toulon</b>
+                    <b>Festival Jazz Toulon</b>
                     <br />
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Veritatis incidunt quis id ex vel? Iste perferendis

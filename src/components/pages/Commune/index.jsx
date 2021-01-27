@@ -70,6 +70,8 @@ class Commune extends React.Component {
           maire={maire}
           mairie={mairie}
         />
+
+        <Evenements />
         <Patrimoine />
         <MapCommune commune={commune} geocommune={geocommune} />
       </div>

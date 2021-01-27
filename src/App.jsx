@@ -11,8 +11,8 @@ function App() {
       <Templates>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/commune/:id" component={Commune} />
-          <Route path="/team" component={Team} />
+          <Route exact path="/commune/:id/:slug" component={Commune} />
+          <Route exact path="/team" component={Team} />
         </Switch>
       </Templates>
     </div>

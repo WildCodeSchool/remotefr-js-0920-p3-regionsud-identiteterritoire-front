@@ -1,13 +1,17 @@
 import React from 'react';
 import axios from 'axios';
 import PropTypes from 'prop-types';
+
+// Import Elements
+import SliderTop from '../../elements/SliderTop';
+import FloatQuickAccess from '../../elements/FloatQuickAccess';
+
+// Import Widgets
+import GalleryCommune from '../../widgets/GalleryCommune';
+import Patrimoine from '../../widgets/Patrimoine';
+import Evenements from '../../widgets/Evenements';
 import InfoCommune from '../../widgets/InfoCommune';
 import MapCommune from '../../widgets/MapCommune';
-import SliderTop from '../../elements/SliderTop';
-import Patrimoine from '../../Patrimoine';
-import Evenements from '../../Evenements';
-import FloatQuickAccess from '../../elements/FloatQuickAccess';
-import GalleryCommune from '../../widgets/GalleryCommune';
 
 /**
  * @class Commune
@@ -77,6 +81,11 @@ class Commune extends React.Component {
           mairie={mairie}
         />
         <Evenements />
+        <div className="row">
+          <div className="col-md-12">
+            <hr className="orange-bar" />
+          </div>
+        </div>
         <Patrimoine />
         <MapCommune commune={commune} geocommune={geocommune} />
         <GalleryCommune />

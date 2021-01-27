@@ -1,0 +1,25 @@
+
+.titlePatrimoine {
+  color: rgb(219, 28, 28);
+  font-size: 4em;
+  font-weight: bold;
+}
+
+.number {
+  color: rgb(219, 28, 28);
+}
+.roundedImage {
+  border-radius: 100px;
+  width: 90px;
+  height: 90px;
+}
+
+.logoMinister {
+  width: 180px;
+  height: auto;
+}
+
+
+.patrimoine-text {
+  max-width: 300px;
+}

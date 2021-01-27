@@ -3,8 +3,8 @@ import axios from 'axios';
 import './css/style.css';
 import { Link } from 'react-router-dom';
 /**
- * @class MapCommune
- * @description Map de la page commune
+ * @class RandomCommuneBottom
+ * @description Rajoute un nuage de tags de commune en bas du site
  */
 //
 function RandomCommuneBottom() {
@@ -16,7 +16,7 @@ function RandomCommuneBottom() {
   useEffect(() => {
     if (!communes.length) {
       axios
-        .get(`https://regionsud-api-dev.woozy.fr/api/communes/random?limit=90`)
+        .get(`https://regionsud-api-dev.woozy.fr/api/communes/random?limit=80`)
         .then((res) => {
           setCommunes(res.data);
         });

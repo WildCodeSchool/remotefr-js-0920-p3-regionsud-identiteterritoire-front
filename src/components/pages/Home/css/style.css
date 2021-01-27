@@ -1,5 +1,21 @@
-.badge-random-home{
-  font-size:16px;
+.badge-random-home {
+  font-size: 16px;
   font-weight: 500;
-  margin:8px;
+  margin: 8px;
+}
+
+/****************
+***PARTENAIRES***
+****************/
+
+.title-partenaire {
+  margin: 40px auto;
+  font-style: italic;
+  color: #313131;
+}
+
+.img-partenaire {
+  width: 100px;
+  opacity: 20%;
+  margin: 0 20px 30px;
 }

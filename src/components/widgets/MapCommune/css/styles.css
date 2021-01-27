@@ -9,17 +9,29 @@
 }
 
 .mapMenuCommuneListLink {
+  background-color: none;
   margin: 10px 0 0 25px;
   color:white !important;
   font-size: 14px;
-  display: block;
+  background-color: #fcbb3b;
+  border-width:0;
+  border: none;
+  outline:none;
 }
+
+.mapMenuCommuneListLink[type="button"] {
+  outline: none;
+}
+
+.mapMenuCommuneListLink[type="button"]::-moz-focus-inner {
+  border: 0;
+}
+
+
 
 .mapMenuCommuneListLink:hover {
   margin: 10px 0 0 25px;
   color: #a46d00;
-  cursor: pointer;
-  display: block;
 }
 
 .mapMenuCommuneListLink > span {

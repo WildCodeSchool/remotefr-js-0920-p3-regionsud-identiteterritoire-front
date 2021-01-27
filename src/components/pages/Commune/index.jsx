@@ -21,6 +21,7 @@ class Commune extends React.Component {
       mairie: [],
       maire: [],
       geocommune: [],
+      sliderImage: '',
     };
   }
 
@@ -31,40 +32,47 @@ class Commune extends React.Component {
       },
     } = this.props;
     axios
-      .get(`https://regionsud-api.woozy.fr/api/communes/${id}`)
+      .get(`https://regionsud-api-dev.woozy.fr/api/communes/${id}`)
       .then((res) => {
         const commune = res.data;
         this.setState({ commune });
       });
 
     axios
-      .get(`https://regionsud-api.woozy.fr/api/communes/${id}/mairie`)
+      .get(`https://regionsud-api-dev.woozy.fr/api/communes/${id}/mairie`)
       .then((res) => {
         const mairie = res.data;
         this.setState({ mairie });
       });
 
     axios
-      .get(`https://regionsud-api.woozy.fr/api/communes/${id}/maire`)
+      .get(`https://regionsud-api-dev.woozy.fr/api/communes/${id}/maire`)
       .then((res) => {
         const maire = res.data;
         this.setState({ maire });
       });
 
     axios
-      .get(`https://regionsud-api.woozy.fr/api/communes/${id}/geocommunes`)
+      .get(`https://regionsud-api-dev.woozy.fr/api/communes/${id}/geocommunes`)
       .then((res) => {
         const geocommune = res.data;
         this.setState({ geocommune });
       });
+
+    axios
+      .get(`https://regionsud-api-dev.woozy.fr/api/communes/${id}/slider`)
+      .then((res) => {
+        const slider = res.data;
+        this.setState({ sliderImage: slider.urlDiaporama });
+      });
   }
 
   render = () => {
-    const { commune, geocommune, maire, mairie } = this.state;
+    const { commune, geocommune, maire, mairie, sliderImage } = this.state;
     return (
       <div>
+        <SliderTop pictures={sliderImage} />
         <FloatQuickAccess />
-        <SliderTop pictures="communes/toulon.jpg" />
         <InfoCommune
           commune={commune}
           geocommune={geocommune}

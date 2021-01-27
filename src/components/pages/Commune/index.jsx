@@ -5,7 +5,7 @@ import InfoCommune from '../../widgets/InfoCommune';
 import MapCommune from '../../widgets/MapCommune';
 import SliderTop from '../../elements/SliderTop';
 import Patrimoine from '../../Patrimoine';
-import Evenements from '../../Evenements';
+import FloatQuickAccess from '../../elements/FloatQuickAccess';
 
 /**
  * @class Commune
@@ -62,6 +62,7 @@ class Commune extends React.Component {
     const { commune, geocommune, maire, mairie } = this.state;
     return (
       <div>
+        <FloatQuickAccess />
         <SliderTop pictures="communes/toulon.jpg" />
         <InfoCommune
           commune={commune}

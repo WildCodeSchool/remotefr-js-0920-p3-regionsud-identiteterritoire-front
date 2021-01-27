@@ -24,6 +24,7 @@ class App extends React.Component {
     return (
       <FormGroup className="datepicker">
         <DatePicker
+          placeholderText="Sélectionnez une date d'arrivée"
           id="example-datepicker"
           value={value}
           dateFormat="DD/MM/YYYY"

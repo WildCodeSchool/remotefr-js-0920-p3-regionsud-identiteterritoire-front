@@ -1,0 +1,27 @@
+/*https://bootsnipp.com/snippets/p1qAD*/
+
+.gal-commune {
+  -webkit-column-count: 6;
+  /* Chrome, Safari, Opera */
+  -moz-column-count: 6;
+  /* Firefox */
+  column-count: 6;
+}
+
+
+.gal-commune img {
+  width: 100%;
+  padding: 7px 0;
+}
+
+@media (max-width: 500px) {
+
+  .gal-commune {
+    -webkit-column-count: 1;
+    /* Chrome, Safari, Opera */
+    -moz-column-count: 1;
+    /* Firefox */
+    column-count: 1;
+  }
+
+}

@@ -1,7 +1,7 @@
 .badge-random-home {
   font-size: 16px;
   font-weight: 500;
-  margin: 8px;
+  margin:8px;
 }
 
 /****************
@@ -18,4 +18,71 @@
   width: 100px;
   opacity: 20%;
   margin: 0 20px 30px;
+}
+
+/*badge-random-home*/
+
+
+
+.badge-regionsud-200 {
+  color: #fff;
+  background-color: #d7a033;
+  }
+
+.badge-regionsud-200:hover {
+  color: #fff;
+  background-color: #a97714;
+  text-decoration: none;
+}
+
+
+.badge-regionsud-400 {
+  color: #fff;
+  background-color: #bb8b2c;
+}
+
+.badge-regionsud-400:hover {
+  color: #fff;
+  background-color: #a17828;
+  text-decoration: none;
+}
+
+
+.badge-regionsud-600 {
+  color: #fff;
+  background-color: #d18b00;
+}
+
+.badge-regionsud-600:hover {
+  color: #fff;
+  background-color: #d18b00;
+  text-decoration: none;
+}
+
+/*https://bootsnipp.com/snippets/p1qAD*/
+
+.gal {
+  -webkit-column-count: 3;
+  /* Chrome, Safari, Opera */
+  -moz-column-count: 3;
+  /* Firefox */
+  column-count: 3;
+}
+
+
+.gal img {
+  width: 100%;
+  padding: 7px 0;
+}
+
+@media (max-width: 500px) {
+
+  .gal {
+    -webkit-column-count: 1;
+    /* Chrome, Safari, Opera */
+    -moz-column-count: 1;
+    /* Firefox */
+    column-count: 1;
+  }
+
 }

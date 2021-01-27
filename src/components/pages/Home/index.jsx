@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import './css/style.css';
 import HomeMapBox from './mapbox';
 import RandomCommuneBottom from './randomCommuneBottom';
+import RandomGallery from './randomGallery';
 import SliderTop from '../../elements/SliderTop';
 import LogoPartenaire from './LogoPartenaire';
 
@@ -34,13 +35,11 @@ class Home extends React.Component {
               <div className="col-md-6">
                 <BlockRandomCity
                   name="Avignon"
-                  slug="avignon"
                   inseeCode="84007"
                   picture="marseille.jpg"
                 />
                 <BlockRandomCity
                   name="Toulon"
-                  slug="toulon"
                   inseeCode="83137"
                   picture="toulon.jpg"
                 />
@@ -49,12 +48,10 @@ class Home extends React.Component {
                 <BlockRandomCity
                   name="Nice"
                   inseeCode="06088"
-                  slug="nice"
                   picture="nice.jpg"
                 />
                 <BlockRandomCity
                   name="Forcalquier"
-                  slug="forcalquier"
                   inseeCode="04088"
                   picture="forcalquier.jpg"
                 />
@@ -71,7 +68,14 @@ class Home extends React.Component {
         </div>
         <div className="row">
           <div className="col-md-12">
-            <RandomCommuneBottom />
+            <div className="row">
+              <div className="col-md-6">
+                <RandomCommuneBottom />
+              </div>
+              <div className="col-md-6">
+                <RandomGallery />
+              </div>
+            </div>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, sit
             aspernatur atque alias maiores iure commodi ratione reprehenderit id
             rem ducimus nostrum aut cumque suscipit eos, quod consequatur.
@@ -102,7 +106,7 @@ class Home extends React.Component {
  * @description Gere les block random des villes
  */
 const BlockRandomCity = (props) => {
-  const { name, inseeCode, picture, slug } = props;
+  const { name, inseeCode, picture } = props;
   const pictureUrl = `/images/communes/${picture}`;
   return (
     <div>
@@ -111,10 +115,7 @@ const BlockRandomCity = (props) => {
           <img src={pictureUrl} className="img-fluid" alt={name} />
         </div>
         <div className=" col-md-8">
-          <Link
-            to={`/commune/${inseeCode}/${slug}`}
-            className="home-title-city"
-          >
+          <Link to={`/commune/${inseeCode}`} className="home-title-city">
             {name}
           </Link>
           cp Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
@@ -130,7 +131,6 @@ BlockRandomCity.propTypes = {
   picture: PropTypes.string.isRequired,
   inseeCode: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  slug: PropTypes.string.isRequired,
 };
 
 export default Home;

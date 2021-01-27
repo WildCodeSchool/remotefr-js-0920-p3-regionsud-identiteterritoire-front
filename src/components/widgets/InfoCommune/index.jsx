@@ -42,8 +42,35 @@ class InfoCommune extends React.Component {
               </a>
             </p>
             <p>
-              $VILLE est un(e) $TYPEDECOMMUNE située dans le département $
-              DEPARTEMENT.
+              <b>
+                $VILLE est un(e) $TYPEDECOMMUNE située dans le département $
+                DEPARTEMENT.
+              </b>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
+              quasi, quod maiores, sequi maxime itaque magnam excepturi
+              voluptate autem esse repellat saepe est quaerat cumque fugit ex ad
+              aliquam qui?
+              <br />
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
+              quasi, quod maiores, sequi maxime itaque magnam excepturi
+              voluptate autem esse repellat saepe est quaerat cumque fugit ex ad
+              aliquam qui?
+              <br />
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
+              quasi, quod maiores, sequi maxime itaque magnam excepturi
+              voluptate autem esse repellat saepe est quaerat cumque fugit ex ad
+              aliquam qui?
+              <br />
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
+              quasi, quod maiores, sequi maxime itaque magnam excepturi
+              voluptate autem esse repellat saepe est quaerat cumque fugit ex ad
+              aliquam qui?
+              <br />
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
+              quasi, quod maiores, sequi maxime itaque magnam excepturi
+              voluptate autem esse repellat saepe est quaerat cumque fugit ex ad
+              aliquam qui?
+              <br />
             </p>
 
             <div className="row">

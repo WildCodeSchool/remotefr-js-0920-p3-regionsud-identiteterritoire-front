@@ -7,6 +7,7 @@ import SliderTop from '../../elements/SliderTop';
 import Patrimoine from '../../Patrimoine';
 import Evenements from '../../Evenements';
 import FloatQuickAccess from '../../elements/FloatQuickAccess';
+import GalleryCommune from '../../widgets/GalleryCommune';
 
 /**
  * @class Commune
@@ -34,29 +35,25 @@ class Commune extends React.Component {
     axios
       .get(`https://regionsud-api-dev.woozy.fr/api/communes/${id}`)
       .then((res) => {
-        const commune = res.data;
-        this.setState({ commune });
+        this.setState({ commune: res.data });
       });
 
     axios
       .get(`https://regionsud-api-dev.woozy.fr/api/communes/${id}/mairie`)
       .then((res) => {
-        const mairie = res.data;
-        this.setState({ mairie });
+        this.setState({ mairie: res.data });
       });
 
     axios
       .get(`https://regionsud-api-dev.woozy.fr/api/communes/${id}/maire`)
       .then((res) => {
-        const maire = res.data;
-        this.setState({ maire });
+        this.setState({ maire: res.data });
       });
 
     axios
       .get(`https://regionsud-api-dev.woozy.fr/api/communes/${id}/geocommunes`)
       .then((res) => {
-        const geocommune = res.data;
-        this.setState({ geocommune });
+        this.setState({ geocommune: res.data });
       });
 
     axios
@@ -82,6 +79,7 @@ class Commune extends React.Component {
         <Evenements />
         <Patrimoine />
         <MapCommune commune={commune} geocommune={geocommune} />
+        <GalleryCommune />
       </div>
     );
   };

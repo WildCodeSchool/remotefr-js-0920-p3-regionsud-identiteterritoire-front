@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import './css/style.css';
 import { Link } from 'react-router-dom';
 /**
  * @class MapCommune
@@ -15,7 +16,7 @@ function RandomCommuneBottom() {
   useEffect(() => {
     if (!communes.length) {
       axios
-        .get(`https://regionsud-api-dev.woozy.fr/api/communes/random?limit=30`)
+        .get(`https://regionsud-api-dev.woozy.fr/api/communes/random?limit=90`)
         .then((res) => {
           setCommunes(res.data);
         });
@@ -25,14 +26,20 @@ function RandomCommuneBottom() {
   return (
     <div className="row">
       <div className="col-md-12">
-        <div className="bigTitle">Découverte aléatoire</div>
+        <div className="mediumTitle">Découverte aléatoire</div>
         <div>
           {communes.map(function c(commune) {
+            const classIt = [
+              'badge-regionsud-200',
+              'badge-regionsud-400',
+              'badge-regionsud-600',
+            ];
+            const random = Math.floor(Math.random() * classIt.length);
             return (
               <Link
-                className="badge badge-secondary badge-random-home"
+                className={`badge ${classIt[random]} badge-random-home`}
                 key={commune.nom}
-                to={`/commune/${commune.code_insee}/${commune.slug}`}
+                to={`/commune/${commune.code_insee}`}
               >
                 {commune.nom}
               </Link>

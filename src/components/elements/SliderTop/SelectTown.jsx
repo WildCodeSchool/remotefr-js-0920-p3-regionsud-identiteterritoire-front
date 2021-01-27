@@ -30,7 +30,7 @@ class SelectTown extends React.Component {
 
   getRandomTown() {
     const one =
-      'https://regionsud-api.woozy.fr/api/communes/autocomplete?q=toulon';
+      'https://regionsud-apiss-dev.woozy.fr/api/communes/autocomplete?q=toulon';
 
     axios.all([axios.get(one).then((response) => response.data)]).then(
       axios.spread((...data) => {

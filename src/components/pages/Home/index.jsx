@@ -76,26 +76,9 @@ class Home extends React.Component {
                 <RandomGallery />
               </div>
             </div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, sit
-            aspernatur atque alias maiores iure commodi ratione reprehenderit id
-            rem ducimus nostrum aut cumque suscipit eos, quod consequatur.
-            Repellendus, quibusdam! Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Ullam, sit aspernatur atque alias maiores iure
-            commodi ratione reprehenderit id rem ducimus nostrum aut cumque
-            suscipit eos, quod consequatur. Repellendus, quibusdam! Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Ullam, sit aspernatur
-            atque alias maiores iure commodi ratione reprehenderit id rem
-            ducimus nostrum aut cumque suscipit eos, quod consequatur.
-            Repellendus, quibusdam! Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Ullam, sit aspernatur atque alias maiores iure
-            commodi ratione reprehenderit id rem ducimus nostrum aut cumque
-            suscipit eos, quod consequatur. Repellendus, quibusdam! Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Ullam, sit aspernatur
-            atque alias maiores iure commodi ratione reprehenderit id rem
-            ducimus nostrum aut cumque suscipit eos, quod consequatur.
           </div>
-          <LogoPartenaire />
         </div>
+        <LogoPartenaire />
       </div>
     );
   };

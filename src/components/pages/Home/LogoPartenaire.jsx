@@ -11,7 +11,7 @@ function LogoPartenaire() {
     <div className="row">
       <div className="col-md-12">
         <div className="partenaire">
-          <div className="title-partenaire">
+          <div className="title-partenaire text-center">
             <h6>
               Partenaires et/ou producteurs de données utilisées dans ce
               prototype
@@ -46,7 +46,7 @@ function LogoPartenaire() {
             </a>
             <a
               href="https://www.culture.gouv.fr/"
-              title="Ministère de la Cultur"
+              title="Ministère de la Culture"
             >
               <img
                 src={mdlc}

@@ -8,7 +8,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: new Date().toISOString(),
+      value: false,
     };
   }
 
@@ -24,8 +24,8 @@ class App extends React.Component {
     return (
       <FormGroup className="datepicker">
         <DatePicker
-          placeholderText="Sélectionnez une date d'arrivée"
-          id="example-datepicker"
+          placeholder="Votre date d'arrivée"
+          className="select-date-picker"
           value={value}
           dateFormat="DD/MM/YYYY"
           dayLabels={['Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam', 'Dim']}

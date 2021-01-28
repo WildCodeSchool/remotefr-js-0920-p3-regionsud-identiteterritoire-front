@@ -8,7 +8,7 @@ import JazzToulon from './images/jazz_toulon.jpg';
 function Evenements() {
   return (
     <section className="row">
-      <div className="col-md-10 offset-md-1">
+      <div className="col-md-8 offset-md-2">
         <div className="row">
           <div className="col-md-6">
             <h3 className="titleEvenements">Evènements</h3>
@@ -25,18 +25,12 @@ function Evenements() {
               la région Provence-Alpes-Côtesd&apos;Azur: Spéctacles, exposition,
               festivals,concerts, conférrence,saison théatrale etc ...
             </p>
-            <img
-              src={Arsud}
-              className="img-rate-quality-pico logoArsud"
-              alt="Responsive_imge"
-            />
+            <img src={Arsud} className="logoArsud" alt="Responsive_imge" />
           </div>
           <div className="col-md-6">
             <BlockEvents
               title="Vivement dimanche au faron"
-              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-          incidunt quis id ex vel? Iste perferendis excepturi porro id illo
-          pariatur in voluptatem sunt, reprehenderit nulla dolores? Dignissimos,
+              description="Lorem ipsum dolor sit amet consectetur adipisicing elit.
           deleniti culpa!"
               image={Faron}
             />
@@ -44,18 +38,14 @@ function Evenements() {
             <BlockEvents
               title="Feu d'artifice"
               description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-          incidunt quis id ex vel? Iste perferendis excepturi porro id illo
-          pariatur in voluptatem sunt, reprehenderit nulla dolores? Dignissimos,
-          deleniti culpa!"
+          incidunt quis id ex vel? "
               image={FeuDartifice}
             />
 
             <BlockEvents
               title="Festival Jazz Toulon"
               description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-          incidunt quis id ex vel? Iste perferendis excepturi porro id illo
-          pariatur in voluptatem sunt, reprehenderit nulla dolores? Dignissimos,
-          deleniti culpa!"
+          incidunt quis id ex vel?"
               image={JazzToulon}
             />
           </div>
@@ -68,15 +58,13 @@ function Evenements() {
 function BlockEvents(props) {
   const { title, description, image } = props;
   return (
-    <div className="row">
-      <div className="col-md-3">
-        <img
-          src={image}
-          className="rounded-circle roundedImage"
-          alt="Responsive_imge"
-        />
+    <div className="row BlockEvents-container">
+      <div className="col-md-4">
+        <div className="circle">
+          <img src={image} className="rounded-circle img-fluid" alt="tmp" />
+        </div>
       </div>
-      <div className="col-md-9">
+      <div className="col-md-8">
         <p>
           <b>{title}</b>
           <br />

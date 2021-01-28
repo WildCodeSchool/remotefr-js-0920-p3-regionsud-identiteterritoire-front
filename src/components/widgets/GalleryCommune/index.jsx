@@ -3,6 +3,7 @@ import axios from 'axios';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import './css/styles.css';
+import LogoPartenaire from '../../pages/Home/LogoPartenaire';
 /**
  * @class MapCommune
  * @description Map de la page commune
@@ -42,6 +43,7 @@ function GalleryCommune(props) {
                 return <img src={picture.urlDiaporama} alt="" />;
               })}
             </div>
+            <LogoPartenaire />
           </div>
         </div>
       </div>

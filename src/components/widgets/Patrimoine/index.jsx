@@ -6,7 +6,7 @@ import logoMusee from './images/logoMusee.jpg';
 function Patrimoine() {
   return (
     <section className="row">
-      <div className="col-md-10 offset-md-1">
+      <div className="col-md-8 offset-md-2">
         <div className="row">
           <div className="col-md-6">
             <h3 className="titlePatrimoine">Patrimoine</h3>
@@ -33,28 +33,22 @@ function Patrimoine() {
           <div className="col-md-6">
             <BlockEvents
               title="Musée d'art"
-              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-          incidunt quis id ex vel? Iste perferendis excepturi porro id illo
-          pariatur in voluptatem sunt, reprehenderit nulla dolores? Dignissimos,
+              description="Lorem reprehenderit nulla dolores? Dignissimos,
           deleniti culpa!"
               image={logoMusee}
             />
 
             <BlockEvents
-              title="Musée d'art"
-              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-          incidunt quis id ex vel? Iste perferendis excepturi porro id illo
-          pariatur in voluptatem sunt, reprehenderit nulla dolores? Dignissimos,
+              title="Musée des cartes"
+              description="Reprehenderit nulla dolores? Dignissimos,
           deleniti culpa!"
               image={logoMusee}
             />
 
             <BlockEvents
-              title="Musée d'art"
+              title="Musée Piccaso"
               description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-          incidunt quis id ex vel? Iste perferendis excepturi porro id illo
-          pariatur in voluptatem sunt, reprehenderit nulla dolores? Dignissimos,
-          deleniti culpa!"
+          incidunt quis"
               image={logoMusee}
             />
           </div>
@@ -67,15 +61,13 @@ function Patrimoine() {
 function BlockEvents(props) {
   const { title, description, image } = props;
   return (
-    <div className="row">
-      <div className="col-md-3">
-        <img
-          src={image}
-          className="rounded-circle roundedImage"
-          alt="Responsive_imge"
-        />
+    <div className="row BlockEvents-container">
+      <div className="col-md-4">
+        <div className="circle">
+          <img src={image} className="rounded-circle img-fluid" alt={title} />
+        </div>
       </div>
-      <div className="col-md-9">
+      <div className="col-md-8">
         <p>
           <b>{title}</b>
           <br />

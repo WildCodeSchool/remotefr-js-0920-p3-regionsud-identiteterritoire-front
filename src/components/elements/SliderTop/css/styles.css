@@ -50,11 +50,12 @@
 .select-picker {
   width: 30%;
   padding: 0 5px;
-}
-
-.select-picker {
   border-radius: 80%;
   border-style: none;
+}
+
+.select-picker:hover {
+  cursor: pointer !important;
 }
 
 .search-icon {
@@ -72,6 +73,7 @@
 #rdp-form-control-example-datepicker {
   border: transparent;
   margin: 0 2px;
+  border-style: none !important;
 }
 /* Calendar React Croix Annulation */
 .input-group-text {

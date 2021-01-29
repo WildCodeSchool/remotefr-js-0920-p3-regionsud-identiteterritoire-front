@@ -34,9 +34,9 @@ class Home extends React.Component {
             <div className="row">
               <div className="col-md-6">
                 <BlockRandomCity
-                  name="Avignon"
-                  inseeCode="84007"
-                  picture="marseille.jpg"
+                  name="Nice"
+                  inseeCode="06088"
+                  picture="nice.jpg"
                 />
                 <BlockRandomCity
                   name="Toulon"
@@ -46,14 +46,14 @@ class Home extends React.Component {
               </div>
               <div className="col-md-6 mrg-home-decalage">
                 <BlockRandomCity
-                  name="Nice"
-                  inseeCode="06088"
-                  picture="nice.jpg"
-                />
-                <BlockRandomCity
                   name="Forcalquier"
                   inseeCode="04088"
                   picture="forcalquier.jpg"
+                />
+                <BlockRandomCity
+                  name="Bargème"
+                  inseeCode="83010"
+                  picture="bargeme.jpg"
                 />
               </div>
             </div>

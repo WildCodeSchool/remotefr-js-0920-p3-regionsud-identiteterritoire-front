@@ -9,10 +9,10 @@ function Team() {
         <div className="team-presentation">
           <h1>Présentation de l&apos;équipe</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae
-            necessitatibus provident veritatis dolore accusantium, quis nulla
-            repellendus beatae enim explicabo commodi minus, dolorem ratione
-            iste officiis! Tempore, quas placeat! Corporis!
+            Nous sommes quatre développeurs junior, issus d'une formation
+            fullstack Javascript à la Wild Code School. <br />
+            Nous avons travaillé sur ce projet en partenariat avec Région Sud,
+            sur les langages React.js et Node.js
           </p>
         </div>
       </article>
@@ -26,7 +26,7 @@ function Team() {
             />
             <h2>Cédric Priouret</h2>
             <p className="left-text">
-              J&apos;ai bossé tout seul sur ce projet.
+              Une affection particulière pour le Css et le front
             </p>
             <div className="social-icons-team">
               <li>
@@ -50,7 +50,9 @@ function Team() {
               title="Alexandre Chauvin"
             />
             <h2>Alexandre Chauvin</h2>
-            <p className="right-text">Expert comptable backend.</p>
+            <p className="right-text">
+              Expert carte et backend. Je code autant que je sors de blagues...
+            </p>
             <div className="social-icons-team">
               <li>
                 <a href="https://github.com/woozyfr">
@@ -74,8 +76,7 @@ function Team() {
             />
             <h2>Miguel Santos</h2>
             <p className="left-text">
-              J&apos;aime manger des sandwichs sur l&apos;autoroute et dans les
-              aéroports.
+              Je manie la guitare et le code de la même façon. Avec style.
             </p>
             <div className="social-icons-team">
               <li>
@@ -100,7 +101,7 @@ function Team() {
             />
             <h2>Cyrille Fabre</h2>
             <p className="right-text">
-              Je fais presque toujours des blagues nulles.
+              Garant de la bonne humeur, et acteur de la cohésion de groupe.
             </p>
             <div className="social-icons-team">
               <li>

@@ -7,7 +7,7 @@ import SliderTop from '../../elements/SliderTop';
 import FloatQuickAccess from '../../elements/FloatQuickAccess';
 
 // Import Widgets
-import GalleryCommune from '../../widgets/GalleryCommune';
+
 import Patrimoine from '../../widgets/Patrimoine';
 import Evenements from '../../widgets/Evenements';
 import InfoCommune from '../../widgets/InfoCommune';
@@ -88,7 +88,6 @@ class Commune extends React.Component {
         </div>
         <Patrimoine />
         <MapCommune commune={commune} geocommune={geocommune} />
-        <GalleryCommune />
       </div>
     );
   };

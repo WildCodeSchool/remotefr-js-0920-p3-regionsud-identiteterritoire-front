@@ -16,7 +16,7 @@ function RandomCommuneBottom() {
   useEffect(() => {
     if (!communes.length) {
       axios
-        .get(`https://regionsud-api-dev.woozy.fr/api/communes/random?limit=80`)
+        .get(`https://regionsud-api-dev.woozy.fr/api/communes/random?limit=40`)
         .then((res) => {
           setCommunes(res.data);
         });
@@ -24,7 +24,7 @@ function RandomCommuneBottom() {
   }, [communes]);
 
   return (
-    <div className="row">
+    <div className="row mt-5">
       <div className="col-md-12">
         <div className="mediumTitle">Découverte aléatoire</div>
         <div>

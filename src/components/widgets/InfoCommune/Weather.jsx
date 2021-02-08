@@ -25,22 +25,23 @@ function Weather(props) {
 
   return (
     <div className="row">
-      <div className="col-md-4">
+      <div className="col-md-12">
+        <div className="MeteoTitle text-center">Météo</div>
+      </div>
+
+      <div className="col-md-6">
         <img
           src={`http://openweathermap.org/img/wn/${weather.icon}@2x.png`}
           alt={weather.description}
         />
       </div>
 
-      <div className="col-md-4">
+      <div className="col-md-6">
         <div className="weather-degree">{main.temp}°</div>
-      </div>
-      <div className="col-md-4">
         <div className="weather-wind-speed">
           <div className="text-center">
-            <b>Vent</b>
+            <b>Vent</b> : {wind.speed}km/h
           </div>
-          <div className="text-center">{wind.speed}km/h</div>
         </div>
       </div>
     </div>

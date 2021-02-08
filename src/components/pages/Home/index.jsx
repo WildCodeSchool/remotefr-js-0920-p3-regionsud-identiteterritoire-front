@@ -3,9 +3,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './css/style.css';
-import HomeMapBox from './mapbox';
 import RandomCommuneBottom from './randomCommuneBottom';
-import RandomGallery from './randomGallery';
+import RadarHome from '../../elements/Charts/RadarHome';
 import SliderTop from '../../elements/SliderTop';
 import LogoPartenaire from './LogoPartenaire';
 
@@ -23,12 +22,17 @@ class Home extends React.Component {
     return (
       <div>
         <SliderTop pictures="home-slide.jpg" />
+
+        <div className="row mt-5">
+          <div className="col-md-6">
+            <RadarHome />
+          </div>
+        </div>
         <div className="row">
           <div className="col-md-12">
             <div className="bigTitle">Laissez vous guider</div>
           </div>
         </div>
-
         <div className="row">
           <div className="col-md-8 offset-md-2">
             <div className="row">
@@ -59,24 +63,8 @@ class Home extends React.Component {
             </div>
           </div>
         </div>
-
-        <div className="row relative">
-          <div className="bigTitle abso-choisir-sur-carte">
-            Choisir sur une carte
-          </div>
-          <HomeMapBox />
-        </div>
-        <div className="row">
-          <div className="col-md-12">
-            <div className="row">
-              <div className="col-md-6">
-                <RandomCommuneBottom />
-              </div>
-              <div className="col-md-6">
-                <RandomGallery />
-              </div>
-            </div>
-          </div>
+        <div className="col-md-12">
+          <RandomCommuneBottom />
         </div>
         <LogoPartenaire />
       </div>

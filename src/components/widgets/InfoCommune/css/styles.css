@@ -45,8 +45,6 @@
 
 /* SOCIAL CONTAINER*/
 .social-container {
-  padding: 4px 40px;
-  margin-top: 50px;
   align-items: center;
 }
 .social-follow {
@@ -66,20 +64,32 @@ a.social:hover {
 
 a.facebook {
   color: #4968ad;
+  margin: 20px 15px;
 }
 
 a.twitter {
   color: #49a1eb;
+  margin: 20px 15px;
 }
 
 a.instagram {
   color: rgb(187, 15, 110);
+  margin: 20px 15px;
 }
 .align-baseline {
   height: 10px;
 }
-.align-baseline1 {
-  height: 35px;
+
+.communeTitle {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.communeWelcome {
+    font-size: 16px;
+    line-height: 0;
+    color:grey;
+    
 }
 
 .orange-bar {
@@ -88,9 +98,6 @@ a.instagram {
   height: 14px;
   margin: 60px auto;
 }
-
-
-
 
 .padding-grey-block{
   padding:24px 15px 15px 15px;

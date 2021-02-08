@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 
 import './css/styles.css';
 import PropTypes from 'prop-types';
-import SelectPersonas from './SelectPersonas';
-import DatePicker from './DatePicker';
 import SelectTown from './SelectTown';
 /**
  * @class SliderTop
@@ -38,8 +36,6 @@ const SliderTop = (props) => {
           <div className="vertical-center">
             <div className="roundedFormsHome">
               <SelectTown />
-              <SelectPersonas />
-              <DatePicker />
               <button type="submit" onSubmit={handleSubmit} className="dot">
                 <i className="fas fa-search search-icon" />{' '}
               </button>

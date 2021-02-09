@@ -24,7 +24,7 @@ function GalleryCommune(props) {
     if (!gallery.length) {
       axios
         .get(
-          `https://regionsud-api-dev.woozy.fr/api/communes/${id}/gallery?limit=18`,
+          `${process.env.REACT_APP_REGIONSUD_API_URL}/communes/${id}/gallery?limit=18`,
         )
         .then((res) => {
           setGallery(res.data);

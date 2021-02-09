@@ -1,19 +1,38 @@
 import React from 'react';
 import './css/styles.css';
+import PropTypes from 'prop-types';
 import logoMinistere from './images/logoMinistere.jpg';
 import logoMusee from './images/logoMusee.jpg';
+// import { OverlayTrigger, Tooltip, Button } from 'react-bootstrap';
+
+// const renderTooltip = (props) => (
+//   <Tooltip id="button-tooltip" {...props}>
+//     Simple tooltip
+//   </Tooltip>
+// );
+
+// <OverlayTrigger
+//   placement="right"
+//   delay={{ show: 250, hide: 400 }}
+//   overlay={renderTooltip}
+// >
+//   <Button variant="success">Hover me to see</Button>
+// </OverlayTrigger>;
 
 function Patrimoine() {
   return (
     <section className="row">
       <div className="col-md-8 offset-md-2">
+        <div className="row mb-3">
+          <div className="col-md-12">
+            <h3 className="titlePatrimoine">Patrimoine</h3>
+          </div>
+        </div>
         <div className="row">
           <div className="col-md-6">
-            <h3 className="titlePatrimoine">Patrimoine</h3>
             <h4>
               <b>Musées</b>
             </h4>
-
             <p>
               Nombre de musées recensés
               <br /> sur la commune :<b className="number"> 10 </b>
@@ -77,5 +96,11 @@ function BlockEvents(props) {
     </div>
   );
 }
+
+BlockEvents.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+};
 
 export default Patrimoine;

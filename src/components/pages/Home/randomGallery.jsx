@@ -16,7 +16,9 @@ function RandomCommuneBottom() {
   useEffect(() => {
     if (!gallery.length) {
       axios
-        .get(`https://regionsud-api-dev.woozy.fr/api/communes/gallery/random`)
+        .get(
+          `${process.env.REACT_APP_REGIONSUD_API_URL}/communes/gallery/random`,
+        )
         .then((res) => {
           setGallery(res.data);
         });

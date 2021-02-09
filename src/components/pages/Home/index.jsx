@@ -27,6 +27,8 @@ class Home extends React.Component {
           <div className="col-md-6">
             <RadarHome />
           </div>
+
+          <div className="col-md-6" />
         </div>
         <div className="row">
           <div className="col-md-12">
@@ -41,11 +43,13 @@ class Home extends React.Component {
                   name="Nice"
                   inseeCode="06088"
                   picture="nice.jpg"
+                  text="Nice est une commune du sud-est de la France, préfecture du département des Alpes-Maritimes et deuxième ville de la région."
                 />
                 <BlockRandomCity
                   name="Toulon"
                   inseeCode="83137"
                   picture="toulon.jpg"
+                  text="Toulon est une commune du Sud-Est de la France, chef-lieu du département du Var et siège de sa préfecture. "
                 />
               </div>
               <div className="col-md-6 mrg-home-decalage">
@@ -53,11 +57,13 @@ class Home extends React.Component {
                   name="Forcalquier"
                   inseeCode="04088"
                   picture="forcalquier.jpg"
+                  text="Forcalquier en occitan provençal Forcauquièr selon la graphie classique, Fourcauquié selon la graphie mistralienne"
                 />
                 <BlockRandomCity
                   name="Bargème"
                   inseeCode="83010"
                   picture="bargeme.jpg"
+                  text="Bargème fait partie de la communauté de Dracénie Provence Verdon agglomération (ex-Communauté d'Agglomération Dracénoise) de 110 014 habitants en 2017"
                 />
               </div>
             </div>
@@ -77,7 +83,7 @@ class Home extends React.Component {
  * @description Gere les block random des villes
  */
 const BlockRandomCity = (props) => {
-  const { name, inseeCode, picture } = props;
+  const { name, inseeCode, picture, text } = props;
   const pictureUrl = `/images/communes/${picture}`;
   return (
     <div>
@@ -89,9 +95,7 @@ const BlockRandomCity = (props) => {
           <Link to={`/commune/${inseeCode}`} className="home-title-city">
             {name}
           </Link>
-          cp Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
-          alias ipsa aperiam voluptatum! Hic sint accusamus aperiam veritatis
-          illo
+          {text}
         </div>
       </div>
     </div>
@@ -102,6 +106,7 @@ BlockRandomCity.propTypes = {
   picture: PropTypes.string.isRequired,
   inseeCode: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
 };
 
 export default Home;

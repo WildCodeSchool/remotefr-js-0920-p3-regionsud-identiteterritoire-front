@@ -13,7 +13,7 @@ function Weather(props) {
     if (codeInsee) {
       axios
         .get(
-          `https://regionsud-api-dev.woozy.fr/api/communes/${codeInsee}/meteo`,
+          `${process.env.REACT_APP_REGIONSUD_API_URL}/communes/${codeInsee}/meteo`,
         )
         .then((res) => {
           setWind(res.data.wind);

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './css/styles.css';
@@ -13,71 +13,72 @@ import imageLogoVillageFlories from './images/Logo-Villes-et-villages-fleuris-20
  * @class InfoCommune
  * @description Map en bas de la home
  */
-class InfoCommune extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
 
-  render() {
-    const { commune, mairie } = this.props;
-    return (
-      <div className="col-md-10 offset-md-1">
-        <div className="row">
-          <div className="col-md-6">
-            <div className="align-baseline1">
-              <div className="communeWelcome">Nos data sur</div>
-              <div className="communeTitle">{commune.nom}</div>
-            </div>
-            <p>
-              <b>Site officiel: </b>
-              <a href="{mairie.www}" target="_blank">
-                {` ${mairie.www}`}
-              </a>
-            </p>
-            <p>{ReactHtmlParser(commune.text)}</p>
-            <div className="row">
-              <div className="col-md-6">
-                <Weather codeInsee={commune.code_insee} />
-              </div>
-              <div className="col-md-6">
-                <SociaLink />
-              </div>
-            </div>
+const InfoCommune = (props) => {
+  const { commune, mairie } = props;
+  useEffect(() => {
+    // axios
+    //   .get(`${process.env.REACT_APP_REGIONSUD_API_URL}/communes/tourismes/radar`)
+    //   .then((res) => {
+    //   });
+  }, []);
+
+  return (
+    <div className="col-md-10 offset-md-1">
+      <div className="row">
+        <div className="col-md-6">
+          <div className="align-baseline1">
+            <div className="communeWelcome">Nos data sur</div>
+            <div className="communeTitle">{commune.nom}</div>
           </div>
-          <div className="col-md-6">
-            <div className="row">
-              <div className="col-md-12">
-                <RadarCommune />
-              </div>
+          <p>
+            <b>Site officiel: </b>
+            <a href="{mairie.www}" target="_blank">
+              {` ${mairie.www}`}
+            </a>
+          </p>
+          <p>{ReactHtmlParser(commune.text)}</p>
+          <div className="row">
+            <div className="col-md-6">
+              <Weather codeInsee={commune.code_insee} />
             </div>
-            <div className="row">
-              <div className="col-md-6 text-center villageIcons">
-                <img
-                  src={imagesLogoVilleInternet}
-                  className="img-rate-quality-picto"
-                  alt="Responsive_imge"
-                />
-              </div>
-              <div className="col-md-6 text-center villageIcons">
-                <img
-                  src={imageLogoVillageFlories}
-                  className="img-rate-quality-picto"
-                  alt="Responsive_imge"
-                />
-              </div>
+            <div className="col-md-6">
+              <SociaLink />
             </div>
           </div>
         </div>
-        <div className="row">
-          <div className="col-md-12">
-            <hr className="orange-bar" />
+        <div className="col-md-6">
+          <div className="row">
+            <div className="col-md-12">
+              <RadarCommune />
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-6 text-center villageIcons">
+              <img
+                src={imagesLogoVilleInternet}
+                className="img-rate-quality-picto"
+                alt="Responsive_imge"
+              />
+            </div>
+            <div className="col-md-6 text-center villageIcons">
+              <img
+                src={imageLogoVillageFlories}
+                className="img-rate-quality-picto"
+                alt="Responsive_imge"
+              />
+            </div>
           </div>
         </div>
       </div>
-    );
-  }
-}
+      <div className="row">
+        <div className="col-md-12">
+          <hr className="orange-bar" />
+        </div>
+      </div>
+    </div>
+  );
+};
 
 InfoCommune.propTypes = {
   match: PropTypes.shape({

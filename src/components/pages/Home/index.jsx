@@ -22,57 +22,58 @@ class Home extends React.Component {
     return (
       <div>
         <SliderTop pictures="home-slide.jpg" />
+        <div className="col-md-10 offset-md-1">
+          <div className="row mt-5">
+            <div className="col-md-6">
+              <RadarHome />
+            </div>
 
-        <div className="row mt-5">
-          <div className="col-md-6">
-            <RadarHome />
+            <div className="col-md-6" />
           </div>
-
-          <div className="col-md-6" />
-        </div>
-        <div className="row">
-          <div className="col-md-12">
-            <div className="bigTitle">Laissez vous guider</div>
+          <div className="row">
+            <div className="col-md-12">
+              <div className="bigTitle">Laissez vous guider</div>
+            </div>
           </div>
-        </div>
-        <div className="row">
-          <div className="col-md-8 offset-md-2">
-            <div className="row">
-              <div className="col-md-6">
-                <BlockRandomCity
-                  name="Nice"
-                  inseeCode="06088"
-                  picture="nice.jpg"
-                  text="Nice est une commune du sud-est de la France, préfecture du département des Alpes-Maritimes et deuxième ville de la région."
-                />
-                <BlockRandomCity
-                  name="Toulon"
-                  inseeCode="83137"
-                  picture="toulon.jpg"
-                  text="Toulon est une commune du Sud-Est de la France, chef-lieu du département du Var et siège de sa préfecture. "
-                />
-              </div>
-              <div className="col-md-6 mrg-home-decalage">
-                <BlockRandomCity
-                  name="Forcalquier"
-                  inseeCode="04088"
-                  picture="forcalquier.jpg"
-                  text="Forcalquier en occitan provençal Forcauquièr selon la graphie classique, Fourcauquié selon la graphie mistralienne"
-                />
-                <BlockRandomCity
-                  name="Bargème"
-                  inseeCode="83010"
-                  picture="bargeme.jpg"
-                  text="Bargème fait partie de la communauté de Dracénie Provence Verdon agglomération (ex-Communauté d'Agglomération Dracénoise) de 110 014 habitants en 2017"
-                />
+          <div className="row">
+            <div className="col-md-12">
+              <div className="row">
+                <div className="col-md-6">
+                  <BlockRandomCity
+                    name="Nice"
+                    inseeCode="06088"
+                    picture="nice.jpg"
+                    text="Nice est une commune du sud-est de la France, préfecture du département des Alpes-Maritimes et deuxième ville de la région."
+                  />
+                  <BlockRandomCity
+                    name="Toulon"
+                    inseeCode="83137"
+                    picture="toulon.jpg"
+                    text="Toulon est une commune du Sud-Est de la France, chef-lieu du département du Var et siège de sa préfecture. "
+                  />
+                </div>
+                <div className="col-md-6 mrg-home-decalage">
+                  <BlockRandomCity
+                    name="Forcalquier"
+                    inseeCode="04088"
+                    picture="forcalquier.jpg"
+                    text="Forcalquier en occitan provençal Forcauquièr selon la graphie classique, Fourcauquié selon la graphie mistralienne"
+                  />
+                  <BlockRandomCity
+                    name="Bargème"
+                    inseeCode="83010"
+                    picture="bargeme.jpg"
+                    text="Bargème fait partie de la communauté de Dracénie Provence Verdon agglomération (ex-Communauté d'Agglomération Dracénoise) de 110 014 habitants en 2017"
+                  />
+                </div>
               </div>
             </div>
           </div>
+          <div className="col-md-12">
+            <RandomCommuneBottom />
+          </div>
+          <LogoPartenaire />
         </div>
-        <div className="col-md-12">
-          <RandomCommuneBottom />
-        </div>
-        <LogoPartenaire />
       </div>
     );
   };

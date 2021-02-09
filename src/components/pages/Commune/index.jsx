@@ -89,7 +89,7 @@ class Commune extends React.Component {
             <hr className="orange-bar" />
           </div>
         </div>
-        <Patrimoine />
+        <Patrimoine geocommune={geocommune} />
         <MapCommune commune={commune} geocommune={geocommune} />
       </div>
     );

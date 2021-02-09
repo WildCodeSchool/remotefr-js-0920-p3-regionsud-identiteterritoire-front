@@ -38,7 +38,7 @@ const RadarCommune = () => {
   useEffect(() => {
     axios
       .get(
-        `https://regionsud-api-dev.woozy.fr/api/communes/${id}/tourismes/radar`,
+        `${process.env.REACT_APP_REGIONSUD_API_URL}/communes/${id}/tourismes/radar`,
       )
       .then((res) => {
         const labelChart = [];

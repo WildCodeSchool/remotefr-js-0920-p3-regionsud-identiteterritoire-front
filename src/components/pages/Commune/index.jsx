@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 // Import Elements
 import SliderTop from '../../elements/SliderTop';
-import FloatQuickAccess from '../../elements/FloatQuickAccess';
+import FloatRaw from '../../elements/FloatQuickAccess/FloatRaw';
 
 // Import Widgets
 
@@ -37,31 +37,33 @@ class Commune extends React.Component {
       },
     } = this.props;
     axios
-      .get(`https://regionsud-api-dev.woozy.fr/api/communes/${id}`)
+      .get(`${process.env.REACT_APP_REGIONSUD_API_URL}/communes/${id}`)
       .then((res) => {
         this.setState({ commune: res.data });
       });
 
     axios
-      .get(`https://regionsud-api-dev.woozy.fr/api/communes/${id}/mairie`)
+      .get(`${process.env.REACT_APP_REGIONSUD_API_URL}/communes/${id}/mairie`)
       .then((res) => {
         this.setState({ mairie: res.data });
       });
 
     axios
-      .get(`https://regionsud-api-dev.woozy.fr/api/communes/${id}/maire`)
+      .get(`${process.env.REACT_APP_REGIONSUD_API_URL}/communes/${id}/maire`)
       .then((res) => {
         this.setState({ maire: res.data });
       });
 
     axios
-      .get(`https://regionsud-api-dev.woozy.fr/api/communes/${id}/geocommunes`)
+      .get(
+        `${process.env.REACT_APP_REGIONSUD_API_URL}/communes/${id}/geocommunes`,
+      )
       .then((res) => {
         this.setState({ geocommune: res.data });
       });
 
     axios
-      .get(`https://regionsud-api-dev.woozy.fr/api/communes/${id}/slider`)
+      .get(`${process.env.REACT_APP_REGIONSUD_API_URL}/communes/${id}/slider`)
       .then((res) => {
         const slider = res.data;
         this.setState({ sliderImage: slider.urlDiaporama });
@@ -73,7 +75,8 @@ class Commune extends React.Component {
     return (
       <div>
         <SliderTop pictures={sliderImage} />
-        <FloatQuickAccess />
+        <FloatRaw />
+
         <InfoCommune
           commune={commune}
           geocommune={geocommune}
@@ -86,7 +89,7 @@ class Commune extends React.Component {
             <hr className="orange-bar" />
           </div>
         </div>
-        <Patrimoine />
+        <Patrimoine geocommune={geocommune} />
         <MapCommune commune={commune} geocommune={geocommune} />
       </div>
     );

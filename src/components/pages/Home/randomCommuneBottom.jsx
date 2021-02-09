@@ -16,7 +16,9 @@ function RandomCommuneBottom() {
   useEffect(() => {
     if (!communes.length) {
       axios
-        .get(`https://regionsud-api-dev.woozy.fr/api/communes/random?limit=40`)
+        .get(
+          `${process.env.REACT_APP_REGIONSUD_API_URL}/communes/random?limit=40`,
+        )
         .then((res) => {
           setCommunes(res.data);
         });

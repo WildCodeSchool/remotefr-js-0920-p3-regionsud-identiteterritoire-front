@@ -117,7 +117,7 @@ ${marker.telephone ? `<div><b>Téléphone</b> : ${marker.telephone}</div>` : ''}
     } = props;
     axios
       .get(
-        `https://regionsud-api-dev.woozy.fr/api/communes/${id}/tourismes?type=${value}`,
+        `${process.env.REACT_APP_REGIONSUD_API_URL}/communes/${id}/tourismes?type=${value}`,
       )
       .then((res) => {
         setMarkers(res.data);
@@ -137,7 +137,7 @@ ${marker.telephone ? `<div><b>Téléphone</b> : ${marker.telephone}</div>` : ''}
     if (!mapOptions.length) {
       axios
         .get(
-          `https://regionsud-api-dev.woozy.fr/api/communes/${id}/tourismes/counter`,
+          `${process.env.REACT_APP_REGIONSUD_API_URL}/communes/${id}/tourismes/counter`,
         )
         .then((res) => {
           setMapOptions(res.data);

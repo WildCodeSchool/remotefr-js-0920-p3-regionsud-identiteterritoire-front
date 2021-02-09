@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import 'prismjs/components/prism-json'; // need this
 
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
@@ -18,45 +17,47 @@ const Raw = () => {
   useEffect(() => {
     axios
       .get(
-        `https://regionsud-api-dev.woozy.fr/api/communes/${id}/tourismes/radar`,
+        `${process.env.REACT_APP_REGIONSUD_API_URL}/communes/${id}/tourismes/radar`,
       )
       .then((res) => {
         setStatistiques(res.data);
       });
 
     axios
-      .get(`https://regionsud-api-dev.woozy.fr/api/communes/${id}`)
+      .get(`${process.env.REACT_APP_REGIONSUD_API_URL}/communes/${id}`)
       .then((res) => {
         setCommune(res.data);
       });
 
     axios
-      .get(`https://regionsud-api-dev.woozy.fr/api/communes/${id}/mairie`)
+      .get(`${process.env.REACT_APP_REGIONSUD_API_URL}/communes/${id}/mairie`)
       .then((res) => {
         setMairie(res.data);
       });
 
     axios
-      .get(`https://regionsud-api-dev.woozy.fr/api/communes/${id}/maire`)
+      .get(`${process.env.REACT_APP_REGIONSUD_API_URL}/communes/${id}/maire`)
       .then((res) => {
         setMaire(res.data);
       });
 
     axios
-      .get(`https://regionsud-api-dev.woozy.fr/api/communes/${id}/geocommunes`)
+      .get(
+        `${process.env.REACT_APP_REGIONSUD_API_URL}/communes/${id}/geocommunes`,
+      )
       .then((res) => {
         setGeocommunes(res.data);
       });
 
     axios
-      .get(`https://regionsud-api-dev.woozy.fr/api/communes/${id}/slider`)
+      .get(`${process.env.REACT_APP_REGIONSUD_API_URL}/communes/${id}/slider`)
       .then((res) => {
         setSlider(res.data);
       });
 
     axios
       .get(
-        `https://regionsud-api-dev.woozy.fr/api/communes/${id}/tourismes?type=PATRIMOINE_CULTUREL`,
+        `${process.env.REACT_APP_REGIONSUD_API_URL}/communes/${id}/tourismes?type=PATRIMOINE_CULTUREL`,
       )
       .then((res) => {
         setTourismes(res.data);
@@ -98,7 +99,7 @@ const Raw = () => {
         </code>
       </pre>
 
-      <div className="rawTitle">Compteurs d'enevement commune</div>
+      <div className="rawTitle">Compteurs d&apos;enevement commune</div>
       <div className="rawSource">Source : Apidae</div>
       <pre className="line-numbers scroll">
         <code className="language-json">

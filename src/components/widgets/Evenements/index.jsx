@@ -63,8 +63,8 @@ function Evenements() {
             </p>
             <p className="evenements-text">
               Culturo.fr publie l&apos;agenda des manifestations culturelles de
-              la région Provence-Alpes-Côtesd&apos;Azur: Spéctacles, exposition,
-              festivals,concerts, conférrence,saison théatrale etc ...
+              la région Provence-Alpes-Côtesd&apos;Azur: Spectacles, exposition,
+              festivals,concerts, conférence,saison théâtrale etc ...
             </p>
             <img src={Arsud} className="logoArsud" alt="Responsive_imge" />
           </div>

@@ -63,10 +63,17 @@ const RadarHome = () => {
     <div>
       <div className="mediumTitle">Nos data</div>
       <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis,
-        rem. Laborum hic a itaque consequuntur quis libero fugit qui laudantium
-        reprehenderit corrupti, quidem exercitationem tempora error dolore id,
-        sed magnam.
+        Ce prototype se propose de recourir à une pluralité de jeux de données
+        en open data, disponibles sur la plateforme régionale DataSud, pour
+        livrer une sorte de « carte d’identité » de chaque commune du
+        territoire, incluant des informations pratiques, de contact, ainsi que
+        des données disponibles sur différents champs, présentés dans le radar
+        ci-dessous. D’autres pourront venir compléter ce « Wiki » territorial :
+        crèches, écoles entreprises, lieux de coworking, faune et flore des
+        parcs, pistes cyclables, … Plus la donnée est libérée, plus la
+        connaissance du territoire grandit ; plus la donnée est qualifiée, plus
+        la connaissance du territoire est juste ! La Région vous accompagne dans
+        l’ouverture de vos données : écrivez à smartdata@maregionsud.fr
       </div>
       <ReactApexChart
         options={config.options}

@@ -1,5 +1,5 @@
 .mapMenuCommuneBlock {
-  z-index: 9999;
+  z-index: 1000;
   position: absolute;
   width: 280px;
   height: 500px;

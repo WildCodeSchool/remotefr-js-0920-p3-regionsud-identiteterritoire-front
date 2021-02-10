@@ -65,7 +65,44 @@
   text-decoration: none;
 }
 
-/*https://bootsnipp.com/snippets/p1qAD*/
+.blockJauneHome{
+    color: #fff;
+    background-color: #fcbb3b;
+    text-decoration: none;
+    min-height: 400px;
+    width:80%;
+    margin-top: 70px ;
+    padding:30px;
+}
+
+.enChiffre {
+  color: #fff;
+  font-size: 55px;
+  font-weight: bold;
+}
+
+.leSaviezVous{
+    color: #ffdb94;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 0px;
+}
+.leSaviezVous-text {
+  color: #000;
+  font-size: 12px;
+}
+
+.nombreHab{
+    color: #000;
+    font-size: 56px;
+    font-weight: bold;
+}
+
+.superficieHome{
+      color: #000;
+      font-size: 56px;
+      font-weight: bold;
+}
 
 .gal {
   -webkit-column-count: 3;

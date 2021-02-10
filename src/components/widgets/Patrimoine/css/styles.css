@@ -58,3 +58,30 @@ text-overflow: ellipsis;
 overflow-y: scroll;
 height: 300px;
 }
+
+
+
+.numberCircle {
+  width: 70px;
+  line-height: 70px;
+  border-radius: 50%;
+  text-align: center;
+  font-size:26px;
+  color:#FFF;
+  background-color: #01c39d;
+}
+
+
+.carteMusee{
+  width:100%;
+  height:300px;
+}
+
+.modal-Body-Patrimoine {
+  padding:80px;
+}
+
+.aVoirPlus {
+  color:rgb(219, 28, 28) !important;
+  cursor: pointer;
+}

@@ -73,7 +73,7 @@ class Commune extends React.Component {
   render = () => {
     const { commune, geocommune, maire, mairie, sliderImage } = this.state;
     return (
-      <div>
+      <div className="relative">
         <SliderTop pictures={sliderImage} />
         <FloatRaw />
 

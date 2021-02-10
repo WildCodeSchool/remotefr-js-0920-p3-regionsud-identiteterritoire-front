@@ -40,7 +40,11 @@
   color: #313131;
   display: block;
 }
-
+.BarPresentation{
+  background-color: #3445bf;
+  color:#fff;
+  height:30px;
+}
 /***** FOOTER *****/
 
 footer {

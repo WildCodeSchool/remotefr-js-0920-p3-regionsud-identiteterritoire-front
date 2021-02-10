@@ -19,6 +19,13 @@ class Templates extends React.Component {
     const { children } = this.props;
     return (
       <div className="Global">
+        <div className="BarPresentation">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-2">Présentaiton du projet</div>
+            </div>
+          </div>
+        </div>
         <Header />
         <main className="container bg-white">{children}</main>
         <Footer />

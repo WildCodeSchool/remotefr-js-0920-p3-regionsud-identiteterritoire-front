@@ -2,7 +2,7 @@
   position: absolute;
   text-align: center;
   top: 35px;
-  right: 6%;
+  right: -135px;
 }
 
 .circle-icon {
@@ -35,10 +35,13 @@
   text-decoration: none;
 }
 
+
+
+
 .title-theme {
   color: #f14132;
   text-align: left;
-  margin-bottom: 30px;
+  margin-bottom: 5px;
 }
 
 .title-theme > :first-of-type {

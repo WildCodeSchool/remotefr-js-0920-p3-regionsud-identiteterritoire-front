@@ -17,6 +17,7 @@ function MapCommune(props) {
   const layerRef = useRef();
 
   /**
+   * @name templatePopup
    * @description creation du template de popup
    */
   function templatePopup(marker) {
@@ -37,10 +38,10 @@ ${marker.telephone ? `<div><b>Téléphone</b> : ${marker.telephone}</div>` : ''}
           ${marker.fax ? `<div><b>Fax</b> : ${marker.fax}</div>` : ''}
           </div></div>`;
   }
+
   /**
    * @description creation de la carte et des UseRef
    */
-
   useEffect(() => {
     mapRef.current = L.map('map', {
       layers: [
@@ -168,7 +169,7 @@ ${marker.telephone ? `<div><b>Téléphone</b> : ${marker.telephone}</div>` : ''}
           })}
         </div>
       </div>
-      <div id="map" />
+      <div id="map" className="mb-5" />
     </div>
   );
 }

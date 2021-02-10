@@ -23,12 +23,46 @@ class Home extends React.Component {
       <div>
         <SliderTop pictures="home-slide.jpg" />
         <div className="col-md-10 offset-md-1">
-          <div className="row mt-5">
-            <div className="col-md-6">
-              <RadarHome />
-            </div>
+          <div className="mt-5">
+            <div className="row">
+              <div className="col-md-6">
+                <RadarHome />
+              </div>
+              <div className="col-md-6">
+                <div className="blockJauneHome mx-auto">
+                  <div className="enChiffre">En Chiffre</div>
+                  <div className="leSaviezVous">Le saviez-vous</div>
+                  <div className="row mt-2">
+                    <div className="col-md-4">
+                      <div className="nombreHab text-right">3</div>
+                    </div>
+                    <div className="col-md-8 pt-3 leSaviezVous-text">
+                      Habitants à <b>Majastres</b> qui est la ville la moins
+                      peuplée de la Région Sud.
+                    </div>
+                  </div>
 
-            <div className="col-md-6" />
+                  <div className="row mt-0">
+                    <div className="col-md-4">
+                      <div className="superficieHome text-right">0,7</div>
+                    </div>
+                    <div className="col-md-8 pt-3 leSaviezVous-text">
+                      Difference de superficie entre la Région sud (31,4km²) et
+                      la <b>Belgique</b> (30,6km²) en km²
+                    </div>
+                  </div>
+
+                  <div className="row mt-0">
+                    <div className="col-md-4">
+                      <div className="superficieHome text-right">7,5</div>
+                    </div>
+                    <div className="col-md-8 pt-3 leSaviezVous-text">
+                      Arles pourrait contenir 7.5 fois la ville de <b>Paris</b>.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div className="row">
             <div className="col-md-12">
@@ -88,7 +122,7 @@ const BlockRandomCity = (props) => {
   const pictureUrl = `/images/communes/${picture}`;
   return (
     <div>
-      <div className="row">
+      <div className="row mb-3">
         <div className="col-md-4">
           <img src={pictureUrl} className="img-fluid" alt={name} />
         </div>

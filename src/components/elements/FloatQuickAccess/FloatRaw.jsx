@@ -12,7 +12,7 @@ const FloatRaw = () => {
   return (
     <div className="container-theme">
       <div className="title-theme">
-        <div>En</div>
+        <div>Version</div>
         <div>Data</div>
       </div>
       <div className="theme-icons">

@@ -119,20 +119,6 @@ class Footer extends React.Component {
             <div className="col-md-4">
               <div className="liens-utiles">
                 <h5 className="title-footer">Liens utiles</h5>
-                <a
-                  href="#"
-                  alt="Subventions régionales"
-                  title="Subventions régionales"
-                >
-                  Subventions régionales
-                </a>
-                <a
-                  href="#"
-                  alt="Sud Marchés Publics"
-                  title="Sud Marchés Publics"
-                >
-                  Sud Marchés Publics
-                </a>
                 <Link
                   to="/team"
                   alt="Équipe en charge du développement"

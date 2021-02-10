@@ -13,6 +13,10 @@ const Raw = () => {
   const [slider, setSlider] = useState([]);
   const [geocommunes, setGeocommunes] = useState([]);
   const [tourisme, setTourismes] = useState([]);
+  const [longitude, setLongitude] = useState(null);
+  const [latitude, setLatitude] = useState(null);
+  const [distance, setDistance] = useState(10000);
+  const [museees, setMuseees] = useState([]);
 
   useEffect(() => {
     axios
@@ -64,6 +68,27 @@ const Raw = () => {
       });
   }, []);
 
+  useEffect(() => {
+    if (!geocommunes.length) {
+      setLongitude(geocommunes.longitude);
+      setLatitude(geocommunes.latitude);
+    }
+  }, [geocommunes]);
+
+  useEffect(() => {
+    if (longitude && latitude && distance) {
+      axios
+        .get(
+          `https://data.culture.gouv.fr/api/records/1.0/search/?dataset=musees-de-france-base-museofile&q=&facet=dompal&facet=region&refine.region=Provence-Alpes-C%C3%B4te+d%27Azur&geofilter.distance=${longitude},${latitude},${distance}`,
+        )
+        .then((res) => {
+          if (res.data.records.length !== 0) {
+            setMuseees(res.data);
+          }
+        });
+    }
+  }, [longitude, latitude, distance]);
+
   return (
     <div>
       <div className="superTitleRaw">Decouverte des data du site</div>
@@ -72,25 +97,21 @@ const Raw = () => {
       <pre className="line-numbers scroll">
         <code className="language-js ">{JSON.stringify(commune, null, 2)}</code>
       </pre>
-
       <div className="rawTitle">Information mairie</div>
       <div className="rawSource">Source : INSEE</div>
       <pre className="line-numbers scroll">
         <code className="language-json">{JSON.stringify(mairie, null, 2)}</code>
       </pre>
-
       <div className="rawTitle">Information maire</div>
       <div className="rawSource">Source : INSEE</div>
       <pre className="line-numbers scroll">
         <code className="language-json">{JSON.stringify(maire, null, 2)}</code>
       </pre>
-
       <div className="rawTitle">Gestion du slider</div>
       <div className="rawSource">Source : interne</div>
       <pre className="line-numbers scroll">
         <code className="language-json">{JSON.stringify(slider, null, 2)}</code>
       </pre>
-
       <div className="rawTitle">Information geolocalisation</div>
       <div className="rawSource">Source : interne</div>
       <pre className="line-numbers scroll">
@@ -98,7 +119,6 @@ const Raw = () => {
           {JSON.stringify(geocommunes, null, 2)}
         </code>
       </pre>
-
       <div className="rawTitle">Compteurs d&apos;enevement commune</div>
       <div className="rawSource">Source : Apidae</div>
       <pre className="line-numbers scroll">
@@ -112,6 +132,13 @@ const Raw = () => {
       <pre className="line-numbers scroll">
         <code className="language-json">
           {JSON.stringify(tourisme, null, 2)}
+        </code>
+      </pre>
+      <div className="rawTitle">Exemple de donnée Muséofile</div>
+      <div className="rawSource">Source : Muséofile </div>
+      <pre className="line-numbers scroll">
+        <code className="language-json">
+          {JSON.stringify(museees, null, 2)}
         </code>
       </pre>
     </div>

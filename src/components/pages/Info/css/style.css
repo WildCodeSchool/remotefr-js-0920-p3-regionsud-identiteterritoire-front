@@ -1,0 +1,131 @@
+.team-content h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.team-history {
+  width: 100%;
+}
+
+.team-presentation p {
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 0 100px;
+}
+
+.team-presentation h1 {
+  color: rgb(241, 8, 8);
+  font-weight: bold;
+  font-size: 3em;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.team-presentation img {
+  width: 60%;
+}
+
+.team-main {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  margin: auto;
+  color: #313131;
+}
+
+.team-content {
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+  background-color: #f2f2f2;
+  color: #313131;
+  flex-flow: row wrap;
+  text-align: center;
+  justify-content: center;
+  transition: all 0.7s ease-in-out;
+  width: 60%;
+  min-width: 300px;
+  margin: 3rem auto;
+  padding: 1.25rem;
+}
+
+.team-content img {
+  width: 50%;
+  height: auto;
+  margin-bottom: 50px;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.team-content .left-text {
+  text-align: center;
+}
+
+.team-content .right-text {
+  text-align: center;
+}
+
+.team-h3 {
+  width: 100%;
+}
+
+.team-p {
+  width: 100%;
+  text-align: justify !important;
+  margin: 0;
+}
+
+/* CSS ICON SOCIAL*/
+
+.social-icons-team {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.social-icons-team li {
+  display: inline-block;
+  margin: 0.15em;
+  position: relative;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.social-icons-team i {
+  color: #313131;
+  position: absolute;
+  top: 0.5em;
+  left: 0.5em;
+  transition: all 265ms ease-out;
+}
+
+.social-icons-team a {
+  display: inline-block;
+}
+
+.social-icons-team a:before {
+  transform: scale(1);
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  content: ' ';
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  display: block;
+  background-color: #fff;
+  transition: all 265ms ease-out;
+}
+
+.social-icons-team a:hover:before {
+  transform: scale(0);
+  transition: all 265ms ease-in;
+  color: #fff;
+}
+
+.social-icons-team a:hover i {
+  transform: scale(2.2);
+  -ms-transform: scale(2.2);
+  -webkit-transform: scale(2.2);
+  color: #313131;
+  transition: all 265ms ease-in;
+}

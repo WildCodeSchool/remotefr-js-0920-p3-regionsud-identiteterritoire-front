@@ -91,10 +91,10 @@ function Patrimoine({ geocommune }) {
             </h4>
 
             <p className="patrimoine-text">
-              La base <b>Muséofile</b> permet de consulter les présentation des
+              La base <b>Muséofile</b> permet de consulter les présentations des
               musées agréés par l&apos;Etat.Quelques instituitions, non
               porteuses de l&apos;appellation musée de France, comme celles
-              relavant de l&apos;institut de France, figurent dans ce
+              relevant de l&apos;institut de France, figurent dans ce
               recensement.
             </p>
             <img
@@ -170,7 +170,7 @@ function PatrimoineModal(props) {
         </p>
 
         <p>
-          <h4 className="mt-4">Addresse</h4>
+          <h4 className="mt-4">Adresse</h4>
           <div>{content?.fields?.nomoff}</div>
           <div>{content?.fields?.adrl1_m}</div>
           <div>
@@ -205,7 +205,7 @@ function BlockEvents(props) {
               onClick={() => props.clickOpenModal(museee)}
               className="aVoirPlus"
             >
-              En voir plus
+              En voir plus :
             </a>
           </div>
         </p>

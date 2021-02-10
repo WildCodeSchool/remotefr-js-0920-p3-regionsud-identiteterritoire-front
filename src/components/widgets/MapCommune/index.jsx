@@ -150,7 +150,7 @@ ${marker.telephone ? `<div><b>Téléphone</b> : ${marker.telephone}</div>` : ''}
     <div className="row relative">
       <div className="bigTitle abso-choisir-sur-carte">Info sur la ville</div>
       <div className="mapMenuCommuneBlock">
-        <div className="mapMenuCommuneTitle">Faite votre choix</div>
+        <div className="mapMenuCommuneTitle">Faites votre choix</div>
         <div>
           {mapOptions.map(function mpo(item, i) {
             return (

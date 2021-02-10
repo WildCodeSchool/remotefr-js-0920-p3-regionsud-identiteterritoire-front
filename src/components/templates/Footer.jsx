@@ -120,7 +120,7 @@ class Footer extends React.Component {
               <div className="liens-utiles">
                 <h5 className="title-footer">Liens utiles</h5>
                 <Link
-                  to="/team"
+                  to="/info#Dev"
                   alt="Équipe en charge du développement"
                   title="Équipe en charge du développement"
                 >

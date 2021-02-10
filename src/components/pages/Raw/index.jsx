@@ -91,7 +91,7 @@ const Raw = () => {
 
   return (
     <div>
-      <div className="superTitleRaw">Decouverte des data du site</div>
+      <div className="superTitleRaw">Découverte des data du site</div>
       <div className="rawTitle">Commune</div>
       <div className="rawSource">Source : INSEE</div>
       <pre className="line-numbers scroll">
@@ -112,14 +112,14 @@ const Raw = () => {
       <pre className="line-numbers scroll">
         <code className="language-json">{JSON.stringify(slider, null, 2)}</code>
       </pre>
-      <div className="rawTitle">Information geolocalisation</div>
+      <div className="rawTitle">Information géolocalisation</div>
       <div className="rawSource">Source : interne</div>
       <pre className="line-numbers scroll">
         <code className="language-json">
           {JSON.stringify(geocommunes, null, 2)}
         </code>
       </pre>
-      <div className="rawTitle">Compteurs d&apos;enevement commune</div>
+      <div className="rawTitle">Compteurs d&apos;évènements commune</div>
       <div className="rawSource">Source : Apidae</div>
       <pre className="line-numbers scroll">
         <code className="language-json">
@@ -127,14 +127,14 @@ const Raw = () => {
         </code>
       </pre>
 
-      <div className="rawTitle">Exemple de donnée patrimoine</div>
+      <div className="rawTitle">Exemple de données patrimoine</div>
       <div className="rawSource">Source : Apidae</div>
       <pre className="line-numbers scroll">
         <code className="language-json">
           {JSON.stringify(tourisme, null, 2)}
         </code>
       </pre>
-      <div className="rawTitle">Exemple de donnée Muséofile</div>
+      <div className="rawTitle">Exemple de données Muséofile</div>
       <div className="rawSource">Source : Muséofile </div>
       <pre className="line-numbers scroll">
         <code className="language-json">

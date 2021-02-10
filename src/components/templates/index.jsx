@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './css/styles.css';
 import PropTypes from 'prop-types';
 import Header from './Header';
@@ -24,7 +25,7 @@ class Templates extends React.Component {
             <div className="row">
               <div className="col-md-12">
                 Présentaton du projet en partenariat avec la Wild Code School.{' '}
-                <a href="/info">En savoir plus.</a>
+                <Link to="/info">En savoir plus.</Link>
               </div>
             </div>
           </div>

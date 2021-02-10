@@ -30,15 +30,15 @@ class Home extends React.Component {
               </div>
               <div className="col-md-6">
                 <div className="blockJauneHome mx-auto">
-                  <div className="enChiffre">En Chiffre</div>
-                  <div className="leSaviezVous">Le saviez-vous</div>
+                  <div className="enChiffre">En Chiffres</div>
+                  <div className="leSaviezVous">Le saviez-vous ?</div>
                   <div className="row mt-2">
                     <div className="col-md-4">
                       <div className="nombreHab text-right">3</div>
                     </div>
                     <div className="col-md-8 pt-3 leSaviezVous-text">
-                      Habitants à <b>Majastres</b> qui est la ville la moins
-                      peuplée de la Région Sud.
+                      Habitants à <b>Majastres</b>, la ville la moins peuplée de
+                      la Région Sud.
                     </div>
                   </div>
 
@@ -47,8 +47,8 @@ class Home extends React.Component {
                       <div className="superficieHome text-right">0,7</div>
                     </div>
                     <div className="col-md-8 pt-3 leSaviezVous-text">
-                      Difference de superficie entre la Région sud (31,4km²) et
-                      la <b>Belgique</b> (30,6km²) en km²
+                      Différence de superficie (en km²) entre la Région sud
+                      (31,4km²) et la <b>Belgique</b> (30,6km²)
                     </div>
                   </div>
 

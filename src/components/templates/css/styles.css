@@ -28,11 +28,12 @@
   font-weight: bold;
   color: #dddddd;
 }
-.MeteoTitle,.SocialTitle{
-  margin-top:30px;
-    font-size: 23px;
-    line-height: 0;
-    color: rgb(163, 158, 158);
+.MeteoTitle,
+.SocialTitle {
+  margin-top: 30px;
+  font-size: 23px;
+  line-height: 0;
+  color: rgb(163, 158, 158);
 }
 .home-title-city {
   font-size: 30px;
@@ -40,11 +41,18 @@
   color: #313131;
   display: block;
 }
-.BarPresentation{
-  background-color: #3445bf;
-  color:#fff;
-  height:30px;
+
+.BarPresentation {
+  padding-top: 5px;
+  background-color: #1a80c3;
+  color: #fff;
+  height: 30px;
 }
+
+.BarPresentation a {
+  color: #fcbb3b;
+}
+
 /***** FOOTER *****/
 
 footer {

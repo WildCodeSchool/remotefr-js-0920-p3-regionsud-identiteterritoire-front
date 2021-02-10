@@ -21,11 +21,12 @@ class Templates extends React.Component {
     return (
       <div className="Global">
         <div className="BarPresentation">
-          <div className="container">
+          <div className="container text-center">
             <div className="row">
-              <Link to="/info">
-                <div className="col-md-4">Présentation du projet</div>
-              </Link>
+              <div className="col-md-12">
+                Présentaton du projet en partenariat avec la Wild Code School.{' '}
+                <Link to="/info">En savoir plus.</Link>
+              </div>
             </div>
           </div>
         </div>

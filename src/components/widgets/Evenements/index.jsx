@@ -1,19 +1,32 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FormGroup } from 'reactstrap';
 import DatePicker from 'reactstrap-date-picker';
 import PropTypes from 'prop-types';
-
+import { useParams } from 'react-router-dom';
 // Import des css
 import './css/styles.css';
-
-// Import des images
+import axios from 'axios';
 import Arsud from './images/Arsud_spectacle.jpg';
-import Faron from './images/faron.jpg';
-import FeuDartifice from './images/feu_dartifice.jpg';
-import JazzToulon from './images/jazz_toulon.jpg';
 
 function Evenements() {
+  const [events, setEvents] = useState([]);
   const [date, setDate] = useState(null);
+  const { id } = useParams();
+
+  useEffect(() => {
+    if (id) {
+      axios
+        .get(
+          `${process.env.REACT_APP_REGIONSUD_API_URL}/communes/${id}/evenements`,
+        )
+        .then((res) => {
+          if (res.data !== 0) {
+            setEvents(res.data);
+          }
+        });
+    }
+  }, [id]);
+
   const handleChange = (value) => {
     setDate(value);
   };
@@ -68,27 +81,14 @@ function Evenements() {
             </p>
             <img src={Arsud} className="logoArsud" alt="Responsive_imge" />
           </div>
-          <div className="col-md-6">
-            <BlockEvents
-              title="Vivement dimanche au faron"
-              description="Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          deleniti culpa!"
-              image={Faron}
-            />
-
-            <BlockEvents
-              title="Feu d'artifice"
-              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-          incidunt quis id ex vel? "
-              image={FeuDartifice}
-            />
-
-            <BlockEvents
-              title="Festival Jazz Toulon"
-              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-          incidunt quis id ex vel?"
-              image={JazzToulon}
-            />
+          <div className="col-md-6 scrollListBlock">
+            {events?.map(function rg(event) {
+              return (
+                <div>
+                  <BlockEvents event={event} />
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
@@ -96,20 +96,17 @@ function Evenements() {
   );
 }
 
-function BlockEvents(props) {
-  const { title, description, image } = props;
+function BlockEvents({ event }) {
   return (
     <div className="row BlockEvents-container">
-      <div className="col-md-4">
-        <div className="circle">
-          <img src={image} className="rounded-circle img-fluid" alt="tmp" />
-        </div>
+      <div className="col-md-3">
+        <div className={`numberCircle-${event.icon}`}>{event.icon}</div>
       </div>
-      <div className="col-md-8">
+      <div className="col-md-9">
         <p>
-          <b>{title}</b>
-          <br />
-          {description}
+          <b>{event.title}</b>
+          <div className="events-date">Date : {event.date}</div>
+          <div className="events-text">{event.description}</div>
         </p>
       </div>
     </div>

@@ -205,7 +205,7 @@ function BlockEvents(props) {
               onClick={() => props.clickOpenModal(museee)}
               className="aVoirPlus"
             >
-              En voir plus :
+              En voir plus
             </a>
           </div>
         </p>

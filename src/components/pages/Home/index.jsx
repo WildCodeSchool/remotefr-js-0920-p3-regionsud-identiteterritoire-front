@@ -32,7 +32,7 @@ class Home extends React.Component {
                 <div className="blockJauneHome mx-auto">
                   <div className="enChiffre">En Chiffres</div>
                   <div className="leSaviezVous">Le saviez-vous ?</div>
-                  <div className="row mt-2">
+                  <div className="row mt-5">
                     <div className="col-md-4">
                       <div className="nombreHab text-right">3</div>
                     </div>
@@ -42,7 +42,7 @@ class Home extends React.Component {
                     </div>
                   </div>
 
-                  <div className="row mt-0">
+                  <div className="row mt-2">
                     <div className="col-md-4">
                       <div className="superficieHome text-right">0,7</div>
                     </div>
@@ -52,7 +52,7 @@ class Home extends React.Component {
                     </div>
                   </div>
 
-                  <div className="row mt-0">
+                  <div className="row mt-2">
                     <div className="col-md-4">
                       <div className="superficieHome text-right">7,5</div>
                     </div>

@@ -1,6 +1,6 @@
 {
-  "name": "p2template",
-  "version": "0.1.0",
+  "name": "regionsud-citer-front",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",

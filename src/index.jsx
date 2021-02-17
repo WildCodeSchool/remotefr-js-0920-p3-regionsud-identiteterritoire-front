@@ -8,9 +8,11 @@ import './prism.css';
 // import ScrollToTop from './ScrollToTop';
 import App from './App';
 
+const routerBasename = process.env.REACT_APP_ROUTER_BASENAME || '/';
+
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={routerBasename}>
       <ScrollToTop />
       <App />
     </BrowserRouter>

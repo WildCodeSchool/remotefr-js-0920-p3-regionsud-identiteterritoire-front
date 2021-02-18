@@ -1,0 +1,81 @@
+.slider {
+  position: relative;
+  height: 300px;
+  max-width: 100%;
+  background-color: #d2d2d2;
+  background-repeat: no-repeat;
+  background-position: center 80%;
+  /*ici variable*/
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+.slider-container {
+  margin-bottom: 25px;
+}
+
+.vertical-center {
+  margin: 15% auto;
+  width: 75%;
+}
+
+.roundedFormsHome {
+  border-radius: 24px;
+  color: rgb(34, 34, 34);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 16px 32px, rgba(0, 0, 0, 0.1) 0px 3px 8px;
+  background-color: #fff;
+  padding: 0 10px;
+}
+
+.dot {
+  height: 36px;
+  width: 36px;
+  background-color: #fcbb3b;
+  border-radius: 50%;
+  margin: 0 10px;
+  cursor: pointer;
+  border: none;
+}
+
+.datepicker {
+  margin: 2px auto;
+}
+
+.select-picker {
+  width: 100%;
+  padding: 0 5px;
+  border-radius: 80%;
+  border-style: none;
+}
+
+.select-picker:hover {
+  cursor: pointer !important;
+}
+
+.search-icon {
+  font-size: 18px;
+  color: #fff;
+  padding: 1px;
+}
+
+/* React Select Style*/
+.css-yk16xz-control {
+  border-style: none !important;
+}
+
+/* React Calendar Style */
+#rdp-form-control-example-datepicker {
+  border: transparent;
+  margin: 0 2px;
+  border-style: none !important;
+}
+/* Calendar React Croix Annulation */
+.input-group-text {
+  display: none;
+}

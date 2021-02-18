@@ -1,0 +1,87 @@
+
+.titlePatrimoine {
+  color: rgb(219, 28, 28);
+  font-size: 4em;
+  font-weight: bold;
+}
+
+.number {
+  color: rgb(219, 28, 28);
+}
+.roundedImage {
+  border-radius: 100px;
+  width: 90px;
+  height: 90px;
+}
+
+.logoMinister {
+  width: 180px;
+  height: auto;
+}
+
+
+.patrimoine-text {
+  max-width: 300px;
+}
+.musee-text{
+display: -webkit-box;
+-webkit-line-clamp: 2;
+-webkit-box-orient: vertical;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+
+.circle {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding: 100% 0 0;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.circle img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.BlockEvents-container{
+  margin-bottom: 25px;
+}
+
+
+.scrollListBlock{
+overflow-y: scroll;
+height: 300px;
+}
+
+
+
+.numberCircle {
+  width: 70px;
+  line-height: 70px;
+  border-radius: 50%;
+  text-align: center;
+  font-size:26px;
+  color:#FFF;
+  background-color: #01c39d;
+}
+
+
+.carteMusee{
+  width:100%;
+  height:300px;
+}
+
+.modal-Body-Patrimoine {
+  padding:80px;
+}
+
+.aVoirPlus {
+  color:rgb(219, 28, 28) !important;
+  cursor: pointer;
+}

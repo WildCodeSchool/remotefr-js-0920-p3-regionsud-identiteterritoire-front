@@ -1,0 +1,25 @@
+  .scroll {
+      margin: 4px, 4px;
+      padding: 4px;
+      width: 100%;
+      max-height: 450px;
+      overflow-x: hidden;
+      overflow-y: auto;
+      text-align: justify;
+      background: #272822;
+    }
+
+.rawSource {
+}
+.rawTitle {
+  font-size: 24px;
+  font-weight: bold;
+  
+}
+
+.superTitleRaw{
+  font-size: 34px;
+   font-weight: bold;
+   text-align: center;
+}
+

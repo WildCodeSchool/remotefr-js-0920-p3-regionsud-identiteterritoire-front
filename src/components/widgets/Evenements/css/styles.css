@@ -1,0 +1,124 @@
+.titleEvenements {
+  color: rgb(219, 28, 28);
+  font-size: 4em;
+  font-weight: bold;
+}
+.logoArsud {
+  max-width: 250px;
+  height: auto;
+}
+
+
+
+
+.evenements-text {
+  max-width:300px;
+}
+
+.circle {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding: 100% 0 0;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.circle img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.BlockEvents-container {
+  margin-bottom: 25px;
+}
+
+
+.events-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.events-date {
+  font-size: 11px;
+  color:#999999;
+}
+
+.numberCircle-Co {
+  width: 70px;
+  line-height: 70px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 26px;
+  color: #FFF;
+  background-color: #01c39d;
+}
+
+
+.numberCircle-Ev {
+  width: 70px;
+  line-height: 70px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 26px;
+  color: #FFF;
+  background-color: #ac4acc;
+}
+
+.numberCircle-The {
+  width: 70px;
+  line-height: 70px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 26px;
+  color: #FFF;
+  background-color: #3e4dbe;
+}
+
+.numberCircle-Fe {
+  width: 70px;
+  line-height: 70px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 26px;
+  color: #FFF;
+  background-color: #d53f3f;
+}
+
+.numberCircle-Mu {
+  width: 70px;
+  line-height: 70px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 26px;
+  color: #FFF;
+  background-color: #d3941b;
+}
+
+.numberCircle-Spe {
+  width: 70px;
+  line-height: 70px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 26px;
+  color: #FFF;
+  background-color: #3e9bbe;
+}
+
+.numberCircle-Li {
+  width: 70px;
+  line-height: 70px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 26px;
+  color: #FFF;
+  background-color: #21816e;
+}

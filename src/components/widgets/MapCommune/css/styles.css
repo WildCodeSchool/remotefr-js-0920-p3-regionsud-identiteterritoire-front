@@ -1,0 +1,80 @@
+.mapMenuCommuneBlock {
+  z-index: 1000;
+  position: absolute;
+  width: 280px;
+  height: 500px;
+  background-color: #fcbb3b;
+  padding: 30px;
+  top: 70px;
+}
+
+.mapMenuCommuneListLink {
+  background-color: none;
+  margin: 10px 0 0 25px;
+  color: white !important;
+  font-size: 14px;
+  background-color: #fcbb3b;
+  border-width: 0;
+  border: none;
+  outline: none;
+}
+
+.mapMenuCommuneListLink[type='button'] {
+  outline: none;
+}
+
+.mapMenuCommuneListLink[type='button']::-moz-focus-inner {
+  border: 0;
+}
+
+.mapMenuCommuneListLink:hover {
+  margin: 10px 0 0 25px;
+  color: #a46d00;
+  cursor: pointer;
+}
+
+.mapMenuCommuneListLink > span {
+  font-size: 11px;
+  color: #a46d00;
+}
+
+.mapMenuCommuneTitle {
+  font-size: 36px;
+  font-weight: bold;
+  position: absolute;
+  color: #e4a019;
+  top: 20;
+  right: 100%;
+  white-space: nowrap;
+  -webkit-transform: rotate(270deg);
+  -webkit-transform-origin: right top;
+  -moz-transform: rotate(270deg);
+  -moz-transform-origin: right top;
+  -ms-transform: rotate(270deg);
+  -ms-transform-origin: right top;
+  -o-transform: rotate(270deg);
+  -o-transform-origin: right top;
+  transform: rotate(270deg);
+  transform-origin: right top;
+}
+
+.mapPopup {
+}
+
+.mapPopup H3 {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif !important;
+}
+
+.mapPopup p {
+  margin: 0;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif !important;
+}
+
+.mapPopupImg {
+  max-width: 200px;
+  max-height: 200px;
+  object-fit: cover;
+}

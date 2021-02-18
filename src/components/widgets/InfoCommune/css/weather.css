@@ -1,0 +1,12 @@
+.weather-degree{
+  margin-top: 25px;
+  font-size: 34px;
+  font-weight: bold;
+}
+.weather-wind-speed {
+  font-size: 12px;
+}
+
+.weather-description {
+  font-size: 12px;
+}
